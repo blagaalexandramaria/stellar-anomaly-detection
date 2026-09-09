@@ -94,6 +94,12 @@ The frozen publication artifact layer is reproducible without the raw observatio
 
 The observational datasets used in the scientific study are **not redistributed** with this repository. To preserve source provenance and avoid redistributing externally sourced files, users must obtain observations from the original providers where permitted and prepare the input described in [Data](docs/data.md) and [`data_requirements.json`](configs/data_requirements.json). The bundled synthetic demo is separate from the publication corpus.
 
+### Research dataset
+
+The frozen research corpus and derived representations associated with this software release are archived separately on Zenodo:
+
+Blaga, Alexandra-Maria, and Răzvan Octavian Mihuț. *K2-E2 RR Lyrae Corpus, PISD Features, and Spectral Graph Representations for Unsupervised Stellar Anomaly Detection*. Version 1.0.0. Zenodo. [https://doi.org/10.5281/zenodo.22677700](https://doi.org/10.5281/zenodo.22677700).
+
 ## Publication artifacts
 
 The frozen inventory is documented in [publication/README.md](publication/README.md):

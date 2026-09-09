@@ -19,3 +19,16 @@ keywords:
   - anomaly detection
   - Lomb-Scargle
   - spectral graphs
+references:
+  - type: data
+    title: "K2-E2 RR Lyrae Corpus, PISD Features, and Spectral Graph Representations for Unsupervised Stellar Anomaly Detection"
+    authors:
+      - given-names: "Alexandra-Maria"
+        family-names: "Blaga"
+        orcid: "https://orcid.org/0009-0004-0990-5022"
+      - given-names: "Răzvan Octavian"
+        family-names: "Mihuț"
+        orcid: "https://orcid.org/0009-0003-3843-7793"
+    version: "1.0.0"
+    doi: "10.5281/zenodo.22677700"
+    url: "https://zenodo.org/records/22677700"

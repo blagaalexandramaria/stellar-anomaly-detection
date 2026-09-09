@@ -6,6 +6,14 @@
     {"name": "Mihuț, Răzvan Octavian", "orcid": "0009-0003-3843-7793"}
   ],
   "license": "MIT",
+  "related_identifiers": [
+    {
+      "scheme": "doi",
+      "identifier": "10.5281/zenodo.22677700",
+      "relation": "isSupplementedBy",
+      "resource_type": "dataset"
+    }
+  ],
   "keywords": [
     "astronomy",
     "stellar variability",
