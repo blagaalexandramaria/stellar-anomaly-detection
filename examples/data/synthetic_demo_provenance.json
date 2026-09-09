@@ -1,0 +1,29 @@
+{
+  "dataset_name": "synthetic_demo_light_curve",
+  "dataset_type": "synthetic",
+  "purpose": "software demonstration",
+  "publication_corpus_member": false,
+  "observational_data": false,
+  "random_seed": 20260821,
+  "generation_description": "Mildly irregular times over 30 arbitrary time units; one sinusoid, one weaker second harmonic, and deterministic Gaussian noise.",
+  "generation_parameters": {
+    "samples": 512,
+    "baseline": 30.0,
+    "fundamental_frequency": 1.25,
+    "fundamental_amplitude": 0.08,
+    "second_harmonic_amplitude": 0.025,
+    "noise_standard_deviation": 0.008
+  },
+  "number_of_samples": 512,
+  "columns": [
+    "time",
+    "flux",
+    "flux_error"
+  ],
+  "units": {
+    "time": "arbitrary time unit",
+    "flux": "normalized dimensionless flux",
+    "flux_error": "normalized dimensionless flux"
+  },
+  "license_relationship": "Project-created synthetic demonstration data distributed with this repository under the repository MIT License."
+}

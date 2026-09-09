@@ -1,0 +1,1 @@
+Figure 3. Cross-model agreement and rank flow across the 33 objects. Panel A shows pairwise Spearman and Kendall concordance together with global Kendall W. Panel B shows intersections of detector-specific top-k sets for k=3,5,10. Panel C shows object-level ordinal-rank flow across IF, LOF, and AE.

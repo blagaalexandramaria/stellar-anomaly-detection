@@ -1,0 +1,8 @@
+view_id,pisd_included,graph_core_included,graph_extended_included,feature_count,scientific_role,primary_vs_ablation_status
+PISD_ONLY,true,false,false,42,PISD-only representation,ABLATION
+GRAPH_CORE_ONLY,false,true,false,30,Graph-Core-only representation,ABLATION
+GRAPH_EXTENDED_ONLY,false,false,true,36,Graph-Extended-only representation,ABLATION
+GRAPH_ALL,false,true,true,66,Combined graph representation,ABLATION
+PISD_PLUS_GRAPH_CORE,true,true,false,72,PISD plus Graph-Core representation,ABLATION
+PISD_PLUS_GRAPH_EXTENDED,true,false,true,78,PISD plus Graph-Extended representation,ABLATION
+PISD_PLUS_GRAPH_ALL,true,true,true,108,Complete frozen multiview representation,PRIMARY

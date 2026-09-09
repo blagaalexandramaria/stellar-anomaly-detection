@@ -1,0 +1,5 @@
+object,case_role,if_rank,lof_rank,ae_rank,consensus_rank,inspection_role,primary_interpretation_boundary
+EPIC 60018238,CASE_A,3,1,1,1,ROBUST_HIGH_CONSENSUS,Selected robust-high-consensus inspection candidate; not a confirmed anomaly
+EPIC 60018678,CASE_C,2,3,4,3,ROBUST_HIGH_CONSENSUS,Observational context requires caution; not a confirmed anomaly
+EPIC 60042292,CASE_D,1,2,5,2,ROBUST_HIGH_CONSENSUS,External identity is ambiguous; identity resolution required
+EPIC 60018742,CASE_B,20,13,8,13,DISAGREEMENT_CONTROL,Model-sensitivity representative case; not an anomaly classification

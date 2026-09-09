@@ -1,0 +1,1 @@
+Figure 5. Representative frozen inspection cases. Columns show EPIC 60018238, EPIC 60018742, EPIC 60018678, and EPIC 60042292; rows show the preserved light curves, Lomb–Scargle spectra, and detector ranks. EPIC 60018742 is the disagreement control; the remaining three are robust-high-consensus cases.

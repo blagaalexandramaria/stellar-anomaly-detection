@@ -1,0 +1,31 @@
+{
+  "artifact_type":"publication_terminology_registry",
+  "terms":[
+    {"canonical_term":"Physics-Informed Spectral Descriptor (PISD)","short_form":"PISD","usage":"The frozen 42-feature spectral descriptor."},
+    {"canonical_term":"PISD_ONLY","display_form":"PISD_ONLY","usage":"42-feature representation."},
+    {"canonical_term":"GRAPH_CORE_ONLY","display_form":"GRAPH_CORE_ONLY","usage":"30-feature Graph-Core representation."},
+    {"canonical_term":"GRAPH_EXTENDED_ONLY","display_form":"GRAPH_EXTENDED_ONLY","usage":"36-feature Graph-Extended representation."},
+    {"canonical_term":"GRAPH_ALL","display_form":"GRAPH_ALL","usage":"66-feature combined graph representation."},
+    {"canonical_term":"PISD_PLUS_GRAPH_CORE","display_form":"PISD + GRAPH_CORE","usage":"72-feature combined representation."},
+    {"canonical_term":"PISD_PLUS_GRAPH_EXTENDED","display_form":"PISD + GRAPH_EXTENDED","usage":"78-feature combined representation."},
+    {"canonical_term":"PISD_PLUS_GRAPH_ALL","display_form":"PISD + GRAPH_ALL","usage":"108-feature primary combined representation."},
+    {"canonical_term":"Isolation Forest (IF)","short_form":"IF","usage":"Frozen Isolation Forest detector."},
+    {"canonical_term":"Local Outlier Factor (LOF)","short_form":"LOF","usage":"Frozen novelty-mode Local Outlier Factor detector."},
+    {"canonical_term":"Autoencoder (AE)","short_form":"AE","usage":"Frozen reconstruction-error autoencoder detector."},
+    {"canonical_term":"PRIMARY population","usage":"The 33-object canonical population used for final ranking analysis."},
+    {"canonical_term":"anomaly score","usage":"Model-specific scalar oriented so higher is more anomalous; do not compare raw scores across model paradigms."},
+    {"canonical_term":"ordinal anomaly rank","usage":"Rank 1 denotes the most unusual placement for the relevant detector or frozen consensus."},
+    {"canonical_term":"normalized rank","usage":"Frozen formula: 1 - (rank - 1) / (n - 1); higher values denote more unusual placement."},
+    {"canonical_term":"cross-model agreement","usage":"Descriptive concordance among model-specific ordinal rankings, not agreement on anomaly truth."},
+    {"canonical_term":"ranking robustness","usage":"Descriptive stability/sensitivity under named frozen comparisons."},
+    {"canonical_term":"representation-dependent ranking concordance","usage":"Within-model agreement across representation views; never substitute performance or accuracy."},
+    {"canonical_term":"selected robust-high-consensus inspection candidate","usage":"Required role for EPIC 60018238, EPIC 60018678, and EPIC 60042292; not a confirmed-anomaly label."},
+    {"canonical_term":"representative model-sensitivity case","usage":"Required role for EPIC 60018742 where the frozen evidence is discussed."},
+    {"canonical_term":"operational-reference peak","usage":"Frozen graph/spectral role; do not silently replace with dominant peak."},
+    {"canonical_term":"dominant peak","usage":"Use only where the frozen spectral artifact explicitly assigns this role; it is distinct from operational-reference peak."},
+    {"canonical_term":"spectral relational graph","usage":"Relational visualization of retained peaks and typed spectral relationships."},
+    {"canonical_term":"local relational neighbourhood","usage":"Operational-reference-centred radius-1 neighbourhood in the publication graph."}
+  ],
+  "global_prohibitions":["accuracy","precision","recall","F1","ROC-AUC","classification performance","detection probability","confirmed anomaly","new astronomical discovery","validated astrophysical anomaly","robust graph community"],
+  "graph_community_status":"COMMUNITIES_NOT_SUPPORTED_FOR_PUBLICATION_COLOR_ENCODING"
+}

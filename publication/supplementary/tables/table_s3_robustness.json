@@ -1,0 +1,52 @@
+{
+  "title": "Frozen ranking-robustness scenarios",
+  "rows": [
+    {
+      "scenario_id": "MEDIAN_VS_MEAN",
+      "comparison": "Median vs mean",
+      "spearman_rho": 0.992971901452473,
+      "kendall_tau": 0.9520153550863725,
+      "mean_absolute_rank_displacement": 0.9090909090909091,
+      "maximum_absolute_rank_displacement": 3,
+      "comparison_definition": "Frozen named comparison; descriptive rank concordance and displacement only."
+    },
+    {
+      "scenario_id": "PRIMARY_VS_FULL",
+      "comparison": "PRIMARY vs FULL",
+      "spearman_rho": 0.9084672148610509,
+      "kendall_tau": 0.7512011150888909,
+      "mean_absolute_rank_displacement": 3.4242424242424243,
+      "maximum_absolute_rank_displacement": 8,
+      "comparison_definition": "Frozen named comparison; descriptive rank concordance and displacement only."
+    },
+    {
+      "scenario_id": "IF_ONLY_PERTURBATION",
+      "comparison": "IF",
+      "spearman_rho": 0.9995818663704296,
+      "kendall_tau": 0.9952194120982412,
+      "mean_absolute_rank_displacement": 0.15151515151515152,
+      "maximum_absolute_rank_displacement": 1,
+      "comparison_definition": "Frozen one-model perturbation; descriptive sensitivity of the consensus ranking."
+    },
+    {
+      "scenario_id": "LOF_ONLY_PERTURBATION",
+      "comparison": "LOF",
+      "spearman_rho": 0.9518909102481282,
+      "kendall_tau": 0.8395777168640545,
+      "mean_absolute_rank_displacement": 2.3333333333333335,
+      "maximum_absolute_rank_displacement": 7,
+      "comparison_definition": "Frozen one-model perturbation; descriptive sensitivity of the consensus ranking."
+    },
+    {
+      "scenario_id": "AE_ONLY_PERTURBATION",
+      "comparison": "AE",
+      "spearman_rho": 0.9614904361634342,
+      "kendall_tau": 0.8676526945638056,
+      "mean_absolute_rank_displacement": 1.7272727272727273,
+      "maximum_absolute_rank_displacement": 9,
+      "comparison_definition": "Frozen one-model perturbation; descriptive sensitivity of the consensus ranking."
+    }
+  ],
+  "authority": "outputs/results/stage_21_5_final_results_freeze/registries/robustness_findings.json",
+  "boundary": "No robustness threshold was predeclared; these values do not establish correctness or detector superiority."
+}

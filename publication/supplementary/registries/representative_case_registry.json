@@ -1,0 +1,100 @@
+{
+  "artifact_type": "publication_supplementary_representative_case_registry",
+  "case_count": 4,
+  "records": [
+    {
+      "object_id": "object:epic:60018238",
+      "epic_id": "EPIC 60018238",
+      "case_role": "CASE_A",
+      "if_rank": 3,
+      "lof_rank": 1,
+      "ae_rank": 1,
+      "consensus_rank": 1,
+      "inspection_roles": [
+        "ROBUST_HIGH_CONSENSUS"
+      ],
+      "inspection_status": "KNOWN_CONTEXT_CONSISTENT",
+      "light_curve_reference": "outputs/k2_e2_photometric_adapter/k2_e2_lightcurve_manifest.json",
+      "lomb_scargle_reference": "outputs/k2_e2_lomb_scargle/lomb_scargle_observation_registry.json",
+      "graph_reference": "outputs/results/stage_21_3_r5_1/figures/main_spectral_graph/figure.pdf",
+      "safe_statement": "This is a frozen, deterministically selected inspection case with preserved observational, spectral, and ordinal-rank evidence.",
+      "must_not_infer": [
+        "physical mechanism from plot appearance",
+        "astrophysical class from morphology",
+        "confirmed anomaly",
+        "prevalence in the population"
+      ]
+    },
+    {
+      "object_id": "object:epic:60018678",
+      "epic_id": "EPIC 60018678",
+      "case_role": "CASE_C",
+      "if_rank": 2,
+      "lof_rank": 3,
+      "ae_rank": 4,
+      "consensus_rank": 3,
+      "inspection_roles": [
+        "ROBUST_HIGH_CONSENSUS"
+      ],
+      "inspection_status": "OBSERVATIONAL_CONTEXT_RELEVANT",
+      "light_curve_reference": "outputs/k2_e2_photometric_adapter/k2_e2_lightcurve_manifest.json",
+      "lomb_scargle_reference": "outputs/k2_e2_lomb_scargle/lomb_scargle_observation_registry.json",
+      "graph_reference": "outputs/results/stage_21_3_r5_1/figures/main_spectral_graph/figure.pdf",
+      "safe_statement": "This is a frozen, deterministically selected inspection case with preserved observational, spectral, and ordinal-rank evidence.",
+      "must_not_infer": [
+        "physical mechanism from plot appearance",
+        "astrophysical class from morphology",
+        "confirmed anomaly",
+        "prevalence in the population"
+      ]
+    },
+    {
+      "object_id": "object:epic:60042292",
+      "epic_id": "EPIC 60042292",
+      "case_role": "CASE_D",
+      "if_rank": 1,
+      "lof_rank": 2,
+      "ae_rank": 5,
+      "consensus_rank": 2,
+      "inspection_roles": [
+        "ROBUST_HIGH_CONSENSUS"
+      ],
+      "inspection_status": "EXTERNAL_IDENTITY_AMBIGUOUS",
+      "light_curve_reference": "outputs/k2_e2_photometric_adapter/k2_e2_lightcurve_manifest.json",
+      "lomb_scargle_reference": "outputs/k2_e2_lomb_scargle/lomb_scargle_observation_registry.json",
+      "graph_reference": "outputs/results/stage_21_3_r5_1/figures/main_spectral_graph/figure.pdf",
+      "safe_statement": "This is a frozen, deterministically selected inspection case with preserved observational, spectral, and ordinal-rank evidence.",
+      "must_not_infer": [
+        "physical mechanism from plot appearance",
+        "astrophysical class from morphology",
+        "confirmed anomaly",
+        "prevalence in the population"
+      ]
+    },
+    {
+      "object_id": "object:epic:60018742",
+      "epic_id": "EPIC 60018742",
+      "case_role": "CASE_B",
+      "if_rank": 20,
+      "lof_rank": 13,
+      "ae_rank": 8,
+      "consensus_rank": 13,
+      "inspection_roles": [
+        "DISAGREEMENT_CONTROL"
+      ],
+      "inspection_status": "MODEL_SENSITIVITY_DOMINATED",
+      "light_curve_reference": "outputs/k2_e2_photometric_adapter/k2_e2_lightcurve_manifest.json",
+      "lomb_scargle_reference": "outputs/k2_e2_lomb_scargle/lomb_scargle_observation_registry.json",
+      "graph_reference": null,
+      "safe_statement": "This is a frozen, deterministically selected inspection case with preserved observational, spectral, and ordinal-rank evidence.",
+      "must_not_infer": [
+        "physical mechanism from plot appearance",
+        "astrophysical class from morphology",
+        "confirmed anomaly",
+        "prevalence in the population"
+      ]
+    }
+  ],
+  "authority": "outputs/results/stage_21_5_final_results_freeze/registries/representative_case_evidence_registry.json",
+  "boundary": "Selected inspection evidence, not confirmed anomalies or astrophysical classes; no PISD profile generated."
+}

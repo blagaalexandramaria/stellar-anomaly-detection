@@ -1,0 +1,17 @@
+{
+  "title": "Stellar Anomaly Detection",
+  "description": "A reproducible physics-informed, multi-view framework for unsupervised ranking of unusual stellar light-curve behaviour.",
+  "creators": [
+    {"name": "Blaga, Alexandra-Maria", "orcid": "0009-0004-0990-5022"},
+    {"name": "Mihuț, Răzvan Octavian", "orcid": "0009-0003-3843-7793"}
+  ],
+  "license": "MIT",
+  "keywords": [
+    "astronomy",
+    "stellar variability",
+    "anomaly detection",
+    "Lomb-Scargle",
+    "physics-informed spectral descriptor",
+    "spectral graphs"
+  ]
+}

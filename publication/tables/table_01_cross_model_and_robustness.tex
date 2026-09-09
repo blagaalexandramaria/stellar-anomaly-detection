@@ -1,0 +1,19 @@
+\begin{table}
+\caption{Cross-model rank agreement and robustness for the 33-object cohort. Section A reports pairwise Spearman $\rho$ and Kendall $\tau$, with global Kendall $W=0.912953$. Section B reports concordance and mean and maximum absolute ordinal-rank displacement for the five predefined robustness comparisons.}
+\begin{tabular}{lrrrr}
+\hline
+Comparison & Spearman $\rho$ & Kendall $\tau$ & Mean $|\Delta r|$ & Max $|\Delta r|$ \\
+\hline
+\multicolumn{5}{l}{\textit{A. Cross-model agreement (global Kendall $W=0.912953$)}}\\
+IF--LOF & 0.877340 & 0.712121 & -- & -- \\
+IF--AE & 0.809492 & 0.617424 & -- & -- \\
+LOF--AE & 0.921457 & 0.738636 & -- & -- \\
+\multicolumn{5}{l}{\textit{B. Robustness}}\\
+Median versus mean & 0.992972 & 0.952015 & 0.909091 & 3 \\
+PRIMARY versus FULL & 0.908467 & 0.751201 & 3.424242 & 8 \\
+IF-only perturbation & 0.999582 & 0.995219 & 0.151515 & 1 \\
+LOF-only perturbation & 0.951891 & 0.839578 & 2.333333 & 7 \\
+AE-only perturbation & 0.961490 & 0.867653 & 1.727273 & 9 \\
+\hline
+\end{tabular}
+\end{table}

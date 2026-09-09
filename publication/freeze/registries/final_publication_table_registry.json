@@ -1,0 +1,9 @@
+{
+  "artifact_type":"final_publication_table_registry",
+  "table_count":2,
+  "authority":"outputs/results/stage_21_6_publication_results_package/",
+  "tables":[
+    {"table_id":"Table 1","title":"Cross-model rank agreement and robustness summary","scientific_purpose":"Compactly report cross-model concordance and the five distinct robustness comparisons while keeping agreement and displacement conceptually separate.","csv_path":"outputs/results/stage_21_6_publication_results_package/tables/table_01_cross_model_and_robustness.csv","json_path":"outputs/results/stage_21_6_publication_results_package/tables/table_01_cross_model_and_robustness.json","latex_path":"outputs/results/stage_21_6_publication_results_package/tables/table_01_cross_model_and_robustness.tex","caption_path":"outputs/results/stage_21_6_publication_results_package/captions/table_01_caption.txt","manuscript_sections":["5.2","5.3"],"interpretation_boundary":"Agreement and displacement quantify different descriptive properties; neither establishes accuracy or anomaly truth."},
+    {"table_id":"Table 2","title":"Representative scientific evidence cases","scientific_purpose":"Report frozen ranks and publication-safe roles for four representative objects.","csv_path":"outputs/results/stage_21_6_publication_results_package/tables/table_02_representative_cases.csv","json_path":"outputs/results/stage_21_6_publication_results_package/tables/table_02_representative_cases.json","latex_path":"outputs/results/stage_21_6_publication_results_package/tables/table_02_representative_cases.tex","caption_path":"outputs/results/stage_21_6_publication_results_package/captions/table_02_caption.txt","manuscript_section":"5.4","interpretation_boundary":"No binary anomaly label or unsupported astrophysical classification; selected candidates are inspection cases, not confirmed anomalies."}
+  ]
+}

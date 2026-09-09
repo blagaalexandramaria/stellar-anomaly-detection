@@ -1,0 +1,75 @@
+{
+  "artifact_type": "compact_publication_methodology_provenance",
+  "provenance_status": "FROZEN_PUBLICATION_METHODOLOGY",
+  "scientific_results_regenerated": false,
+  "canonical_reference": {
+    "policy_id": "canonical_harmonic_family_lexicographic_v1",
+    "deterministic": true,
+    "semantics": "OPERATIONAL_REFERENCE_FOR_DOWNSTREAM_FEATURE_EXTRACTION",
+    "physical_fundamental_confirmed_by_policy": false,
+    "public_level_3_turnkey_selector_claimed": false
+  },
+  "spectral_stability": {
+    "n_perturb": 100,
+    "seed_policy": "pisd_stability_object_seed_sha256_v1",
+    "root_seed": 42,
+    "object_specific_deterministic_streams": true,
+    "frozen_object_count": 33,
+    "per_object_seeds_disclosed": false
+  },
+  "representations": {
+    "views": {
+      "PISD_ONLY": 42,
+      "GRAPH_CORE_ONLY": 30,
+      "GRAPH_EXTENDED_ONLY": 36,
+      "GRAPH_ALL": 66,
+      "PISD_PLUS_GRAPH_CORE": 72,
+      "PISD_PLUS_GRAPH_EXTENDED": 78,
+      "PISD_PLUS_GRAPH_ALL": 108
+    },
+    "primary": "PISD_PLUS_GRAPH_ALL"
+  },
+  "experiment": {
+    "pilot_objects": 33,
+    "independence_unit": "astronomical_object",
+    "split_protocol": "OBJECT_LEVEL_REPEATED_HOLDOUT_V1",
+    "split_count": 30,
+    "evaluation_fraction": 0.2,
+    "preprocessing": ["RAW_V1", "STANDARD_SCALE_V1", "ROBUST_SCALE_V1"],
+    "preprocessing_fit_scope": "REFERENCE_PARTITION_ONLY",
+    "root_seed": 42,
+    "split_and_experiment_seed_policy": "SHA256_EXPERIMENT_CHILD_SEED_V1"
+  },
+  "models": {
+    "isolation_forest": ["200 trees / all features", "500 trees / all features", "200 trees / max_features=0.75"],
+    "local_outlier_factor_neighbors": [5, 10, 20],
+    "autoencoder": {
+      "latent_dimensions": [2, 4, 8],
+      "hidden_width_formula": "H=max(Z+1,min(8,ceil(sqrt(D)/2)))",
+      "replications_per_design_stratum": 3
+    }
+  },
+  "ranking_and_robustness": {
+    "normalized_rank": "1.0 if N=1 else 1.0-(rank-1)/(N-1)",
+    "primary_consensus": "median normalized rank across IF, LOF, and AE",
+    "agreement": "1-normalized-rank range",
+    "robustness": "predefined full-sensitivity rank correlations, displacement, agreement, and top-k comparisons"
+  },
+  "lomb_scargle_provenance": {
+    "frozen_execution_directly_established": {
+      "minimum_frequency_d_inverse": 0.01,
+      "maximum_frequency_d_inverse": 20.0,
+      "samples_per_peak": 5,
+      "false_alarm_method": "baluev",
+      "alpha": 0.01
+    },
+    "current_public_implementation_defaults_not_independently_repeated_in_compact_frozen_snapshot": {
+      "normalization": "standard",
+      "fit_mean": true,
+      "center_data": true,
+      "nterms": 1
+    },
+    "frozen_configuration_provenance_status": "PARTIAL"
+  },
+  "reproducibility_boundary": "Level 3 remains CONDITIONAL_ON_SOURCE_DATA and is not a turnkey publication rerun."
+}

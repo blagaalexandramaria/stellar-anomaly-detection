@@ -1,0 +1,98 @@
+{
+  "artifact_type": "final_model_configuration_registry",
+  "models": [
+    {
+      "model_id": "IF",
+      "identity": "scikit-learn IsolationForest 1.8.0",
+      "fixed_configuration_grid": [
+        {
+          "n_estimators": 200,
+          "max_features": 1
+        },
+        {
+          "n_estimators": 500,
+          "max_features": 1
+        },
+        {
+          "n_estimators": 200,
+          "max_features": 0.75
+        }
+      ],
+      "shared_parameters": {
+        "max_samples": "auto",
+        "contamination": "auto",
+        "bootstrap": false,
+        "n_jobs": 1,
+        "random_state": "derived per experiment"
+      },
+      "fit_policy": "reference objects only; evaluation excluded",
+      "score": "-score_samples(X)",
+      "orientation": "HIGHER_IS_MORE_ANOMALOUS",
+      "selection_boundary": "No best configuration selected; frozen consensus aggregates the fixed sensitivity grid.",
+      "authority": "outputs/experiments/isolation_forest/stage_16_1/isolation_forest_hyperparameter_registry.json"
+    },
+    {
+      "model_id": "LOF",
+      "identity": "scikit-learn LocalOutlierFactor novelty mode",
+      "fixed_configuration_grid": [
+        {
+          "n_neighbors": 5
+        },
+        {
+          "n_neighbors": 10
+        },
+        {
+          "n_neighbors": 20
+        }
+      ],
+      "shared_parameters": {
+        "metric": "minkowski",
+        "p": 2,
+        "algorithm": "auto",
+        "leaf_size": 30,
+        "contamination": "auto",
+        "n_jobs": 1,
+        "novelty": true
+      },
+      "fit_policy": "reference objects only; evaluation excluded",
+      "score": "-score_samples(X_evaluation); reference diagnostic -negative_outlier_factor_",
+      "orientation": "HIGHER_IS_MORE_ANOMALOUS",
+      "selection_boundary": "No best neighborhood selected; fixed sensitivity grid.",
+      "authority": "outputs/experiments/lof/stage_17_1/local_outlier_factor_configuration_registry.json"
+    },
+    {
+      "model_id": "AE",
+      "identity": "PyTorch symmetric fully connected autoencoder",
+      "architecture": "D-H-Z-H-D; ReLU hidden; linear latent/output; H=max(Z+1,min(8,ceil(sqrt(D)/2)))",
+      "fixed_configuration_grid": [
+        {
+          "latent_dimension": 2
+        },
+        {
+          "latent_dimension": 4
+        },
+        {
+          "latent_dimension": 8
+        }
+      ],
+      "training": {
+        "optimizer": "Adam",
+        "learning_rate": 0.001,
+        "loss": "MSE",
+        "epochs": 100,
+        "batch": "full 26-object reference batch",
+        "device": "CPU",
+        "dtype": "float32",
+        "deterministic_algorithms": true,
+        "replications": 3,
+        "early_stopping": false,
+        "validation_split": false
+      },
+      "score": "mean featurewise squared reconstruction error",
+      "orientation": "HIGHER_IS_MORE_ANOMALOUS",
+      "selection_boundary": "No best latent dimension selected; fixed sensitivity grid.",
+      "authority": "outputs/experiments/autoencoder/stage_18_1/autoencoder_training_contract.json"
+    }
+  ],
+  "seed_policy": "root seed 42; SHA-256-derived child seed from model/view/preprocessing/split/configuration/replication identity"
+}

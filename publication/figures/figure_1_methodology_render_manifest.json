@@ -1,0 +1,80 @@
+{
+  "artifact_type": "publication_methodology_figure_render_manifest",
+  "manuscript_figure": "Figure 1",
+  "selected_object": "EPIC 60018752",
+  "canonical_object_id": "object:epic:60018752",
+  "selection_independent_of_anomaly_rank": true,
+  "scientific_recomputation_performed": false,
+  "source_payload_hashes": {
+    "methodology_figure_payload.json": "f729a2b00bdc2b00e2b19d6342647742990b7d53a68c6270abbc64c761b430b5",
+    "methodology_figure_lightcurve.csv": "0823867664e01e4a0a25e7e23030c082717eeed5e152e33311b27944dfd68587",
+    "methodology_figure_periodogram.csv": "14e579b90099b6b38be01d514a1e396939c0341635210bae259c76ccc0d0174d",
+    "methodology_figure_peaks.csv": "3928a2dec0e929f2d4115033e92a5c178a9f0f8e666338572215dfe522696f4e",
+    "methodology_figure_graph_nodes.csv": "c198c715d753994c17e6007231bb99dcbeb4f750a0d5349a27b94d168b4f4d9f",
+    "methodology_figure_graph_edges.csv": "a044a17a8718bf1af0a484426c74963f20cfb3d35a39efd5848667fd13d6f4a8"
+  },
+  "figure_dimensions": {
+    "width_mm": 180,
+    "height_mm": 125,
+    "width_in": 7.086614173228347,
+    "height_in": 4.921259842519685
+  },
+  "font": {
+    "family": "DejaVu Sans",
+    "minimum_effective_point_size": 5.1,
+    "main_text_target_pt": "7-9"
+  },
+  "layout_seed": null,
+  "layout_seed_reason": "Persisted deterministic frequency/log-power coordinates; no stochastic layout",
+  "graph_display_policy": "frequency_logpower_coordinates_v1; deterministic; no random seed; no community semantics; persisted display_in_panel flags from Stage 22.14",
+  "full_graph": {
+    "nodes": 89,
+    "projected_edges": 17521
+  },
+  "displayed_graph": {
+    "nodes": 12,
+    "edges": 6
+  },
+  "relation_types_displayed": [
+    "DIFFERENCE_COMBINATION",
+    "HARMONIC",
+    "RATIONAL",
+    "SIDEBAND_PAIR",
+    "SUBHARMONIC",
+    "SUM_COMBINATION"
+  ],
+  "contract": {
+    "PISD": 42,
+    "Graph-Core": 30,
+    "Graph-Extended": 36,
+    "Graph-All": 66,
+    "views": 7,
+    "PRIMARY": "PISD_PLUS_GRAPH_ALL",
+    "objects": 33,
+    "holdouts": 30,
+    "reference": 26,
+    "evaluation": 7,
+    "detectors": [
+      "IF",
+      "LOF",
+      "AE"
+    ],
+    "evidence_freeze_displayed": true
+  },
+  "outputs": {
+    "figure_1_methodology.pdf": {
+      "sha256": "8623766364e2b0c35e102273354c130299accb3afe5e908850a22bdc19278fb7",
+      "size_bytes": 51741
+    },
+    "figure_1_methodology.svg": {
+      "sha256": "cae5d87ff1ad5fbfea2f3296f198fd0c980fda2f9f8985463861ec11a7ac02a3",
+      "size_bytes": 163335
+    },
+    "figure_1_methodology.png": {
+      "sha256": "b5befd0a41358d5866ad6b51520021443d02234a6f0527795703b301707bd65a",
+      "size_bytes": 1074369
+    }
+  },
+  "frozen_result_figures_modified": false,
+  "public_release_modified": false
+}

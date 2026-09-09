@@ -1,0 +1,6 @@
+scenario_id,comparison,spearman_rho,kendall_tau,mean_absolute_rank_displacement,maximum_absolute_rank_displacement,comparison_definition
+MEDIAN_VS_MEAN,Median vs mean,0.992971901452473,0.9520153550863725,0.9090909090909091,3,Frozen named comparison; descriptive rank concordance and displacement only.
+PRIMARY_VS_FULL,PRIMARY vs FULL,0.9084672148610509,0.7512011150888909,3.4242424242424243,8,Frozen named comparison; descriptive rank concordance and displacement only.
+IF_ONLY_PERTURBATION,IF,0.9995818663704296,0.9952194120982412,0.15151515151515152,1,Frozen one-model perturbation; descriptive sensitivity of the consensus ranking.
+LOF_ONLY_PERTURBATION,LOF,0.9518909102481282,0.8395777168640545,2.3333333333333335,7,Frozen one-model perturbation; descriptive sensitivity of the consensus ranking.
+AE_ONLY_PERTURBATION,AE,0.9614904361634342,0.8676526945638056,1.7272727272727273,9,Frozen one-model perturbation; descriptive sensitivity of the consensus ranking.

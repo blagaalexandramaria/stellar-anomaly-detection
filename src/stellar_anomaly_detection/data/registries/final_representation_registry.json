@@ -1,0 +1,159 @@
+{
+  "artifact_type": "final_representation_registry",
+  "representation_count": 7,
+  "records": [
+    {
+      "canonical_id": "PISD_ONLY",
+      "components": [
+        "PISD"
+      ],
+      "dimensionality": 42,
+      "feature_ordering_authority": "outputs/pisd_descriptor_contract/pisd_feature_contract_registry.json",
+      "raw_matrix_processing": "Raw feature view; preprocessing policy applied within each reference partition",
+      "preprocessing_policies": [
+        "RAW_V1",
+        "STANDARD_SCALE_V1",
+        "ROBUST_SCALE_V1"
+      ],
+      "evaluated_models": [
+        "IF",
+        "LOF",
+        "AE"
+      ],
+      "analysis_status": "ABLATION",
+      "scientific_interpretation_boundary": "Representation-dependent ranking concordance only; not accuracy, performance, or superiority."
+    },
+    {
+      "canonical_id": "GRAPH_CORE_ONLY",
+      "components": [
+        "GRAPH_CORE"
+      ],
+      "dimensionality": 30,
+      "feature_ordering_authority": "outputs/k2_e2_multiview_dataset/dataset_feature_registry.json",
+      "raw_matrix_processing": "Raw feature view; preprocessing policy applied within each reference partition",
+      "preprocessing_policies": [
+        "RAW_V1",
+        "STANDARD_SCALE_V1",
+        "ROBUST_SCALE_V1"
+      ],
+      "evaluated_models": [
+        "IF",
+        "LOF",
+        "AE"
+      ],
+      "analysis_status": "ABLATION",
+      "scientific_interpretation_boundary": "Representation-dependent ranking concordance only; not accuracy, performance, or superiority."
+    },
+    {
+      "canonical_id": "GRAPH_EXTENDED_ONLY",
+      "components": [
+        "GRAPH_EXTENDED"
+      ],
+      "dimensionality": 36,
+      "feature_ordering_authority": "outputs/k2_e2_multiview_dataset/dataset_feature_registry.json",
+      "raw_matrix_processing": "Raw feature view; preprocessing policy applied within each reference partition",
+      "preprocessing_policies": [
+        "RAW_V1",
+        "STANDARD_SCALE_V1",
+        "ROBUST_SCALE_V1"
+      ],
+      "evaluated_models": [
+        "IF",
+        "LOF",
+        "AE"
+      ],
+      "analysis_status": "ABLATION",
+      "scientific_interpretation_boundary": "Representation-dependent ranking concordance only; not accuracy, performance, or superiority."
+    },
+    {
+      "canonical_id": "GRAPH_ALL",
+      "components": [
+        "GRAPH_CORE",
+        "GRAPH_EXTENDED"
+      ],
+      "dimensionality": 66,
+      "feature_ordering_authority": "outputs/k2_e2_multiview_dataset/dataset_feature_registry.json",
+      "raw_matrix_processing": "Raw feature view; preprocessing policy applied within each reference partition",
+      "preprocessing_policies": [
+        "RAW_V1",
+        "STANDARD_SCALE_V1",
+        "ROBUST_SCALE_V1"
+      ],
+      "evaluated_models": [
+        "IF",
+        "LOF",
+        "AE"
+      ],
+      "analysis_status": "ABLATION",
+      "scientific_interpretation_boundary": "Representation-dependent ranking concordance only; not accuracy, performance, or superiority."
+    },
+    {
+      "canonical_id": "PISD_PLUS_GRAPH_CORE",
+      "components": [
+        "PISD",
+        "GRAPH_CORE"
+      ],
+      "dimensionality": 72,
+      "feature_ordering_authority": "outputs/k2_e2_multiview_dataset/dataset_feature_registry.json",
+      "raw_matrix_processing": "Raw feature view; preprocessing policy applied within each reference partition",
+      "preprocessing_policies": [
+        "RAW_V1",
+        "STANDARD_SCALE_V1",
+        "ROBUST_SCALE_V1"
+      ],
+      "evaluated_models": [
+        "IF",
+        "LOF",
+        "AE"
+      ],
+      "analysis_status": "ABLATION",
+      "scientific_interpretation_boundary": "Representation-dependent ranking concordance only; not accuracy, performance, or superiority."
+    },
+    {
+      "canonical_id": "PISD_PLUS_GRAPH_EXTENDED",
+      "components": [
+        "PISD",
+        "GRAPH_EXTENDED"
+      ],
+      "dimensionality": 78,
+      "feature_ordering_authority": "outputs/k2_e2_multiview_dataset/dataset_feature_registry.json",
+      "raw_matrix_processing": "Raw feature view; preprocessing policy applied within each reference partition",
+      "preprocessing_policies": [
+        "RAW_V1",
+        "STANDARD_SCALE_V1",
+        "ROBUST_SCALE_V1"
+      ],
+      "evaluated_models": [
+        "IF",
+        "LOF",
+        "AE"
+      ],
+      "analysis_status": "ABLATION",
+      "scientific_interpretation_boundary": "Representation-dependent ranking concordance only; not accuracy, performance, or superiority."
+    },
+    {
+      "canonical_id": "PISD_PLUS_GRAPH_ALL",
+      "components": [
+        "PISD",
+        "GRAPH_CORE",
+        "GRAPH_EXTENDED"
+      ],
+      "dimensionality": 108,
+      "feature_ordering_authority": "outputs/k2_e2_multiview_dataset/dataset_feature_registry.json",
+      "raw_matrix_processing": "Raw feature view; preprocessing policy applied within each reference partition",
+      "preprocessing_policies": [
+        "RAW_V1",
+        "STANDARD_SCALE_V1",
+        "ROBUST_SCALE_V1"
+      ],
+      "evaluated_models": [
+        "IF",
+        "LOF",
+        "AE"
+      ],
+      "analysis_status": "PRIMARY",
+      "scientific_interpretation_boundary": "Representation-dependent ranking concordance only; not accuracy, performance, or superiority."
+    }
+  ],
+  "authority": "outputs/k2_e2_multiview_dataset/raw_multiview_dataset_manifest.json"
+}

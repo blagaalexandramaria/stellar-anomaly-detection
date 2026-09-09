@@ -1,0 +1,11 @@
+{
+  "title":"Representative scientific evidence cases",
+  "rows":[
+    {"object":"EPIC 60018238","case_role":"CASE_A","if_rank":3,"lof_rank":1,"ae_rank":1,"consensus_rank":1,"inspection_role":"ROBUST_HIGH_CONSENSUS","primary_interpretation_boundary":"Selected robust-high-consensus inspection candidate; not a confirmed anomaly"},
+    {"object":"EPIC 60018678","case_role":"CASE_C","if_rank":2,"lof_rank":3,"ae_rank":4,"consensus_rank":3,"inspection_role":"ROBUST_HIGH_CONSENSUS","primary_interpretation_boundary":"Observational context requires caution; not a confirmed anomaly"},
+    {"object":"EPIC 60042292","case_role":"CASE_D","if_rank":1,"lof_rank":2,"ae_rank":5,"consensus_rank":2,"inspection_role":"ROBUST_HIGH_CONSENSUS","primary_interpretation_boundary":"External identity is ambiguous; identity resolution required"},
+    {"object":"EPIC 60018742","case_role":"CASE_B","if_rank":20,"lof_rank":13,"ae_rank":8,"consensus_rank":13,"inspection_role":"DISAGREEMENT_CONTROL","primary_interpretation_boundary":"Model-sensitivity representative case; not an anomaly classification"}
+  ],
+  "source":"outputs/results/stage_21_5_final_results_freeze/registries/final_candidate_evidence_registry.json",
+  "boundary":"Ranks and inspection roles are not binary anomaly classifications."
+}

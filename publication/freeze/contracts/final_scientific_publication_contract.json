@@ -1,0 +1,25 @@
+{
+  "artifact_type":"final_scientific_publication_contract",
+  "stage":"21.9",
+  "status":"SCIENTIFIC_RESULTS_PIPELINE_FROZEN",
+  "authority_precedence":["Stage 21.9 final scientific publication freeze","Stage 21.8 supplementary publication package","Stage 21.7 manuscript technical completeness","Stage 21.6 publication Results package","Stage 21.5 final Results freeze","Earlier frozen stages for provenance only"],
+  "authoritative_components":{
+    "main_figures":"registries/final_publication_figure_registry.json",
+    "main_tables":"registries/final_publication_table_registry.json",
+    "supplementary_material":"registries/final_supplementary_registry.json",
+    "numerical_results":"registries/final_numerical_results_registry.json",
+    "claims":"registries/final_claim_evidence_registry.json",
+    "terminology":"registries/publication_terminology_registry.json"
+  },
+  "frozen_scientific_system":{
+    "representations":["PISD_ONLY","GRAPH_CORE_ONLY","GRAPH_EXTENDED_ONLY","GRAPH_ALL","PISD_PLUS_GRAPH_CORE","PISD_PLUS_GRAPH_EXTENDED","PISD_PLUS_GRAPH_ALL"],
+    "dimensions":[42,30,36,66,72,78,108],
+    "models":["Isolation Forest (IF)","Local Outlier Factor (LOF)","Autoencoder (AE)"],
+    "evaluation_scope":["representation-dependent ranking behaviour","ranking robustness","cross-model agreement","predefined top-k overlap","rank comparison","representative candidate inspection"],
+    "ground_truth_status":"NO_AUTHORITATIVE_GROUND_TRUTH_ANOMALY_LABELS"
+  },
+  "candidate_language":{"EPIC 60018238":"selected robust-high-consensus inspection candidate","EPIC 60018678":"selected robust-high-consensus inspection candidate","EPIC 60042292":"selected robust-high-consensus inspection candidate","EPIC 60018742":"representative model-sensitivity case"},
+  "graph_interpretation":{"supported":["spectral relational context","retained-peak topology","relationship-type structure","operational-reference-centred local relational neighbourhoods"],"community_status":"COMMUNITIES_NOT_SUPPORTED_FOR_PUBLICATION_COLOR_ENCODING","prohibited":["robust graph communities","astrophysical clusters","new centralities","new graph anomaly scores","unsupported common-neighbour claims across objects"]},
+  "publication_exclusions":["debugging artifacts","mutation audits","fingerprints as scientific content","exploratory failed branches","community-detection diagnostics","intermediate visualization attempts","obsolete figure versions","stage bureaucracy"],
+  "closure_rule":"After Stage 21.9 the scientific/results pipeline is closed unless an actual scientific error is discovered."
+}

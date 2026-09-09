@@ -1,0 +1,1 @@
+Table 1. Cross-model rank agreement and robustness for the 33-object cohort. Section A reports pairwise Spearman ρ and Kendall τ, with global Kendall W=0.912953. Section B reports concordance and mean and maximum absolute ordinal-rank displacement for the five predefined robustness comparisons.

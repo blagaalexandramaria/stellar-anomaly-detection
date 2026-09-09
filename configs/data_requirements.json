@@ -1,0 +1,8 @@
+{
+  "artifact_type":"public_data_requirements",
+  "level_1":{"status":"OPERATIONAL_WITH_SYNTHETIC_DEMO","bundled_input":"examples/data/synthetic_demo_light_curve.csv","accepted_input":"CSV with time, flux, and optional flux_error columns","synthetic_demo_is_observational_data":false,"synthetic_demo_is_publication_evidence":false},
+  "level_3":{"status":"CONDITIONAL_ON_SOURCE_DATA","source":"Konkoly K2 Campaign 2 RR Lyrae pilot population","raw_observational_corpus_bundled":false,"automatic_download":false,"required_inputs":["user-supplied finite time-series observations","stable object identifiers","frozen operational spectral interpretation context","or seven aligned representation matrices for results reproduction"]},
+  "real_observational_data_redistributed":false,
+  "synthetic_demo_authorized":true,
+  "legal_claim":"The repository distribution decision is not a legal determination that observational-data redistribution is forbidden."
+}

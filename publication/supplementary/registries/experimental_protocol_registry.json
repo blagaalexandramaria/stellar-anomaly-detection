@@ -1,0 +1,39 @@
+{
+  "artifact_type": "experimental_protocol_registry",
+  "population": {
+    "objects": 33,
+    "observations": 33,
+    "source_id": "konkoly_k2_e2_rr_lyrae",
+    "independence_unit": "astronomical_object"
+  },
+  "design_expression": "model x representation x preprocessing/configuration x object-level split x replication (where applicable) -> experiment -> anomaly score -> rank",
+  "splits": {
+    "protocol": "OBJECT_LEVEL_REPEATED_HOLDOUT_V1",
+    "count": 30,
+    "evaluation_fraction": 0.2,
+    "approximate_reference_objects": 26,
+    "approximate_evaluation_objects": 7,
+    "group_key": "canonical_object_id",
+    "external_validation": "deferred"
+  },
+  "seed_policy": {
+    "root_seed": 42,
+    "policy": "SHA256_EXPERIMENT_CHILD_SEED_V1"
+  },
+  "rank": {
+    "orientation": "rank 1 / normalized rank 1.0 is most unusual",
+    "normalized_formula": "1.0 if n==1 else 1.0-(rank-1)/(n-1)"
+  },
+  "consensus": {
+    "primary_rule": "median normalized rank",
+    "agreement_axis": "1-normalized_rank_range",
+    "boundary": "CONSENSUS_RANK != ANOMALY_CLASSIFICATION"
+  },
+  "configuration_boundary": "Fixed sensitivity grids were not optimized against evaluation objects.",
+  "reproducibility_assumptions": [
+    "frozen input matrices and row ordering",
+    "reference-only preprocessing fit",
+    "deterministic split and child-seed policies",
+    "library versions recorded in execution artifacts"
+  ]
+}

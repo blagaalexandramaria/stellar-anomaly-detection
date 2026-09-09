@@ -1,0 +1,14 @@
+\begin{longtable}{lllllll}
+\caption{Frozen representation views}\\
+\hline
+view\_id & pisd\_included & graph\_core\_included & graph\_extended\_included & feature\_count & scientific\_role & primary\_vs\_ablation\_status \\
+\hline
+PISD\_ONLY & true & false & false & 42 & PISD-only representation & ABLATION \\
+GRAPH\_CORE\_ONLY & false & true & false & 30 & Graph-Core-only representation & ABLATION \\
+GRAPH\_EXTENDED\_ONLY & false & false & true & 36 & Graph-Extended-only representation & ABLATION \\
+GRAPH\_ALL & false & true & true & 66 & Combined graph representation & ABLATION \\
+PISD\_PLUS\_GRAPH\_CORE & true & true & false & 72 & PISD plus Graph-Core representation & ABLATION \\
+PISD\_PLUS\_GRAPH\_EXTENDED & true & false & true & 78 & PISD plus Graph-Extended representation & ABLATION \\
+PISD\_PLUS\_GRAPH\_ALL & true & true & true & 108 & Complete frozen multiview representation & PRIMARY \\
+\hline
+\end{longtable}

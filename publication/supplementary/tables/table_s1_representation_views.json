@@ -1,0 +1,72 @@
+{
+  "title": "Frozen representation-view registry",
+  "rows": [
+    {
+      "view_id": "PISD_ONLY",
+      "pisd_included": true,
+      "graph_core_included": false,
+      "graph_extended_included": false,
+      "feature_count": 42,
+      "scientific_role": "PISD-only representation",
+      "primary_vs_ablation_status": "ABLATION"
+    },
+    {
+      "view_id": "GRAPH_CORE_ONLY",
+      "pisd_included": false,
+      "graph_core_included": true,
+      "graph_extended_included": false,
+      "feature_count": 30,
+      "scientific_role": "Graph-Core-only representation",
+      "primary_vs_ablation_status": "ABLATION"
+    },
+    {
+      "view_id": "GRAPH_EXTENDED_ONLY",
+      "pisd_included": false,
+      "graph_core_included": false,
+      "graph_extended_included": true,
+      "feature_count": 36,
+      "scientific_role": "Graph-Extended-only representation",
+      "primary_vs_ablation_status": "ABLATION"
+    },
+    {
+      "view_id": "GRAPH_ALL",
+      "pisd_included": false,
+      "graph_core_included": true,
+      "graph_extended_included": true,
+      "feature_count": 66,
+      "scientific_role": "Combined graph representation",
+      "primary_vs_ablation_status": "ABLATION"
+    },
+    {
+      "view_id": "PISD_PLUS_GRAPH_CORE",
+      "pisd_included": true,
+      "graph_core_included": true,
+      "graph_extended_included": false,
+      "feature_count": 72,
+      "scientific_role": "PISD plus Graph-Core representation",
+      "primary_vs_ablation_status": "ABLATION"
+    },
+    {
+      "view_id": "PISD_PLUS_GRAPH_EXTENDED",
+      "pisd_included": true,
+      "graph_core_included": false,
+      "graph_extended_included": true,
+      "feature_count": 78,
+      "scientific_role": "PISD plus Graph-Extended representation",
+      "primary_vs_ablation_status": "ABLATION"
+    },
+    {
+      "view_id": "PISD_PLUS_GRAPH_ALL",
+      "pisd_included": true,
+      "graph_core_included": true,
+      "graph_extended_included": true,
+      "feature_count": 108,
+      "scientific_role": "Complete frozen multiview representation",
+      "primary_vs_ablation_status": "PRIMARY"
+    }
+  ],
+  "source": "outputs/k2_e2_multiview_dataset/raw_multiview_dataset_manifest.json",
+  "boundary": "View definitions support representation-dependent analysis and do not imply representation superiority.",
+  "final_table_id": "Table S1",
+  "inherited_from": "Stage 21.6"
+}

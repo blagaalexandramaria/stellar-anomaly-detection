@@ -1,0 +1,35 @@
+{
+  "mode": "render",
+  "figures": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "files": [
+    "figure_1_methodology.pdf",
+    "figure_1_methodology.svg",
+    "figure_1_methodology.png",
+    "figure_02.pdf",
+    "figure_02.svg",
+    "figure_02.png",
+    "figure_03.pdf",
+    "figure_03.svg",
+    "figure_03.png",
+    "figure_04.pdf",
+    "figure_04.svg",
+    "figure_04.png",
+    "figure_05.pdf",
+    "figure_05.svg",
+    "figure_05.png",
+    "figure_06.pdf",
+    "figure_06.svg",
+    "figure_06.png"
+  ],
+  "figure_1_source": "frozen public methodology payload",
+  "figure_2_5_source": "frozen public JSON payloads",
+  "figure_6_source": "accepted frozen graph-render artifact",
+  "community_detection_rerun": false
+}

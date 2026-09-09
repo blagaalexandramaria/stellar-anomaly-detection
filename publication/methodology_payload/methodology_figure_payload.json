@@ -1,0 +1,173 @@
+{
+  "payload_version": "methodology_figure_payload_v1",
+  "scientific_recomputation_performed": false,
+  "selection_rule": {
+    "version": "methodology_visual_suitability_v1",
+    "eligibility": "valid light curve, persisted periodogram, valid graph, canonical reference, dominant peak",
+    "score": "30 if not Results candidate + 10 validity + 5 reference + 5 dominant + 5 per represented relation type + peak adequacy (20 for 20-80, 10 for 81-120, else 0) + 20*(max_edges-edge_count)/(max_edges-min_edges)",
+    "tie_break": "descending score, ascending edge_count, ascending canonical_object_id",
+    "prohibited_inputs": [
+      "anomaly score",
+      "anomaly rank",
+      "consensus rank",
+      "astrophysical unusualness",
+      "candidate category except preference penalty"
+    ]
+  },
+  "selection_explicitly_excludes_anomaly_rank": true,
+  "selected_object": {
+    "canonical_object_id": "object:epic:60018752",
+    "observation_id": "observation:4a4591056283a9debf557521",
+    "number_of_photometric_samples": 433,
+    "time_baseline": 8.97035260000007,
+    "number_of_retained_peaks": 89,
+    "number_of_graph_nodes": 89,
+    "number_of_graph_edges": 17521,
+    "number_of_analytical_relationships": 9515,
+    "has_HARMONIC": "YES",
+    "has_SUBHARMONIC": "YES",
+    "has_RATIONAL": "YES",
+    "has_SUM_COMBINATION": "YES",
+    "has_DIFFERENCE_COMBINATION": "YES",
+    "has_SIDEBAND_PAIR": "YES",
+    "canonical_reference_available": "YES",
+    "dominant_peak_available": "YES",
+    "number_of_isolated_nodes": 0,
+    "number_of_connected_components": 1,
+    "candidate_in_results": "NO",
+    "visualization_score": 110.0,
+    "visualization_rank": 1
+  },
+  "top_three": [
+    {
+      "canonical_object_id": "object:epic:60018752",
+      "why_visually_suitable": "Complete frozen inputs; 89 peaks; 6 relation types; deterministic 12-node display subset; not a Results candidate",
+      "potential_visual_problem": "Full graph has 17521 projected edges and must be visually subsetted without changing the preserved graph",
+      "results_candidate": "NO",
+      "score": 110.0
+    },
+    {
+      "canonical_object_id": "object:epic:60018737",
+      "why_visually_suitable": "Complete frozen inputs; 94 peaks; 6 relation types; deterministic 12-node display subset; not a Results candidate",
+      "potential_visual_problem": "Full graph has 19624 projected edges and must be visually subsetted without changing the preserved graph",
+      "results_candidate": "NO",
+      "score": 108.40778316
+    },
+    {
+      "canonical_object_id": "object:epic:60018755",
+      "why_visually_suitable": "Complete frozen inputs; 93 peaks; 6 relation types; deterministic 12-node display subset; not a Results candidate",
+      "potential_visual_problem": "Full graph has 19828 projected edges and must be visually subsetted without changing the preserved graph",
+      "results_candidate": "NO",
+      "score": 108.25333131
+    }
+  ],
+  "lightcurve": {
+    "csv": "methodology_figure_lightcurve.csv",
+    "samples": 433,
+    "provenance": "outputs/k2_e2_photometric_adapter/k2_e2_photometric_transformation_manifest.json",
+    "frozen_lightcurve_fingerprint": "63aa2b40e4642c87b82dade137f3bb2ec8099499e11838c70bff7efd55aa2a03",
+    "frozen_flux_runtime_fingerprint": "d3ee46714517ea0c9ff9c42be40516d7b561660b30f51b209066b5ba554be65f",
+    "materialization_note": "Values serialized from authoritative raw rows using the already-frozen Pogson transform solely to recover the unpersisted runtime vector; exact frozen runtime semantic fingerprint verified; no spectral or anomaly analysis executed"
+  },
+  "periodogram": {
+    "csv": "methodology_figure_periodogram.csv",
+    "samples": 898,
+    "frequency_npy": "outputs/k2_e2_operational_spectral_arrays/observation_observation:4a4591056283a9debf557521/frequency.npy",
+    "power_npy": "outputs/k2_e2_operational_spectral_arrays/observation_observation:4a4591056283a9debf557521/power.npy",
+    "dominant_frequency": 1.6821750714681922,
+    "dominant_power": 0.6939659103903993,
+    "false_alarm_method": "baluev",
+    "false_alarm_threshold_alpha": 0.01,
+    "false_alarm_level": 0.05002431940245591,
+    "false_alarm_probability": 1.1245063205655399e-107,
+    "frozen_execution_fingerprint": "8c5304128770fdeaa9cc80bb7bde556a0cb9a553066b7c08305ffe2b19323865"
+  },
+  "peaks": {
+    "csv": "methodology_figure_peaks.csv",
+    "count": 89,
+    "reference_peak_id": "retained_peak:observation:4a4591056283a9debf557521:0020",
+    "dominant_peak_id": "retained_peak:observation:4a4591056283a9debf557521:0001",
+    "source": "outputs/k2_e2_periodogram_peaks/retained_peak_registry.json"
+  },
+  "graph": {
+    "nodes_csv": "methodology_figure_graph_nodes.csv",
+    "edges_csv": "methodology_figure_graph_edges.csv",
+    "node_count": 89,
+    "edge_count": 17521,
+    "analytical_relationship_count": 9515,
+    "relation_types": [
+      "DIFFERENCE_COMBINATION",
+      "HARMONIC",
+      "RATIONAL",
+      "SIDEBAND_PAIR",
+      "SUBHARMONIC",
+      "SUM_COMBINATION"
+    ],
+    "display_node_count": 12,
+    "display_edge_count": 6,
+    "layout_policy": "frequency_logpower_coordinates_v1; deterministic; no random seed; no community semantics",
+    "source_directory": "outputs/k2_e2_spectral_graphs/observations/observation_4a4591056283a9debf557521"
+  },
+  "pisd_families": [
+    {
+      "name": "Spectral Strength",
+      "features": 5
+    },
+    {
+      "name": "Spectral Morphology",
+      "features": 13
+    },
+    {
+      "name": "Harmonic Structure",
+      "features": 10
+    },
+    {
+      "name": "Spectral Complexity",
+      "features": 7
+    },
+    {
+      "name": "Spectral Stability",
+      "features": 7
+    }
+  ],
+  "views": {
+    "PISD_ONLY": 42,
+    "GRAPH_CORE_ONLY": 30,
+    "GRAPH_EXTENDED_ONLY": 36,
+    "GRAPH_ALL": 66,
+    "PISD_PLUS_GRAPH_CORE": 72,
+    "PISD_PLUS_GRAPH_EXTENDED": 78,
+    "PISD_PLUS_GRAPH_ALL": 108,
+    "PRIMARY": "PISD_PLUS_GRAPH_ALL"
+  },
+  "experiment": {
+    "objects": 33,
+    "holdouts": 30,
+    "reference_per_split": 26,
+    "evaluation_per_split": 7,
+    "preprocessing": [
+      "RAW_V1",
+      "STANDARD_SCALE_V1",
+      "ROBUST_SCALE_V1"
+    ],
+    "detectors": [
+      "Isolation Forest",
+      "Local Outlier Factor",
+      "Autoencoder"
+    ],
+    "autoencoder": "D-H-Z-H-D"
+  },
+  "evidence_flow": [
+    "model-specific anomaly scores",
+    "ordinal ranks",
+    "normalized ranks",
+    "cross-model agreement",
+    "median normalized-rank consensus",
+    "robustness",
+    "frozen inspection cohort",
+    "internal scientific inspection",
+    "EVIDENCE FREEZE",
+    "external catalogue/literature context"
+  ],
+  "external_context_cannot_modify_frozen_evidence": true
+}

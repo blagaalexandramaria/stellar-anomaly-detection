@@ -1,0 +1,27 @@
+{
+  "artifact_type":"final_supplementary_registry",
+  "authority":"outputs/results/stage_21_8_publication_supplementary_package/",
+  "supplementary_table_count":5,
+  "tables":[
+    {"table_id":"Table S1","title":"Frozen representation views","paths":{"csv":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s1_representation_views.csv","json":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s1_representation_views.json","latex":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s1_representation_views.tex"}},
+    {"table_id":"Table S2","title":"Complete frozen PRIMARY object rankings","paths":{"csv":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s2_complete_object_rankings.csv","json":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s2_complete_object_rankings.json","latex":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s2_complete_object_rankings.tex"}},
+    {"table_id":"Table S3","title":"Frozen ranking-robustness scenarios","paths":{"csv":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s3_robustness.csv","json":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s3_robustness.json","latex":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s3_robustness.tex"}},
+    {"table_id":"Table S4","title":"Frozen cross-model agreement and predefined top-k overlap","paths":{"csv":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s4_cross_model_agreement.csv","json":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s4_cross_model_agreement.json","latex":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s4_cross_model_agreement.tex"}},
+    {"table_id":"Table S5","title":"Within-model representation-dependent rank concordance","paths":{"csv":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s5_representation_dependence.csv","json":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s5_representation_dependence.json","latex":"outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s5_representation_dependence.tex"}}
+  ],
+  "publication_registries":[
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/pisd_feature_registry.json",
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/graph_feature_registry.json",
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_model_configuration_registry.json",
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_representation_registry.json",
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/representative_case_registry.json"
+  ],
+  "methods_and_handoff":[
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_methods/spectral_representation.md",
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_methods/graph_representation.md",
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_methods/unsupervised_models.md",
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_methods/experimental_protocol.md",
+    "outputs/results/stage_21_8_publication_supplementary_package/handoff/supplementary_material_handoff.md"
+  ],
+  "excluded_from_publication_supplement":["debugging artifacts","mutation audits","fingerprints and hash registries as scientific content","exploratory failed branches","community-detection diagnostics","intermediate visualization attempts","obsolete figure versions","stage-transition bureaucracy"]
+}

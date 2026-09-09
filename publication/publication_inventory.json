@@ -1,0 +1,15 @@
+{
+  "artifact_type": "current_publication_inventory",
+  "figures": [
+    {"figure_id": "Figure 1", "basename": "figure_1_methodology", "caption": "captions/figure_01_caption.txt", "formats": ["pdf", "svg", "png"]},
+    {"figure_id": "Figure 2", "basename": "figure_02", "caption": "captions/figure_02_caption.txt", "formats": ["pdf", "svg", "png"]},
+    {"figure_id": "Figure 3", "basename": "figure_03", "caption": "captions/figure_03_caption.txt", "formats": ["pdf", "svg", "png"]},
+    {"figure_id": "Figure 4", "basename": "figure_04", "caption": "captions/figure_04_caption.txt", "formats": ["pdf", "svg", "png"]},
+    {"figure_id": "Figure 5", "basename": "figure_05", "caption": "captions/figure_05_caption.txt", "formats": ["pdf", "svg", "png"]},
+    {"figure_id": "Figure 6", "basename": "figure_06", "caption": "captions/figure_06_caption.txt", "formats": ["pdf", "svg", "png"]}
+  ],
+  "tables": [
+    {"table_id": "Table 1", "basename": "table_01_cross_model_and_robustness", "caption": "captions/table_01_caption.txt", "formats": ["csv", "json", "tex"]},
+    {"table_id": "Table 2", "basename": "table_02_representative_cases", "caption": "captions/table_02_caption.txt", "formats": ["csv", "json", "tex"]}
+  ]
+}

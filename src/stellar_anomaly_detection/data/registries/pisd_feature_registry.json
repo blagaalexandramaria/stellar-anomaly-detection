@@ -1,0 +1,857 @@
+{
+  "artifact_type": "publication_supplementary_pisd_feature_registry",
+  "descriptor_version": "2.0.0",
+  "feature_count": 42,
+  "family_order": [
+    {
+      "family_id": "spectral_strength",
+      "family_name": "Spectral Strength",
+      "family_order": 1,
+      "feature_count": 5
+    },
+    {
+      "family_id": "spectral_morphology",
+      "family_name": "Spectral Morphology",
+      "family_order": 2,
+      "feature_count": 13
+    },
+    {
+      "family_id": "harmonic_structure",
+      "family_name": "Harmonic Structure",
+      "family_order": 3,
+      "feature_count": 10
+    },
+    {
+      "family_id": "spectral_complexity",
+      "family_name": "Spectral Complexity",
+      "family_order": 4,
+      "feature_count": 7
+    },
+    {
+      "family_id": "spectral_stability",
+      "family_name": "Spectral Stability",
+      "family_order": 5,
+      "feature_count": 7
+    }
+  ],
+  "features": [
+    {
+      "global_order": 1,
+      "feature_id": "maximum_power",
+      "family_id": "spectral_strength",
+      "family_order": 1,
+      "order_within_family": 1,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_strength.SpectralStrength.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 2,
+      "feature_id": "mean_power",
+      "family_id": "spectral_strength",
+      "family_order": 1,
+      "order_within_family": 2,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_strength.SpectralStrength.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 3,
+      "feature_id": "integrated_spectral_power",
+      "family_id": "spectral_strength",
+      "family_order": 1,
+      "order_within_family": 3,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_strength.SpectralStrength.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 4,
+      "feature_id": "robust_spectral_snr",
+      "family_id": "spectral_strength",
+      "family_order": 1,
+      "order_within_family": 4,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_strength.SpectralStrength.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 5,
+      "feature_id": "peak_bin_concentration",
+      "family_id": "spectral_strength",
+      "family_order": 1,
+      "order_within_family": 5,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_strength.SpectralStrength.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 6,
+      "feature_id": "has_peaks",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 1,
+      "output_type": "integer",
+      "unit": "count_or_boolean",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 7,
+      "feature_id": "has_multiple_peaks",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 2,
+      "output_type": "integer",
+      "unit": "count_or_boolean",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 8,
+      "feature_id": "peak_count",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 3,
+      "output_type": "integer",
+      "unit": "count_or_boolean",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 9,
+      "feature_id": "peak_density",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 4,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 10,
+      "feature_id": "average_peak_width",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 5,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 11,
+      "feature_id": "maximum_peak_width",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 6,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 12,
+      "feature_id": "peak_width_variability",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 7,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 13,
+      "feature_id": "average_prominence",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 8,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 14,
+      "feature_id": "maximum_prominence",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 9,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 15,
+      "feature_id": "prominence_variability",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 10,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 16,
+      "feature_id": "peak_height_variability",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 11,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 17,
+      "feature_id": "mean_peak_separation",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 12,
+      "output_type": "float",
+      "unit": "frequency",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 18,
+      "feature_id": "peak_separation_variability",
+      "family_id": "spectral_morphology",
+      "family_order": 2,
+      "order_within_family": 13,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_morphology.SpectralMorphology.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 19,
+      "feature_id": "has_harmonic_structure",
+      "family_id": "harmonic_structure",
+      "family_order": 3,
+      "order_within_family": 1,
+      "output_type": "integer",
+      "unit": "count_or_boolean",
+      "required_input_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "frequency_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.harmonic_structure.HarmonicStructure.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 20,
+      "feature_id": "harmonic_count",
+      "family_id": "harmonic_structure",
+      "family_order": 3,
+      "order_within_family": 2,
+      "output_type": "integer",
+      "unit": "count_or_boolean",
+      "required_input_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "frequency_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.harmonic_structure.HarmonicStructure.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 21,
+      "feature_id": "fundamental_frequency",
+      "family_id": "harmonic_structure",
+      "family_order": 3,
+      "order_within_family": 3,
+      "output_type": "float",
+      "unit": "frequency",
+      "required_input_semantics": [
+        "REFERENCE_BASED",
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "frequency_semantics": [
+        "REFERENCE_BASED",
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.harmonic_structure.HarmonicStructure.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 22,
+      "feature_id": "fundamental_power",
+      "family_id": "harmonic_structure",
+      "family_order": 3,
+      "order_within_family": 4,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "REFERENCE_BASED",
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "frequency_semantics": [
+        "REFERENCE_BASED",
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.harmonic_structure.HarmonicStructure.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 23,
+      "feature_id": "fundamental_dominance",
+      "family_id": "harmonic_structure",
+      "family_order": 3,
+      "order_within_family": 5,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "frequency_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.harmonic_structure.HarmonicStructure.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 24,
+      "feature_id": "first_harmonic_ratio",
+      "family_id": "harmonic_structure",
+      "family_order": 3,
+      "order_within_family": 6,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "frequency_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.harmonic_structure.HarmonicStructure.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 25,
+      "feature_id": "strongest_harmonic_ratio",
+      "family_id": "harmonic_structure",
+      "family_order": 3,
+      "order_within_family": 7,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "frequency_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.harmonic_structure.HarmonicStructure.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 26,
+      "feature_id": "harmonic_complexity",
+      "family_id": "harmonic_structure",
+      "family_order": 3,
+      "order_within_family": 8,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "frequency_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.harmonic_structure.HarmonicStructure.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 27,
+      "feature_id": "harmonic_power_fraction",
+      "family_id": "harmonic_structure",
+      "family_order": 3,
+      "order_within_family": 9,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "frequency_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.harmonic_structure.HarmonicStructure.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 28,
+      "feature_id": "mean_harmonic_deviation",
+      "family_id": "harmonic_structure",
+      "family_order": 3,
+      "order_within_family": 10,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "frequency_semantics": [
+        "CANONICAL_HARMONIC_FAMILY"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.harmonic_structure.HarmonicStructure.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 29,
+      "feature_id": "normalized_spectral_entropy",
+      "family_id": "spectral_complexity",
+      "family_order": 4,
+      "order_within_family": 1,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_complexity.SpectralComplexity.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 30,
+      "feature_id": "spectral_gini_index",
+      "family_id": "spectral_complexity",
+      "family_order": 4,
+      "order_within_family": 2,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_complexity.SpectralComplexity.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 31,
+      "feature_id": "normalized_power_variance",
+      "family_id": "spectral_complexity",
+      "family_order": 4,
+      "order_within_family": 3,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_complexity.SpectralComplexity.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 32,
+      "feature_id": "power_skewness",
+      "family_id": "spectral_complexity",
+      "family_order": 4,
+      "order_within_family": 4,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_complexity.SpectralComplexity.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 33,
+      "feature_id": "power_excess_kurtosis",
+      "family_id": "spectral_complexity",
+      "family_order": 4,
+      "order_within_family": 5,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_complexity.SpectralComplexity.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 34,
+      "feature_id": "robust_power_dispersion",
+      "family_id": "spectral_complexity",
+      "family_order": 4,
+      "order_within_family": 6,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_complexity.SpectralComplexity.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 35,
+      "feature_id": "top_power_concentration",
+      "family_id": "spectral_complexity",
+      "family_order": 4,
+      "order_within_family": 7,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_complexity.SpectralComplexity.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 36,
+      "feature_id": "median_profile_similarity",
+      "family_id": "spectral_stability",
+      "family_order": 5,
+      "order_within_family": 1,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_stability.SpectralStability.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 37,
+      "feature_id": "profile_similarity_variability",
+      "family_id": "spectral_stability",
+      "family_order": 5,
+      "order_within_family": 2,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "FULL_SPECTRUM"
+      ],
+      "frequency_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "FULL_SPECTRUM"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_stability.SpectralStability.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 38,
+      "feature_id": "dominant_peak_retention_rate",
+      "family_id": "spectral_stability",
+      "family_order": 5,
+      "order_within_family": 3,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "DOMINANT_BASED"
+      ],
+      "frequency_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "DOMINANT_BASED"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_stability.SpectralStability.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 39,
+      "feature_id": "median_normalized_frequency_drift",
+      "family_id": "spectral_stability",
+      "family_order": 5,
+      "order_within_family": 4,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "DOMINANT_BASED"
+      ],
+      "frequency_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "DOMINANT_BASED"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_stability.SpectralStability.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 40,
+      "feature_id": "p90_normalized_frequency_drift",
+      "family_id": "spectral_stability",
+      "family_order": 5,
+      "order_within_family": 5,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "DOMINANT_BASED"
+      ],
+      "frequency_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "DOMINANT_BASED"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_stability.SpectralStability.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 41,
+      "feature_id": "dominant_power_stability",
+      "family_id": "spectral_stability",
+      "family_order": 5,
+      "order_within_family": 6,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "DOMINANT_BASED"
+      ],
+      "frequency_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "DOMINANT_BASED"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_stability.SpectralStability.extract",
+      "status": "ACTIVE"
+    },
+    {
+      "global_order": 42,
+      "feature_id": "dominant_power_log_variability",
+      "family_id": "spectral_stability",
+      "family_order": 5,
+      "order_within_family": 7,
+      "output_type": "float",
+      "unit": "dimensionless_or_source_power_unit",
+      "required_input_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "DOMINANT_BASED"
+      ],
+      "frequency_semantics": [
+        "MONTE_CARLO_STABILITY",
+        "DOMINANT_BASED"
+      ],
+      "nullable": false,
+      "undefined_conditions": [],
+      "implementation_source": "spectral_descriptor.spectral_stability.SpectralStability.extract",
+      "status": "ACTIVE"
+    }
+  ],
+  "feature_ordering_authority": "outputs/pisd_descriptor_contract/pisd_feature_contract_registry.json",
+  "processing_boundary": "The frozen PISD matrix is raw and unnormalized; model preprocessing is fit on reference partitions only. No feature definition or equation was invented here."
+}

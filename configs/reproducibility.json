@@ -1,0 +1,8 @@
+{
+  "artifact_type":"public_reproducibility_configuration",
+  "levels":{"1":"SYNTHETIC_QUICK_START","2":"FROZEN_PUBLICATION_ARTIFACTS","3":"CONDITIONAL_FULL_RECOMPUTATION"},
+  "authorities":{"experimental_protocol":"publication/supplementary/registries/experimental_protocol_registry.json","models":"publication/supplementary/registries/final_model_configuration_registry.json","representations":"publication/supplementary/registries/final_representation_registry.json","numerical_results":"publication/freeze/registries/final_numerical_results_registry.json"},
+  "inventories":{"main_figures":6,"main_tables":2,"supplementary_tables":5},
+  "level_1_data_status":"OPERATIONAL_WITH_SYNTHETIC_DEMO",
+  "level_3_data_status":"CONDITIONAL_ON_SOURCE_DATA"
+}

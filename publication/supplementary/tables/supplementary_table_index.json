@@ -1,0 +1,62 @@
+{
+  "artifact_type": "supplementary_table_index",
+  "table_count": 5,
+  "tables": [
+    {
+      "final_table_id": "Table S1",
+      "title": "Frozen representation views",
+      "purpose": "Define the seven detector input views and dimensions.",
+      "source_authority": "Stage 21.6 Table S1; frozen multiview manifest",
+      "csv_path": "supplementary_tables/table_s1_representation_views.csv",
+      "json_path": "supplementary_tables/table_s1_representation_views.json",
+      "latex_path": "supplementary_tables/table_s1_representation_views.tex",
+      "main_manuscript_dependency": "Results 5.1 / Figure 1",
+      "provenance": "INHERITED_FROM_STAGE_21_6"
+    },
+    {
+      "final_table_id": "Table S2",
+      "title": "Complete frozen PRIMARY object rankings",
+      "purpose": "Provide all 33 detector and consensus rankings.",
+      "source_authority": "Stage 19.3 primary consensus table",
+      "csv_path": "supplementary_tables/table_s2_complete_object_rankings.csv",
+      "json_path": "supplementary_tables/table_s2_complete_object_rankings.json",
+      "latex_path": "supplementary_tables/table_s2_complete_object_rankings.tex",
+      "main_manuscript_dependency": "Results 5.3-5.4 / Figures 3-4",
+      "provenance": "NEWLY_CONSOLIDATED"
+    },
+    {
+      "final_table_id": "Table S3",
+      "title": "Frozen ranking-robustness scenarios",
+      "purpose": "Report complete quantities for the five named robustness comparisons.",
+      "source_authority": "Stage 21.5 robustness findings",
+      "csv_path": "supplementary_tables/table_s3_robustness.csv",
+      "json_path": "supplementary_tables/table_s3_robustness.json",
+      "latex_path": "supplementary_tables/table_s3_robustness.tex",
+      "main_manuscript_dependency": "Results 5.2 / Figure 2 / Table 1",
+      "provenance": "NEWLY_CONSOLIDATED"
+    },
+    {
+      "final_table_id": "Table S4",
+      "title": "Frozen cross-model agreement and predefined top-k overlap",
+      "purpose": "Report pairwise/global concordance, p-values, and k=3,5,10 overlap.",
+      "source_authority": "Stage 21.5 cross-model findings",
+      "csv_path": "supplementary_tables/table_s4_cross_model_agreement.csv",
+      "json_path": "supplementary_tables/table_s4_cross_model_agreement.json",
+      "latex_path": "supplementary_tables/table_s4_cross_model_agreement.tex",
+      "main_manuscript_dependency": "Results 5.3 / Figure 3 / Table 1",
+      "provenance": "NEWLY_CONSOLIDATED"
+    },
+    {
+      "final_table_id": "Table S5",
+      "title": "Within-model representation-dependent rank concordance",
+      "purpose": "Provide full frozen pairwise representation matrices and predeclared contrasts.",
+      "source_authority": "Final Figure 1 data payload",
+      "csv_path": "supplementary_tables/table_s5_representation_dependence.csv",
+      "json_path": "supplementary_tables/table_s5_representation_dependence.json",
+      "latex_path": "supplementary_tables/table_s5_representation_dependence.tex",
+      "main_manuscript_dependency": "Results 5.1 / Figure 1",
+      "provenance": "NEWLY_CONSOLIDATED"
+    }
+  ],
+  "duplication_decision": "Stage 21.6 Table S1 remains Table S1 and is inherited into this final package; no duplicate representation-definition table was created."
+}

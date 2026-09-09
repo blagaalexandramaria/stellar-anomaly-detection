@@ -1,0 +1,26 @@
+{
+  "title": "Cross-model rank agreement and robustness summary",
+  "population": "33 canonical objects",
+  "sections": {
+    "cross_model_agreement": {
+      "global_kendall_w": 0.9129530600118836,
+      "rows": [
+        {"comparison":"IF-LOF","spearman_rho":0.8773395721925135,"kendall_tau":0.7121212121212122},
+        {"comparison":"IF-AE","spearman_rho":0.8094919786096257,"kendall_tau":0.6174242424242424},
+        {"comparison":"LOF-AE","spearman_rho":0.921457219251337,"kendall_tau":0.7386363636363638}
+      ],
+      "source":"outputs/results/stage_21_5_final_results_freeze/registries/cross_model_agreement_findings.json"
+    },
+    "robustness": {
+      "rows": [
+        {"scenario":"Median versus mean aggregation","spearman":0.992971901452473,"kendall":0.9520153550863725,"mean_absolute_rank_displacement":0.9090909090909091,"maximum_absolute_rank_displacement":3},
+        {"scenario":"PRIMARY versus FULL","spearman":0.9084672148610509,"kendall":0.7512011150888909,"mean_absolute_rank_displacement":3.4242424242424243,"maximum_absolute_rank_displacement":8},
+        {"scenario":"IF-only perturbation","spearman":0.9995818663704296,"kendall":0.9952194120982412,"mean_absolute_rank_displacement":0.15151515151515152,"maximum_absolute_rank_displacement":1},
+        {"scenario":"LOF-only perturbation","spearman":0.9518909102481282,"kendall":0.8395777168640545,"mean_absolute_rank_displacement":2.3333333333333335,"maximum_absolute_rank_displacement":7},
+        {"scenario":"AE-only perturbation","spearman":0.9614904361634342,"kendall":0.8676526945638056,"mean_absolute_rank_displacement":1.7272727272727273,"maximum_absolute_rank_displacement":9}
+      ],
+      "source":"outputs/results/stage_21_5_final_results_freeze/registries/robustness_findings.json"
+    }
+  },
+  "boundary":"Agreement and displacement quantify different properties; neither establishes detector accuracy or scientific correctness."
+}

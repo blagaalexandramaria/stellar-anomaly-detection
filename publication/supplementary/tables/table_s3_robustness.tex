@@ -1,0 +1,12 @@
+\begin{longtable}{lllllll}
+\caption{Frozen ranking-robustness scenarios}\\
+\hline
+scenario\_id & comparison & spearman\_rho & kendall\_tau & mean\_absolute\_rank\_displacement & maximum\_absolute\_rank\_displacement & comparison\_definition \\
+\hline
+MEDIAN\_VS\_MEAN & Median vs mean & 0.992971901452473 & 0.9520153550863725 & 0.9090909090909091 & 3 & Frozen named comparison; descriptive rank concordance and displacement only. \\
+PRIMARY\_VS\_FULL & PRIMARY vs FULL & 0.9084672148610509 & 0.7512011150888909 & 3.4242424242424243 & 8 & Frozen named comparison; descriptive rank concordance and displacement only. \\
+IF\_ONLY\_PERTURBATION & IF & 0.9995818663704296 & 0.9952194120982412 & 0.15151515151515152 & 1 & Frozen one-model perturbation; descriptive sensitivity of the consensus ranking. \\
+LOF\_ONLY\_PERTURBATION & LOF & 0.9518909102481282 & 0.8395777168640545 & 2.3333333333333335 & 7 & Frozen one-model perturbation; descriptive sensitivity of the consensus ranking. \\
+AE\_ONLY\_PERTURBATION & AE & 0.9614904361634342 & 0.8676526945638056 & 1.7272727272727273 & 9 & Frozen one-model perturbation; descriptive sensitivity of the consensus ranking. \\
+\hline
+\end{longtable}

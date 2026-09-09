@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the software and the associated manuscript."
+title: "Stellar Anomaly Detection"
+type: software
+authors:
+  - given-names: "Alexandra-Maria"
+    family-names: "Blaga"
+    orcid: "https://orcid.org/0009-0004-0990-5022"
+  - given-names: "Răzvan Octavian"
+    family-names: "Mihuț"
+    orcid: "https://orcid.org/0009-0003-3843-7793"
+repository-code: "https://github.com/blagaalexandramaria/stellar-anomaly-detection"
+license: MIT
+abstract: "Physics-informed multi-view analysis for unsupervised stellar anomaly ranking."
+version: 0.1.0
+keywords:
+  - astronomy
+  - stellar variability
+  - anomaly detection
+  - Lomb-Scargle
+  - spectral graphs

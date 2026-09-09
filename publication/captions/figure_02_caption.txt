@@ -1,0 +1,1 @@
+Figure 2. Representation-dependent anomaly-ranking behaviour across the seven predefined feature views. Panel A shows within-detector Spearman agreement for IF, LOF, and AE across the 33 objects. Panel B summarizes the three predeclared representation contrasts using mean Spearman agreement and interquartile range.

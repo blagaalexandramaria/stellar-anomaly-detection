@@ -1,0 +1,9 @@
+# Reader-facing pointers to the frozen public authorities. Scientific values
+# remain in the referenced registries and are not duplicated here.
+status: frozen_public_authorities
+experimental_protocol: publication/supplementary/registries/experimental_protocol_registry.json
+model_configurations: publication/supplementary/registries/final_model_configuration_registry.json
+representations: publication/supplementary/registries/final_representation_registry.json
+numerical_results: publication/freeze/registries/final_numerical_results_registry.json
+reproducibility: configs/reproducibility.json
+data_requirements: configs/data_requirements.json

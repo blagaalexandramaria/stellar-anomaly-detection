@@ -1,0 +1,1 @@
+Figure 4. Robustness under the five predefined perturbations. Panel A shows Spearman and Kendall concordance; Panel B shows mean and maximum absolute ordinal-rank displacement.
