@@ -130,7 +130,17 @@ treated as a validated scientific output.
 
 ## Citation
 
-Use [`CITATION.cff`](CITATION.cff). No paper or archival DOI has been assigned.
+Use [`CITATION.cff`](CITATION.cff) for citing the software.
+
+The archived software release is available on Zenodo:
+
+- **Stellar Anomaly Detection**, Version `v1.0.0`
+- DOI: https://doi.org/10.5281/zenodo.22678422
+
+The associated research dataset is archived separately on Zenodo:
+
+- **K2-E2 RR Lyrae Corpus, PISD Features, and Spectral Graph Representations for Unsupervised Stellar Anomaly Detection**, Version `1.0.0`
+- DOI: https://doi.org/10.5281/zenodo.22677700
 
 ## License
 
