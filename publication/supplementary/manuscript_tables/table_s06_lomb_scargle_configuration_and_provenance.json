@@ -1,0 +1,102 @@
+{
+  "table_id": "Table S6",
+  "title": "Lomb–Scargle configuration and provenance",
+  "supplementary_section": "S2",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_lomb_scargle/lomb_scargle_execution_configuration.json",
+    "outputs/k2_e2_lomb_scargle/lomb_scargle_frequency_grid_summary_registry.json"
+  ],
+  "provenance_caveat": "normalization, fit_mean, center_data, and nterms remain strongly corroborated but not execution-bound.",
+  "columns": [
+    "contract_item",
+    "value_or_rule",
+    "evidence_category",
+    "provenance_status",
+    "supporting_artifact",
+    "notes"
+  ],
+  "records": [
+    {
+      "contract_item": "implementation",
+      "value_or_rule": "astropy.timeseries.LombScargle",
+      "evidence_category": "current implementation plus frozen execution artifacts",
+      "provenance_status": "PROJECT_VERIFIED",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py; outputs/k2_e2_lomb_scargle/lomb_scargle_execution_manifest.json",
+      "notes": "No recomputation performed."
+    },
+    {
+      "contract_item": "inputs",
+      "value_or_rule": "validated time and relative flux; dy=None",
+      "evidence_category": "frozen configuration and light-curve manifest",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "outputs/k2_e2_lomb_scargle/lomb_scargle_execution_configuration.json; outputs/k2_e2_photometric_adapter/k2_e2_lightcurve_manifest.json",
+      "notes": "Unweighted."
+    },
+    {
+      "contract_item": "frequency interval",
+      "value_or_rule": "0.01 <= f <= 20 d^-1",
+      "evidence_category": "frozen execution configuration",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "outputs/k2_e2_lomb_scargle/lomb_scargle_execution_configuration.json",
+      "notes": "Fixed configured bounds."
+    },
+    {
+      "contract_item": "grid",
+      "value_or_rule": "autopower; samples_per_peak=5",
+      "evidence_category": "frozen configuration and grid registries",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "outputs/k2_e2_lomb_scargle/lomb_scargle_execution_configuration.json; outputs/k2_e2_lomb_scargle/lomb_scargle_frequency_grid_summary_registry.json",
+      "notes": "Object-specific generated grid persisted."
+    },
+    {
+      "contract_item": "dominant tie",
+      "value_or_rule": "first frequency-grid occurrence attaining maximum power",
+      "evidence_category": "frozen execution implementation/result metadata",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle_execution.py",
+      "notes": "numpy.argmax_first_occurrence."
+    },
+    {
+      "contract_item": "model form",
+      "value_or_rule": "y(t)=a cos(2 pi f t)+b sin(2 pi f t)+c",
+      "evidence_category": "current constructor settings",
+      "provenance_status": "STRONGLY_CORROBORATED_NOT_EXECUTION_BOUND",
+      "supporting_artifact": "outputs/results/stage_22_11_final_public_release_audit/ls_provenance_final_check.csv",
+      "notes": "Depends on fit_mean=True and nterms=1; do not promote to execution-bound provenance."
+    },
+    {
+      "contract_item": "normalization",
+      "value_or_rule": "standard",
+      "evidence_category": "Stage 22.11 final provenance classification",
+      "provenance_status": "STRONGLY_CORROBORATED_NOT_EXECUTION_BOUND",
+      "supporting_artifact": "outputs/results/stage_22_11_final_public_release_audit/ls_provenance_final_check.csv",
+      "notes": "Supported by current public/full implementation and records, not serialized in execution-bound frozen config."
+    },
+    {
+      "contract_item": "fit_mean",
+      "value_or_rule": "True",
+      "evidence_category": "Stage 22.11 final provenance classification",
+      "provenance_status": "STRONGLY_CORROBORATED_NOT_EXECUTION_BOUND",
+      "supporting_artifact": "outputs/results/stage_22_11_final_public_release_audit/ls_provenance_final_check.csv",
+      "notes": "Same qualification."
+    },
+    {
+      "contract_item": "center_data",
+      "value_or_rule": "True",
+      "evidence_category": "Stage 22.11 final provenance classification",
+      "provenance_status": "STRONGLY_CORROBORATED_NOT_EXECUTION_BOUND",
+      "supporting_artifact": "outputs/results/stage_22_11_final_public_release_audit/ls_provenance_final_check.csv",
+      "notes": "Same qualification."
+    },
+    {
+      "contract_item": "nterms",
+      "value_or_rule": "1",
+      "evidence_category": "Stage 22.11 final provenance classification",
+      "provenance_status": "STRONGLY_CORROBORATED_NOT_EXECUTION_BOUND",
+      "supporting_artifact": "outputs/results/stage_22_11_final_public_release_audit/ls_provenance_final_check.csv",
+      "notes": "Same qualification."
+    }
+  ]
+}

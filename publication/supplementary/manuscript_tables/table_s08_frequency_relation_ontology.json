@@ -1,0 +1,104 @@
+{
+  "table_id": "Table S8",
+  "title": "Frequency-relation ontology",
+  "supplementary_section": "S2",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_frequency_relationships/frequency_relationship_configuration.json"
+  ],
+  "provenance_caveat": "Relation predicates are analytical definitions, not confirmed physical coupling.",
+  "columns": [
+    "relation_type",
+    "source_arity",
+    "mathematical_predicate",
+    "parameter_limits",
+    "tolerance_rule",
+    "directionality",
+    "duplicate_policy",
+    "relationship_id_policy",
+    "provenance_status",
+    "supporting_artifact",
+    "notes"
+  ],
+  "records": [
+    {
+      "relation_type": "HARMONIC",
+      "source_arity": "1",
+      "mathematical_predicate": "For lower-frequency base a and higher target t: f_t approximately n f_a.",
+      "parameter_limits": "integer n=2..10 inclusive",
+      "tolerance_rule": "|f_t-n f_a|/delta_f_R <= 1",
+      "directionality": "base_peak_id -> target_peak_id",
+      "duplicate_policy": "Every accepted (base,target,n) is retained; no cross-order collapse.",
+      "relationship_id_policy": "harmonic:{base_peak_id}:{target_peak_id}:{n}",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "src/spectral/relationships/frequency_relationship_analysis.py; outputs/k2_e2_frequency_relationships/frequency_relationship_configuration.json",
+      "notes": "Descriptive candidate; significance NOT_EVALUATED."
+    },
+    {
+      "relation_type": "SUBHARMONIC",
+      "source_arity": "1",
+      "mathematical_predicate": "For reference r and lower target s: f_s approximately f_r/n.",
+      "parameter_limits": "integer divisor n=2..4 inclusive",
+      "tolerance_rule": "|f_s-f_r/n|/delta_f_R <= 1",
+      "directionality": "reference_peak_id -> subharmonic_peak_id",
+      "duplicate_policy": "Every accepted (reference,subharmonic,n) is retained; inverse harmonic ID is linked when present.",
+      "relationship_id_policy": "subharmonic:{reference_peak_id}:{subharmonic_peak_id}:{n}",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "src/spectral/relationships/frequency_relationship_analysis.py; outputs/k2_e2_frequency_relationships/frequency_relationship_configuration.json",
+      "notes": "Scientific status applied once; no physical mode claim."
+    },
+    {
+      "relation_type": "RATIONAL",
+      "source_arity": "1",
+      "mathematical_predicate": "For frequency-ordered low a and high t: f_t approximately (p/q) f_a.",
+      "parameter_limits": "p=2..10; q=2..p-1; gcd(p,q)=1",
+      "tolerance_rule": "|f_t-(p/q)f_a|/delta_f_R <= 1",
+      "directionality": "lower-frequency base -> higher-frequency target",
+      "duplicate_policy": "At most one ratio per unordered peak pair: minimize (normalized residual, p+q, p, q, predicted frequency).",
+      "relationship_id_policy": "rational:{base_peak_id}:{target_peak_id}:{p}:{q}",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "src/spectral/relationships/frequency_relationship_analysis.py; outputs/k2_e2_frequency_relationships/frequency_relationship_configuration.json",
+      "notes": "Reduced ratios only; q=1/integer harmonics are excluded from this family."
+    },
+    {
+      "relation_type": "SUM_COMBINATION",
+      "source_arity": "2",
+      "mathematical_predicate": "For distinct sources a,b and distinct target t: f_t approximately f_a+f_b.",
+      "parameter_limits": "Prediction must lie within min/max retained-peak frequency; source pair traversed once by retained rank.",
+      "tolerance_rule": "Target lookup is inclusive on [prediction-delta_f_R, prediction+delta_f_R]; normalized residual <=1.",
+      "directionality": "each source -> target in graph projection",
+      "duplicate_policy": "Each matching target is retained; source peaks are excluded as targets; no additional collapse.",
+      "relationship_id_policy": "sum:{source_a_id}:{source_b_id}:{target_id}",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "src/spectral/relationships/frequency_relationship_analysis.py",
+      "notes": "The two source IDs follow retained-rank pair order."
+    },
+    {
+      "relation_type": "DIFFERENCE_COMBINATION",
+      "source_arity": "2",
+      "mathematical_predicate": "For distinct sources a,b: f_t approximately |f_a-f_b|, with positive prediction and a distinct target.",
+      "parameter_limits": "Each unordered source pair traversed once by retained rank.",
+      "tolerance_rule": "Target lookup is inclusive on [prediction-delta_f_R, prediction+delta_f_R]; normalized residual <=1.",
+      "directionality": "high and low sources -> target in graph projection",
+      "duplicate_policy": "Each matching target is retained; source peaks are excluded as targets; no additional collapse.",
+      "relationship_id_policy": "difference:{source_a_id}:{source_b_id}:{target_id}",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "src/spectral/relationships/frequency_relationship_analysis.py",
+      "notes": "Source IDs in the relationship ID follow retained-rank pair order, not frequency order."
+    },
+    {
+      "relation_type": "SIDEBAND_PAIR",
+      "source_arity": "2",
+      "mathematical_predicate": "For f_left < f_center < f_right: |(f_center-f_left)-(f_right-f_center)| <= delta_f_R.",
+      "parameter_limits": "Every frequency-ordered left/center/right triple satisfying the predicate.",
+      "tolerance_rule": "offset asymmetry/delta_f_R <=1; right lookup inclusive around 2 f_center-f_left.",
+      "directionality": "center -> left and center -> right in graph projection",
+      "duplicate_policy": "Each unique frequency-ordered triple is retained; no extra collapse.",
+      "relationship_id_policy": "sideband:{left_peak_id}:{center_peak_id}:{right_peak_id}",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "src/spectral/relationships/frequency_relationship_analysis.py",
+      "notes": "modulation_frequency_candidate is mean of left and right offsets; physical modulation is not confirmed."
+    }
+  ]
+}

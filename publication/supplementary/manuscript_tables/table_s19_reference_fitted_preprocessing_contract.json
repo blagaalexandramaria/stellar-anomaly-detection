@@ -1,0 +1,57 @@
+{
+  "table_id": "Table S19",
+  "title": "Reference-fitted preprocessing contract",
+  "supplementary_section": "S5",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_experimental_boundary/preprocessing_policy_registry.json"
+  ],
+  "provenance_caveat": "Evaluation objects never affect fitting; zero-scale columns remain in schema and map to zero.",
+  "columns": [
+    "preprocessing_name",
+    "fit_scope",
+    "transform_scope",
+    "centering_rule",
+    "scaling_rule",
+    "zero_scale_behavior",
+    "implementation",
+    "provenance_status",
+    "notes"
+  ],
+  "records": [
+    {
+      "preprocessing_name": "RAW_V1",
+      "fit_scope": "NONE",
+      "transform_scope": "reference and evaluation",
+      "centering_rule": "none",
+      "scaling_rule": "identity",
+      "zero_scale_behavior": "n/a",
+      "implementation": "frozen identity policy",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "No PCA or feature removal"
+    },
+    {
+      "preprocessing_name": "STANDARD_SCALE_V1",
+      "fit_scope": "REFERENCE_PARTITION_ONLY",
+      "transform_scope": "both with reference-fit parameters",
+      "centering_rule": "reference mean",
+      "scaling_rule": "population standard deviation; ddof=0",
+      "zero_scale_behavior": "retain feature; map to zero in both partitions",
+      "implementation": "frozen project implementation",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "evaluation rows excluded"
+    },
+    {
+      "preprocessing_name": "ROBUST_SCALE_V1",
+      "fit_scope": "REFERENCE_PARTITION_ONLY",
+      "transform_scope": "both with reference-fit parameters",
+      "centering_rule": "reference median",
+      "scaling_rule": "reference IQR; NumPy linear quantiles",
+      "zero_scale_behavior": "retain feature; map to zero in both partitions",
+      "implementation": "frozen project implementation",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "evaluation rows excluded"
+    }
+  ]
+}

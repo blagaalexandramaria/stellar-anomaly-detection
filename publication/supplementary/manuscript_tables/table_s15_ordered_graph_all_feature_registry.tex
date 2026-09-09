@@ -1,0 +1,78 @@
+\begin{longtable}{lllllll}
+\caption{Ordered Graph-All feature registry}\\
+\toprule
+graph\_all\_index & feature\_name & source\_registry & source\_index & short\_definition & provenance\_status & notes \\
+\midrule
+\endfirsthead
+\toprule
+graph\_all\_index & feature\_name & source\_registry & source\_index & short\_definition & provenance\_status & notes \\
+\midrule
+\endhead
+1 & node\_count & Graph-Core & 1 & node count & FROZEN\_ARTIFACT\_VERIFIED &  \\
+2 & projected\_edge\_count & Graph-Core & 2 & projected edge count & FROZEN\_ARTIFACT\_VERIFIED &  \\
+3 & unique\_directed\_edge\_count & Graph-Core & 3 & unique directed edge count & FROZEN\_ARTIFACT\_VERIFIED &  \\
+4 & parallel\_edge\_count & Graph-Core & 4 & parallel edge count & FROZEN\_ARTIFACT\_VERIFIED &  \\
+5 & parallel\_edge\_fraction & Graph-Core & 5 & parallel edge fraction & FROZEN\_ARTIFACT\_VERIFIED &  \\
+6 & mean\_edge\_multiplicity & Graph-Core & 6 & mean edge multiplicity & FROZEN\_ARTIFACT\_VERIFIED &  \\
+7 & directed\_multigraph\_density & Graph-Core & 7 & directed multigraph density & FROZEN\_ARTIFACT\_VERIFIED &  \\
+8 & directed\_simple\_density & Graph-Core & 8 & directed simple density & FROZEN\_ARTIFACT\_VERIFIED &  \\
+9 & mean\_in\_degree & Graph-Core & 9 & mean in degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+10 & mean\_out\_degree & Graph-Core & 10 & mean out degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+11 & mean\_total\_degree & Graph-Core & 11 & mean total degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+12 & median\_total\_degree & Graph-Core & 12 & median total degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+13 & maximum\_in\_degree & Graph-Core & 13 & maximum in degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+14 & maximum\_out\_degree & Graph-Core & 14 & maximum out degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+15 & total\_degree\_std & Graph-Core & 15 & total degree std & FROZEN\_ARTIFACT\_VERIFIED &  \\
+16 & total\_degree\_coefficient\_of\_variation & Graph-Core & 16 & total degree coefficient of variation & FROZEN\_ARTIFACT\_VERIFIED &  \\
+17 & in\_degree\_std & Graph-Core & 17 & in degree std & FROZEN\_ARTIFACT\_VERIFIED &  \\
+18 & out\_degree\_std & Graph-Core & 18 & out degree std & FROZEN\_ARTIFACT\_VERIFIED &  \\
+19 & weak\_component\_count & Graph-Core & 19 & weak component count & FROZEN\_ARTIFACT\_VERIFIED &  \\
+20 & largest\_weak\_component\_fraction & Graph-Core & 20 & largest weak component fraction & FROZEN\_ARTIFACT\_VERIFIED &  \\
+21 & strong\_component\_count & Graph-Core & 21 & strong component count & FROZEN\_ARTIFACT\_VERIFIED &  \\
+22 & largest\_strong\_component\_fraction & Graph-Core & 22 & largest strong component fraction & FROZEN\_ARTIFACT\_VERIFIED &  \\
+23 & reciprocal\_edge\_pair\_fraction & Graph-Core & 23 & reciprocal edge pair fraction & FROZEN\_ARTIFACT\_VERIFIED &  \\
+24 & isolated\_node\_fraction & Graph-Core & 24 & isolated node fraction & FROZEN\_ARTIFACT\_VERIFIED &  \\
+25 & reference\_node\_in\_degree & Graph-Core & 25 & reference node in degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+26 & reference\_node\_out\_degree & Graph-Core & 26 & reference node out degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+27 & reference\_node\_total\_degree & Graph-Core & 27 & reference node total degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+28 & dominant\_node\_in\_degree & Graph-Core & 28 & dominant node in degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+29 & dominant\_node\_out\_degree & Graph-Core & 29 & dominant node out degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+30 & dominant\_node\_total\_degree & Graph-Core & 30 & dominant node total degree & FROZEN\_ARTIFACT\_VERIFIED &  \\
+31 & node\_power\_mean & Graph-Extended & 1 & node power mean & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+32 & node\_power\_std & Graph-Extended & 2 & node power std & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+33 & node\_power\_coefficient\_of\_variation & Graph-Extended & 3 & node power coefficient of variation & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+34 & node\_power\_gini & Graph-Extended & 4 & node power gini & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+35 & reference\_node\_power\_fraction & Graph-Extended & 5 & reference node power fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+36 & dominant\_node\_power\_fraction & Graph-Extended & 6 & dominant node power fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+37 & node\_frequency\_min & Graph-Extended & 7 & node frequency min & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+38 & node\_frequency\_max & Graph-Extended & 8 & node frequency max & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+39 & node\_frequency\_span & Graph-Extended & 9 & node frequency span & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+40 & node\_frequency\_mean & Graph-Extended & 10 & node frequency mean & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+41 & node\_frequency\_std & Graph-Extended & 11 & node frequency std & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+42 & reference\_frequency\_relative\_position & Graph-Extended & 12 & reference frequency relative position & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+43 & dominant\_frequency\_relative\_position & Graph-Extended & 13 & dominant frequency relative position & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+44 & reference\_to\_dominant\_frequency\_ratio & Graph-Extended & 14 & reference to dominant frequency ratio & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+45 & reference\_to\_dominant\_power\_ratio & Graph-Extended & 15 & reference to dominant power ratio & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+46 & high\_confidence\_edge\_fraction & Graph-Extended & 16 & high confidence edge fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+47 & moderate\_confidence\_edge\_fraction & Graph-Extended & 17 & moderate confidence edge fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+48 & low\_confidence\_edge\_fraction & Graph-Extended & 18 & low confidence edge fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+49 & mean\_confidence\_projection & Graph-Extended & 19 & mean confidence projection & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+50 & harmonic\_edge\_fraction & Graph-Extended & 20 & harmonic edge fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+51 & subharmonic\_edge\_fraction & Graph-Extended & 21 & subharmonic edge fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+52 & rational\_edge\_fraction & Graph-Extended & 22 & rational edge fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+53 & sum\_combination\_edge\_fraction & Graph-Extended & 23 & sum combination edge fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+54 & difference\_combination\_edge\_fraction & Graph-Extended & 24 & difference combination edge fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+55 & sideband\_edge\_fraction & Graph-Extended & 25 & sideband edge fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+56 & mean\_normalized\_relationship\_residual & Graph-Extended & 26 & mean normalized relationship residual & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+57 & median\_normalized\_relationship\_residual & Graph-Extended & 27 & median normalized relationship residual & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+58 & p90\_normalized\_relationship\_residual & Graph-Extended & 28 & p90 normalized relationship residual & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+59 & mean\_relationship\_similarity\_weight & Graph-Extended & 29 & mean relationship similarity weight & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+60 & canonical\_harmonic\_node\_fraction & Graph-Extended & 30 & canonical harmonic node fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+61 & canonical\_harmonic\_power\_fraction & Graph-Extended & 31 & canonical harmonic power fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+62 & mean\_canonical\_harmonic\_order & Graph-Extended & 32 & mean canonical harmonic order & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+63 & maximum\_canonical\_harmonic\_order & Graph-Extended & 33 & maximum canonical harmonic order & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+64 & alias\_advisory\_node\_fraction & Graph-Extended & 34 & alias advisory node fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+65 & primary\_sideband\_node\_fraction & Graph-Extended & 35 & primary sideband node fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+66 & primary\_sideband\_edge\_fraction & Graph-Extended & 36 & primary sideband edge fraction & FROZEN\_ARTIFACT\_VERIFIED & Ordered concatenation after Graph-Core \\
+\bottomrule
+\end{longtable}

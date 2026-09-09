@@ -1,0 +1,46 @@
+{
+  "table_id": "Table S2",
+  "title": "Frozen K2-E2 experimental-source summary",
+  "supplementary_section": "S1",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_photometric_adapter/k2_e2_lightcurve_manifest.json",
+    "outputs/k2_e2_photometric_adapter/photometric_transformation_registry.json"
+  ],
+  "provenance_caveat": "Source labels are preserved literally; no more specific BJD or Kp calibration claim is made.",
+  "columns": [
+    "internal_source_product_id",
+    "mission_observing_campaign",
+    "publication_source",
+    "source_paper_reported_sample",
+    "project_level_frozen_sample",
+    "exact_source_columns",
+    "retained_row_count",
+    "astronomical_object_count",
+    "independent_experimental_unit",
+    "observational_samples_per_object",
+    "eligibility_validation_status",
+    "source_paper_fact_basis",
+    "project_processing_fact_basis",
+    "provenance_note"
+  ],
+  "records": [
+    {
+      "internal_source_product_id": "konkoly_k2_e2_rr_lyrae",
+      "mission_observing_campaign": "K2; Two-Wheel Concept Engineering Test (K2-E2), Pisces",
+      "publication_source": "Molnár et al. (2015), MNRAS 452(4), 4283–4296; doi:10.1093/mnras/stv1638; arXiv:1507.04714",
+      "source_paper_reported_sample": "33 RR Lyrae stars; 8.9-day observation; 27 RRab, 4 RRc, 2 RRd",
+      "project_level_frozen_sample": "33 astronomical objects; 33 light-curve products; 14,338 retained photometric samples",
+      "exact_source_columns": "EPIC | BJD-2450000 | Kp | Kp_err",
+      "retained_row_count": "14338",
+      "astronomical_object_count": "33",
+      "independent_experimental_unit": "astronomical object",
+      "observational_samples_per_object": "431–436 retained rows per object (median 435)",
+      "eligibility_validation_status": "33/33 ELIGIBLE in frozen pilot spectral-QC manifest; Stage 22.13 records FROZEN_PROVEN",
+      "source_paper_fact_basis": "[private path omitted]; [private path omitted]",
+      "project_processing_fact_basis": "outputs/k2_e2_raw_loader/k2_e2_raw_loader_manifest.json | outputs/k2_e2_raw_loader/k2_e2_raw_loader_statistics.json | outputs/k2_e2_photometric_adapter/k2_e2_lightcurve_manifest.json | outputs/k2_e2_photometric_adapter/photometric_transformation_registry.json | outputs/k2_e2_photometric_adapter/k2_e2_photometric_transformation_statistics.json | outputs/k2_e2_real_spectral_qc/spectral_qc_lomb_scargle_eligibility_manifest.json | outputs/results/stage_22_13_manuscript_evidence_extraction/pilot_cohort_manifest.csv",
+      "provenance_note": "Source-paper facts and project-processing facts are kept distinct; project records govern transformations, filtering, identifiers, counts, and eligibility."
+    }
+  ]
+}

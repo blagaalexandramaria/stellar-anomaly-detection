@@ -1,0 +1,175 @@
+{
+  "table_id": "Table S9",
+  "title": "Canonical operational-reference contract",
+  "supplementary_section": "S2",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_spectral_interpretation/canonical_harmonic_family_registry.json",
+    "outputs/k2_e2_spectral_interpretation/canonical_harmonic_member_registry.json",
+    "outputs/k2_e2_spectral_interpretation/canonical_spectral_representation_registry.json"
+  ],
+  "provenance_caveat": "The operational reference is not asserted to be the physical stellar fundamental.",
+  "columns": [
+    "priority_order",
+    "criterion",
+    "mathematical_or_algorithmic_definition",
+    "preferred_direction",
+    "tie_break_role",
+    "supporting_artifact",
+    "provenance_status",
+    "notes"
+  ],
+  "records": [
+    {
+      "priority_order": "0",
+      "criterion": "candidate set",
+      "mathematical_or_algorithmic_definition": "Provisional harmonic families having a base retained peak and at least one HARMONIC member.",
+      "preferred_direction": "eligible only",
+      "tie_break_role": "gate",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Families without harmonic members are not ranked."
+    },
+    {
+      "priority_order": "1",
+      "criterion": "dominant-peak membership",
+      "mathematical_or_algorithmic_definition": "int(dominant_member_status).",
+      "preferred_direction": "larger first",
+      "tie_break_role": "primary",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Encoded as negative value in ascending selection tuple."
+    },
+    {
+      "priority_order": "2",
+      "criterion": "supported harmonic count",
+      "mathematical_or_algorithmic_definition": "Number of accepted harmonic relationships with the family base.",
+      "preferred_direction": "larger first",
+      "tie_break_role": "secondary",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Count may include competing targets at the same order before canonical member-per-order resolution."
+    },
+    {
+      "priority_order": "3",
+      "criterion": "harmonic support score",
+      "mathematical_or_algorithmic_definition": "supported_harmonic_count + sum(member_power / dominant_power).",
+      "preferred_direction": "larger first",
+      "tie_break_role": "secondary",
+      "supporting_artifact": "src/spectral/relationships/frequency_relationship_analysis.py; src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Structural score, not a physical probability."
+    },
+    {
+      "priority_order": "4",
+      "criterion": "median normalized harmonic residual",
+      "mathematical_or_algorithmic_definition": "Median of |observed-predicted|/delta_f_R over family harmonic relationships.",
+      "preferred_direction": "smaller first",
+      "tie_break_role": "secondary",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Resolution-normalized."
+    },
+    {
+      "priority_order": "5",
+      "criterion": "maximum normalized harmonic residual",
+      "mathematical_or_algorithmic_definition": "Maximum of |observed-predicted|/delta_f_R over family harmonic relationships.",
+      "preferred_direction": "smaller first",
+      "tie_break_role": "secondary",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Resolution-normalized."
+    },
+    {
+      "priority_order": "6",
+      "criterion": "family alias-advisory participant count",
+      "mathematical_or_algorithmic_definition": "Sum of stored alias-advisory flags in the provisional family record.",
+      "preferred_direction": "smaller first",
+      "tie_break_role": "secondary",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Advisory burden is a ranking key, not an automatic veto."
+    },
+    {
+      "priority_order": "7",
+      "criterion": "base-peak power",
+      "mathematical_or_algorithmic_definition": "Power of the family base retained peak.",
+      "preferred_direction": "larger first",
+      "tie_break_role": "secondary",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Encoded as negative power."
+    },
+    {
+      "priority_order": "8",
+      "criterion": "base frequency",
+      "mathematical_or_algorithmic_definition": "Frequency of the family base retained peak.",
+      "preferred_direction": "smaller first",
+      "tie_break_role": "stable tie break",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Deterministic organizing preference."
+    },
+    {
+      "priority_order": "9",
+      "criterion": "base retained rank",
+      "mathematical_or_algorithmic_definition": "One-based retained rank of the base peak.",
+      "preferred_direction": "smaller first",
+      "tie_break_role": "stable tie break",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Rank derives from dominant-first NMS traversal."
+    },
+    {
+      "priority_order": "10",
+      "criterion": "family identifier",
+      "mathematical_or_algorithmic_definition": "Stable provisional_family:{base_peak_id} string.",
+      "preferred_direction": "lexicographically smaller first",
+      "tie_break_role": "final stable tie break",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Makes selection input-order invariant."
+    },
+    {
+      "priority_order": "11",
+      "criterion": "reference derivation",
+      "mathematical_or_algorithmic_definition": "Select the retained base peak of the rank-1 family.",
+      "preferred_direction": "rank 1",
+      "tie_break_role": "selection",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py; outputs/k2_e2_spectral_interpretation/reference_frequency_selection_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Role is OPERATIONAL_REFERENCE_FOR_DOWNSTREAM_FEATURE_EXTRACTION; physical_fundamental_confirmed=false."
+    },
+    {
+      "priority_order": "12",
+      "criterion": "fallback 1",
+      "mathematical_or_algorithmic_definition": "If no eligible family exists and the frozen dominant peak exists, select the dominant peak.",
+      "preferred_direction": "dominant",
+      "tie_break_role": "fallback",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Status SELECTED_DOMINANT_FALLBACK."
+    },
+    {
+      "priority_order": "13",
+      "criterion": "fallback 2",
+      "mathematical_or_algorithmic_definition": "If neither an eligible family nor dominant peak exists, minimize (frequency, retained_rank).",
+      "preferred_direction": "lower first",
+      "tie_break_role": "final fallback",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Status SELECTED_LOWEST_FREQUENCY_FALLBACK."
+    },
+    {
+      "priority_order": "14",
+      "criterion": "canonical member per harmonic order",
+      "mathematical_or_algorithmic_definition": "Within selected family/order minimize (normalized residual, absolute residual, -power, -relative power, frequency, retained rank, retained_peak_id).",
+      "preferred_direction": "tuple ascending",
+      "tie_break_role": "member tie break",
+      "supporting_artifact": "src/spectral/interpretation/spectral_interpretation_analysis.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Competing same-order members are preserved with duplicate_harmonic_order_member reason."
+    }
+  ]
+}

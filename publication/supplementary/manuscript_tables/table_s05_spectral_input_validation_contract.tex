@@ -1,0 +1,24 @@
+\begin{longtable}{llllll}
+\caption{Spectral input-validation contract}\\
+\toprule
+validation\_rule & exact\_condition & action\_on\_failure & supporting\_artifact & provenance\_status & notes \\
+\midrule
+\endfirsthead
+\toprule
+validation\_rule & exact\_condition & action\_on\_failure & supporting\_artifact & provenance\_status & notes \\
+\midrule
+\endhead
+numeric representation & time, flux, and optional flux\_error are converted with np.asarray(..., dtype=np.float64). & Raise validation error if subsequent dimensional, finite, or domain checks fail. & src/spectral/lomb\_scargle/lomb\_scargle.py & PROJECT\_VERIFIED & Current validated implementation; frozen execution records persist valid numerical status and analyzer fingerprint. \\
+array dimensionality & time.ndim == 1 and flux.ndim == 1; if present, flux\_error.ndim == 1. & Raise ValueError. & src/spectral/lomb\_scargle/lomb\_scargle.py & PROJECT\_VERIFIED & Canonical frozen input has flux\_error=None. \\
+equal lengths & time.size == flux.size; optional flux\_error.size == time.size. & Raise ValueError. & src/spectral/lomb\_scargle/lomb\_scargle.py & PROJECT\_VERIFIED & Frozen execution results record input\_lengths\_match=true. \\
+minimum observations & Current constructor default minimum\_observations=3; configured value must be an integer >=3. & Raise ValueError below the configured minimum. & src/spectral/lomb\_scargle/lomb\_scargle.py; outputs/results/stage\_22\_11\_final\_public\_release\_audit/ls\_provenance\_final\_check.csv & STRONGLY\_CORROBORATED\_NOT\_EXECUTION\_BOUND & The numerical threshold is explicit in current code but is not serialized in the compact frozen execution configuration. \\
+finite time & all time values finite. & Raise ValueError. & src/spectral/lomb\_scargle/lomb\_scargle.py & PROJECT\_VERIFIED & Eligibility and execution validation corroborate successful frozen inputs. \\
+finite flux & all relative-flux values finite. & Raise ValueError. & src/spectral/lomb\_scargle/lomb\_scargle.py & PROJECT\_VERIFIED & Eligibility and execution validation corroborate successful frozen inputs. \\
+nonconstant flux & np.ptp(flux) != 0. & Raise ValueError. & src/spectral/lomb\_scargle/lomb\_scargle.py & PROJECT\_VERIFIED & Exact equality to zero is the rejection condition. \\
+stable ordering & order = np.argsort(time, kind="stable"); time, flux, and optional flux\_error are copied in that order. & Proceed with owned float64 copies after validation. & src/spectral/lomb\_scargle/lomb\_scargle.py & PROJECT\_VERIFIED & Stable sorting is deterministic for equal keys, but equal times are rejected next. \\
+duplicate times & After sorting, no adjacent time difference may equal zero. & Raise ValueError; duplicates must be aggregated upstream, not silently within LS. & src/spectral/lomb\_scargle/lomb\_scargle.py & PROJECT\_VERIFIED & Frozen contract rejects duplicates. \\
+strict time monotonicity & After stable sorting, every adjacent time difference must be >0. & Raise ValueError. & src/spectral/lomb\_scargle/lomb\_scargle.py & PROJECT\_VERIFIED & Also implies positive baseline for a valid array with at least three observations. \\
+optional uncertainty array & If present: 1D, matching length, finite, and strictly positive. & Raise ValueError. & src/spectral/lomb\_scargle/lomb\_scargle.py & PROJECT\_VERIFIED & Not exercised by the frozen pilot because canonical flux\_error=None. \\
+input immutability & Fingerprints/copies are compared before and after execution; frozen inputs must not be modified. & Fail execution with input\_mutation\_detected. & src/spectral/lomb\_scargle/lomb\_scargle\_execution.py & FROZEN\_ARTIFACT\_VERIFIED & Frozen Stage 13.3 audit reports input\_arrays\_modified=false. \\
+\bottomrule
+\end{longtable}

@@ -1,0 +1,16 @@
+\begin{longtable}{llllllll}
+\caption{Experiment seed contract}\\
+\toprule
+seed\_scope & root\_seed & policy\_name & derivation\_inputs & exact\_derivation\_if\_verified & persisted & provenance\_status & notes \\
+\midrule
+\endfirsthead
+\toprule
+seed\_scope & root\_seed & policy\_name & derivation\_inputs & exact\_derivation\_if\_verified & persisted & provenance\_status & notes \\
+\midrule
+\endhead
+split & 42 & SHA256\_EXPERIMENT\_CHILD\_SEED\_V1 & root seed; split identity & Exact serialized preimage not independently established & YES & PARTIALLY\_VERIFIED & Do not regenerate \\
+IF run & 42 & SHA256\_EXPERIMENT\_CHILD\_SEED\_V1 & split, view, preprocessing, config, family & Persisted deterministic run seed & YES & FROZEN\_ARTIFACT\_VERIFIED & random\_state derived per experiment \\
+LOF run & 42 & SHA256\_EXPERIMENT\_CHILD\_SEED\_V1 & run identity fields & LOF estimator has no stochastic random\_state & PARTIAL & PARTIALLY\_VERIFIED & Identity provenance preserved \\
+AE run & 42 & SHA256\_EXPERIMENT\_CHILD\_SEED\_V1 & model\_family; view\_id; preprocessing\_policy\_id; split\_id; architecture\_configuration\_id; replication\_id & UINT32(FIRST\_8\_BYTES(SHA256(CANONICAL\_JSON(seed\_material)))) & YES & EXECUTION\_BOUND & Seeds Python random, NumPy, Torch \\
+\bottomrule
+\end{longtable}

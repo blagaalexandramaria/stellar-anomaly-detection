@@ -1,0 +1,18 @@
+\begin{longtable}{lllllllll}
+\caption{Spectral graph relationship projection contract}\\
+\toprule
+relation\_type & source\_arity & graph\_direction\_semantics & allowed\_parallelism & edge\_weight\_definition & relationship\_id\_behavior & notes & provenance\_status & supporting\_artifact \\
+\midrule
+\endfirsthead
+\toprule
+relation\_type & source\_arity & graph\_direction\_semantics & allowed\_parallelism & edge\_weight\_definition & relationship\_id\_behavior & notes & provenance\_status & supporting\_artifact \\
+\midrule
+\endhead
+HARMONIC & 2 & BASE\_TO\_TARGET & RETAINED & relationship\_similarity\_weight=1/(1+normalized\_resolution\_residual) & One edge preserves original relationship identity & ONE\_EDGE; BASE -> HARMONIC\_TARGET & EXECUTION\_BOUND & outputs/spectral\_graph\_contract/graph\_relationship\_projection\_registry.json \\
+SUBHARMONIC & 2 & HIGH\_TO\_LOWER & RETAINED & relationship\_similarity\_weight=1/(1+normalized\_resolution\_residual) & One edge preserves original relationship identity & ONE\_EDGE; REFERENCE\_OR\_HIGH -> LOWER\_SUBHARMONIC & EXECUTION\_BOUND & outputs/spectral\_graph\_contract/graph\_relationship\_projection\_registry.json \\
+RATIONAL & 2 & LOW\_TO\_HIGH & RETAINED & relationship\_similarity\_weight=1/(1+normalized\_resolution\_residual) & One edge preserves original relationship identity & ONE\_EDGE; LOWER\_FREQUENCY -> HIGHER\_FREQUENCY & EXECUTION\_BOUND & outputs/spectral\_graph\_contract/graph\_relationship\_projection\_registry.json \\
+SUM\_COMBINATION & 3 & EACH\_SOURCE\_TO\_TARGET & RETAINED & relationship\_similarity\_weight=1/(1+normalized\_resolution\_residual) & Projected edges share original relationship identity & PAIRWISE\_SHARED\_RELATIONSHIP\_ID; SOURCE\_A\_AND\_SOURCE\_B -> TARGET & EXECUTION\_BOUND & outputs/spectral\_graph\_contract/graph\_relationship\_projection\_registry.json \\
+DIFFERENCE\_COMBINATION & 3 & EACH\_SOURCE\_TO\_TARGET & RETAINED & relationship\_similarity\_weight=1/(1+normalized\_resolution\_residual) & Projected edges share original relationship identity & PAIRWISE\_SHARED\_RELATIONSHIP\_ID; HIGH\_SOURCE\_AND\_LOW\_SOURCE -> TARGET & EXECUTION\_BOUND & outputs/spectral\_graph\_contract/graph\_relationship\_projection\_registry.json \\
+SIDEBAND\_PAIR & 3 & CENTER\_TO\_EACH\_SIDEBAND & RETAINED & relationship\_similarity\_weight=1/(1+normalized\_resolution\_residual) & Projected edges share original relationship identity & PAIRWISE\_SHARED\_RELATIONSHIP\_ID; CENTER -> LEFT\_AND\_RIGHT & EXECUTION\_BOUND & outputs/spectral\_graph\_contract/graph\_relationship\_projection\_registry.json \\
+\bottomrule
+\end{longtable}

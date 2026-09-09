@@ -1,0 +1,118 @@
+{
+  "table_id": "Table S5",
+  "title": "Spectral input-validation contract",
+  "supplementary_section": "S2",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_lomb_scargle/lomb_scargle_execution_configuration.json",
+    "outputs/k2_e2_lomb_scargle/lomb_scargle_execution_audit.json"
+  ],
+  "provenance_caveat": "Validation behavior is execution-corroborated; implementation-level clauses remain identified as such.",
+  "columns": [
+    "validation_rule",
+    "exact_condition",
+    "action_on_failure",
+    "supporting_artifact",
+    "provenance_status",
+    "notes"
+  ],
+  "records": [
+    {
+      "validation_rule": "numeric representation",
+      "exact_condition": "time, flux, and optional flux_error are converted with np.asarray(..., dtype=np.float64).",
+      "action_on_failure": "Raise validation error if subsequent dimensional, finite, or domain checks fail.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py",
+      "provenance_status": "PROJECT_VERIFIED",
+      "notes": "Current validated implementation; frozen execution records persist valid numerical status and analyzer fingerprint."
+    },
+    {
+      "validation_rule": "array dimensionality",
+      "exact_condition": "time.ndim == 1 and flux.ndim == 1; if present, flux_error.ndim == 1.",
+      "action_on_failure": "Raise ValueError.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py",
+      "provenance_status": "PROJECT_VERIFIED",
+      "notes": "Canonical frozen input has flux_error=None."
+    },
+    {
+      "validation_rule": "equal lengths",
+      "exact_condition": "time.size == flux.size; optional flux_error.size == time.size.",
+      "action_on_failure": "Raise ValueError.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py",
+      "provenance_status": "PROJECT_VERIFIED",
+      "notes": "Frozen execution results record input_lengths_match=true."
+    },
+    {
+      "validation_rule": "minimum observations",
+      "exact_condition": "Current constructor default minimum_observations=3; configured value must be an integer >=3.",
+      "action_on_failure": "Raise ValueError below the configured minimum.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py; outputs/results/stage_22_11_final_public_release_audit/ls_provenance_final_check.csv",
+      "provenance_status": "STRONGLY_CORROBORATED_NOT_EXECUTION_BOUND",
+      "notes": "The numerical threshold is explicit in current code but is not serialized in the compact frozen execution configuration."
+    },
+    {
+      "validation_rule": "finite time",
+      "exact_condition": "all time values finite.",
+      "action_on_failure": "Raise ValueError.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py",
+      "provenance_status": "PROJECT_VERIFIED",
+      "notes": "Eligibility and execution validation corroborate successful frozen inputs."
+    },
+    {
+      "validation_rule": "finite flux",
+      "exact_condition": "all relative-flux values finite.",
+      "action_on_failure": "Raise ValueError.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py",
+      "provenance_status": "PROJECT_VERIFIED",
+      "notes": "Eligibility and execution validation corroborate successful frozen inputs."
+    },
+    {
+      "validation_rule": "nonconstant flux",
+      "exact_condition": "np.ptp(flux) != 0.",
+      "action_on_failure": "Raise ValueError.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py",
+      "provenance_status": "PROJECT_VERIFIED",
+      "notes": "Exact equality to zero is the rejection condition."
+    },
+    {
+      "validation_rule": "stable ordering",
+      "exact_condition": "order = np.argsort(time, kind=\"stable\"); time, flux, and optional flux_error are copied in that order.",
+      "action_on_failure": "Proceed with owned float64 copies after validation.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py",
+      "provenance_status": "PROJECT_VERIFIED",
+      "notes": "Stable sorting is deterministic for equal keys, but equal times are rejected next."
+    },
+    {
+      "validation_rule": "duplicate times",
+      "exact_condition": "After sorting, no adjacent time difference may equal zero.",
+      "action_on_failure": "Raise ValueError; duplicates must be aggregated upstream, not silently within LS.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py",
+      "provenance_status": "PROJECT_VERIFIED",
+      "notes": "Frozen contract rejects duplicates."
+    },
+    {
+      "validation_rule": "strict time monotonicity",
+      "exact_condition": "After stable sorting, every adjacent time difference must be >0.",
+      "action_on_failure": "Raise ValueError.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py",
+      "provenance_status": "PROJECT_VERIFIED",
+      "notes": "Also implies positive baseline for a valid array with at least three observations."
+    },
+    {
+      "validation_rule": "optional uncertainty array",
+      "exact_condition": "If present: 1D, matching length, finite, and strictly positive.",
+      "action_on_failure": "Raise ValueError.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle.py",
+      "provenance_status": "PROJECT_VERIFIED",
+      "notes": "Not exercised by the frozen pilot because canonical flux_error=None."
+    },
+    {
+      "validation_rule": "input immutability",
+      "exact_condition": "Fingerprints/copies are compared before and after execution; frozen inputs must not be modified.",
+      "action_on_failure": "Fail execution with input_mutation_detected.",
+      "supporting_artifact": "src/spectral/lomb_scargle/lomb_scargle_execution.py",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Frozen Stage 13.3 audit reports input_arrays_modified=false."
+    }
+  ]
+}

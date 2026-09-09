@@ -1,0 +1,27 @@
+\begin{longtable}{llllllll}
+\caption{Canonical operational-reference contract}\\
+\toprule
+priority\_order & criterion & mathematical\_or\_algorithmic\_definition & preferred\_direction & tie\_break\_role & supporting\_artifact & provenance\_status & notes \\
+\midrule
+\endfirsthead
+\toprule
+priority\_order & criterion & mathematical\_or\_algorithmic\_definition & preferred\_direction & tie\_break\_role & supporting\_artifact & provenance\_status & notes \\
+\midrule
+\endhead
+0 & candidate set & Provisional harmonic families having a base retained peak and at least one HARMONIC member. & eligible only & gate & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Families without harmonic members are not ranked. \\
+1 & dominant-peak membership & int(dominant\_member\_status). & larger first & primary & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Encoded as negative value in ascending selection tuple. \\
+2 & supported harmonic count & Number of accepted harmonic relationships with the family base. & larger first & secondary & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Count may include competing targets at the same order before canonical member-per-order resolution. \\
+3 & harmonic support score & supported\_harmonic\_count + sum(member\_power / dominant\_power). & larger first & secondary & src/spectral/relationships/frequency\_relationship\_analysis.py; src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Structural score, not a physical probability. \\
+4 & median normalized harmonic residual & Median of |observed-predicted|/delta\_f\_R over family harmonic relationships. & smaller first & secondary & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Resolution-normalized. \\
+5 & maximum normalized harmonic residual & Maximum of |observed-predicted|/delta\_f\_R over family harmonic relationships. & smaller first & secondary & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Resolution-normalized. \\
+6 & family alias-advisory participant count & Sum of stored alias-advisory flags in the provisional family record. & smaller first & secondary & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Advisory burden is a ranking key, not an automatic veto. \\
+7 & base-peak power & Power of the family base retained peak. & larger first & secondary & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Encoded as negative power. \\
+8 & base frequency & Frequency of the family base retained peak. & smaller first & stable tie break & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Deterministic organizing preference. \\
+9 & base retained rank & One-based retained rank of the base peak. & smaller first & stable tie break & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Rank derives from dominant-first NMS traversal. \\
+10 & family identifier & Stable provisional\_family:\{base\_peak\_id\} string. & lexicographically smaller first & final stable tie break & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Makes selection input-order invariant. \\
+11 & reference derivation & Select the retained base peak of the rank-1 family. & rank 1 & selection & src/spectral/interpretation/spectral\_interpretation\_analysis.py; outputs/k2\_e2\_spectral\_interpretation/reference\_frequency\_selection\_registry.json & FROZEN\_ARTIFACT\_VERIFIED & Role is OPERATIONAL\_REFERENCE\_FOR\_DOWNSTREAM\_FEATURE\_EXTRACTION; physical\_fundamental\_confirmed=false. \\
+12 & fallback 1 & If no eligible family exists and the frozen dominant peak exists, select the dominant peak. & dominant & fallback & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Status SELECTED\_DOMINANT\_FALLBACK. \\
+13 & fallback 2 & If neither an eligible family nor dominant peak exists, minimize (frequency, retained\_rank). & lower first & final fallback & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Status SELECTED\_LOWEST\_FREQUENCY\_FALLBACK. \\
+14 & canonical member per harmonic order & Within selected family/order minimize (normalized residual, absolute residual, -power, -relative power, frequency, retained rank, retained\_peak\_id). & tuple ascending & member tie break & src/spectral/interpretation/spectral\_interpretation\_analysis.py & EXECUTION\_BOUND & Competing same-order members are preserved with duplicate\_harmonic\_order\_member reason. \\
+\bottomrule
+\end{longtable}

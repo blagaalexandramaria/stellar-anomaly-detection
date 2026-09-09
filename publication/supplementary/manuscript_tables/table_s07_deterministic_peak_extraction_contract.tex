@@ -1,0 +1,23 @@
+\begin{longtable}{lllllll}
+\caption{Deterministic peak-extraction contract}\\
+\toprule
+stage & rule & exact\_condition & deterministic\_tie\_break & supporting\_artifact & provenance\_status & notes \\
+\midrule
+\endfirsthead
+\toprule
+stage & rule & exact\_condition & deterministic\_tie\_break & supporting\_artifact & provenance\_status & notes \\
+\midrule
+\endhead
+candidate detection & interior local maximum & For index i in 1..N-2: power[i] > power[i-1] and power[i] >= power[i+1]. & Strict-left/non-strict-right resolves a flat two-point top to its left member. & src/spectral/peaks/periodogram\_peak\_extraction.py & EXECUTION\_BOUND & Boundary samples are not ordinary interior maxima. \\
+candidate augmentation & global maximum inclusion & Append frozen Stage 13.3 dominant\_index when absent from ordinary local maxima. & Stage 13.3 dominant uses numpy.argmax, first grid occurrence on a tie. & src/spectral/peaks/periodogram\_peak\_extraction.py; src/spectral/lomb\_scargle/lomb\_scargle\_execution.py & EXECUTION\_BOUND & Guarantees the global Lomb–Scargle maximum enters the candidate set, including a boundary maximum. \\
+candidate identity & stable candidate identifier & peak\_candidate:\{observation\_id\}:\{grid\_index zero-padded to 6 digits\}. & Grid index fixes identity. & src/spectral/peaks/periodogram\_peak\_extraction.py & EXECUTION\_BOUND & Duplicate candidate indices are removed by sorted(set(indices)). \\
+candidate ranking & descending power & Sort by (-power, frequency, local\_maximum\_index). & Lower frequency, then lower grid index. & src/spectral/peaks/periodogram\_peak\_extraction.py & EXECUTION\_BOUND & No peak-count cap and no power threshold are applied. \\
+Rayleigh scale & object-specific resolution & T=max(t)-min(t); delta\_f\_R=1/T. & Not applicable. & src/spectral/peaks/periodogram\_peak\_extraction.py; outputs/k2\_e2\_periodogram\_peaks/peak\_extraction\_configuration.json & EXECUTION\_BOUND & Cadence diagnostic baseline supplies T. \\
+NMS ordering & dominant-first greedy traversal & Process the frozen dominant candidate first, then all other candidates in candidate-rank order. & Candidate rank uses the deterministic ranking above. & src/spectral/peaks/periodogram\_peak\_extraction.py & EXECUTION\_BOUND & Dominant-first ordering ensures global-maximum preservation. \\
+NMS suppression & one-Rayleigh minimum separation & Suppress candidate c when the first already retained r satisfies |f\_c-f\_r| < delta\_f\_R. & First close retained peak in traversal order is the suppressor. & src/spectral/peaks/periodogram\_peak\_extraction.py & EXECUTION\_BOUND & Equality |delta f|=delta\_f\_R is retained; multiplier=1.0. \\
+retained identity & stable retained identifier & retained\_peak:\{observation\_id\}:\{retained sequence zero-padded to 4 digits\}. & Greedy traversal order fixes sequence. & src/spectral/peaks/periodogram\_peak\_extraction.py & EXECUTION\_BOUND & Retained rank is one-based traversal order. \\
+few/no ordinary maxima & fallback behavior & The frozen global maximum is still appended and retained; execution fails only if dominant continuity or positive dominant power is invalid. & numpy.argmax first occurrence for dominant ties. & src/spectral/peaks/periodogram\_peak\_extraction.py & EXECUTION\_BOUND & At least one retained peak is therefore required for a successful observation. \\
+FAP role & dominant-only metadata & Attach frozen FAP/level/significance to the dominant retained peak; secondary retained peaks receive NOT\_EVALUATED and null FAP fields. & Dominant identity is frozen from Stage 13.3. & src/spectral/peaks/periodogram\_peak\_extraction.py & EXECUTION\_BOUND & FAP does not filter candidates or retained peaks. \\
+sampling-window role & advisory proximity annotation & Compare each retained peak with principal window peak and maximum sidelobe using distance <= delta\_f\_R. & Both reason codes may be retained in fixed order. & src/spectral/peaks/periodogram\_peak\_extraction.py & EXECUTION\_BOUND & Alias advisories never remove, rerank, or invalidate retained peaks. \\
+\bottomrule
+\end{longtable}

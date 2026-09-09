@@ -106,7 +106,9 @@ The frozen inventory is documented in [publication/README.md](publication/README
 
 - [`publication/figures/`](publication/figures/) — manuscript Figures 1--6;
 - [`publication/tables/`](publication/tables/) — two main tables;
-- [`publication/supplementary/`](publication/supplementary/) — five supplementary tables and scientific registries.
+- [`publication/supplementary/tables/`](publication/supplementary/tables/) — the earlier five-table frozen results bundle used by Level 2 reproduction;
+- [`publication/supplementary/manuscript_tables/`](publication/supplementary/manuscript_tables/) — current Tables S1--S27 for Supplementary Sections S1--S8;
+- [`publication/supplementary/registries/`](publication/supplementary/registries/) — scientific registries.
 
 ## Scientific interpretation boundary
 

@@ -1,0 +1,5 @@
+seed_scope,root_seed,policy_name,derivation_inputs,exact_derivation_if_verified,persisted,provenance_status,notes
+split,42,SHA256_EXPERIMENT_CHILD_SEED_V1,root seed; split identity,Exact serialized preimage not independently established,YES,PARTIALLY_VERIFIED,Do not regenerate
+IF run,42,SHA256_EXPERIMENT_CHILD_SEED_V1,"split, view, preprocessing, config, family",Persisted deterministic run seed,YES,FROZEN_ARTIFACT_VERIFIED,random_state derived per experiment
+LOF run,42,SHA256_EXPERIMENT_CHILD_SEED_V1,run identity fields,LOF estimator has no stochastic random_state,PARTIAL,PARTIALLY_VERIFIED,Identity provenance preserved
+AE run,42,SHA256_EXPERIMENT_CHILD_SEED_V1,model_family; view_id; preprocessing_policy_id; split_id; architecture_configuration_id; replication_id,UINT32(FIRST_8_BYTES(SHA256(CANONICAL_JSON(seed_material)))),YES,EXECUTION_BOUND,"Seeds Python random, NumPy, Torch"

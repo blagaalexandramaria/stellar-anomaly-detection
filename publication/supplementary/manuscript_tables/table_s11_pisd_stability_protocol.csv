@@ -1,0 +1,10 @@
+protocol_item,frozen_contract,evidence,provenance_status,notes
+N_perturb,100,outputs/pisd_execution_policy/pisd_monte_carlo_reproducibility_policy.json,EXECUTION_BOUND,33 x 100=3300 successful
+root seed,42,outputs/pisd_execution_policy/pisd_monte_carlo_reproducibility_policy.json,EXECUTION_BOUND,
+object seed policy,pisd_stability_object_seed_sha256_v1,outputs/pisd_execution_policy/pisd_monte_carlo_reproducibility_policy.json,EXECUTION_BOUND,33 unique persisted seeds
+perturbed quantity,"relative flux: flux + Normal(0,sigma)",src/pisd/execution/pisd_v2_orchestrator.py,EXECUTION_BOUND,Time fixed; uncertainty vector absent in pilot
+frozen noise path,corrected first-difference MAD for all 33 objects,outputs/k2_e2_pisd_v2/pisd_v2_stability_execution_registry.json,FROZEN_ARTIFACT_VERIFIED,fallback_used=false for all
+fixed quantities,"time, frequency grid, frozen reference power profile, baseline, frozen dominant reference",src/pisd/execution/pisd_v2_orchestrator.py,EXECUTION_BOUND,Only perturbed power is evaluated
+repeated stage,Lomb-Scargle power evaluation on fixed grid,src/pisd/execution/pisd_v2_orchestrator.py,EXECUTION_BOUND,No autopower; no peak/relation/canonical rerun
+aggregation,"median, population SD, mean indicator, linear p90, exponential median transform",src/pisd/execution/pisd_v2_orchestrator.py,EXECUTION_BOUND,Feature-specific formulas in Table S1
+failure handling,fail-fast; all 100 required,src/pisd/execution/pisd_v2_orchestrator.py; outputs/k2_e2_pisd_v2/pisd_v2_stability_execution_registry.json,EXECUTION_BOUND,Frozen failed_perturbations=0

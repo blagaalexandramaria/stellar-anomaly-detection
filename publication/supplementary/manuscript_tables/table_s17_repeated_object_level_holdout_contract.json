@@ -1,0 +1,98 @@
+{
+  "table_id": "Table S17",
+  "title": "Repeated object-level holdout contract",
+  "supplementary_section": "S5",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_experimental_boundary/object_level_resampling_protocol.json",
+    "outputs/k2_e2_experiment_inputs/object_level_split_registry.json"
+  ],
+  "provenance_caveat": "Thirty deterministic splits use astronomical objects as the independent units.",
+  "columns": [
+    "contract_item",
+    "frozen_value",
+    "supporting_artifact",
+    "provenance_status",
+    "notes"
+  ],
+  "records": [
+    {
+      "contract_item": "protocol",
+      "frozen_value": "OBJECT_LEVEL_REPEATED_HOLDOUT_V1",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    },
+    {
+      "contract_item": "independent_unit",
+      "frozen_value": "astronomical object",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    },
+    {
+      "contract_item": "object_count",
+      "frozen_value": "33",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    },
+    {
+      "contract_item": "repeat_count",
+      "frozen_value": "30",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    },
+    {
+      "contract_item": "evaluation_fraction",
+      "frozen_value": "0.2",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    },
+    {
+      "contract_item": "reference_count",
+      "frozen_value": "26",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    },
+    {
+      "contract_item": "evaluation_count",
+      "frozen_value": "7",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    },
+    {
+      "contract_item": "persistence",
+      "frozen_value": "object IDs, row IDs, indices, and split seeds",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    },
+    {
+      "contract_item": "sharing",
+      "frozen_value": "common split registry across views and detector families",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    },
+    {
+      "contract_item": "stratification",
+      "frozen_value": "not recorded",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    },
+    {
+      "contract_item": "evaluation_coverage",
+      "frozen_value": "all 33 objects; 2–10 appearances",
+      "supporting_artifact": "outputs/k2_e2_experiment_inputs/object_level_split_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Photometric measurements are nested, not independently split"
+    }
+  ]
+}

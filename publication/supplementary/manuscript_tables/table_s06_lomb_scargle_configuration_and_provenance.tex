@@ -1,0 +1,22 @@
+\begin{longtable}{llllll}
+\caption{Lomb–Scargle configuration and provenance}\\
+\toprule
+contract\_item & value\_or\_rule & evidence\_category & provenance\_status & supporting\_artifact & notes \\
+\midrule
+\endfirsthead
+\toprule
+contract\_item & value\_or\_rule & evidence\_category & provenance\_status & supporting\_artifact & notes \\
+\midrule
+\endhead
+implementation & astropy.timeseries.LombScargle & current implementation plus frozen execution artifacts & PROJECT\_VERIFIED & src/spectral/lomb\_scargle/lomb\_scargle.py; outputs/k2\_e2\_lomb\_scargle/lomb\_scargle\_execution\_manifest.json & No recomputation performed. \\
+inputs & validated time and relative flux; dy=None & frozen configuration and light-curve manifest & EXECUTION\_BOUND & outputs/k2\_e2\_lomb\_scargle/lomb\_scargle\_execution\_configuration.json; outputs/k2\_e2\_photometric\_adapter/k2\_e2\_lightcurve\_manifest.json & Unweighted. \\
+frequency interval & 0.01 <= f <= 20 d\textasciicircum{}-1 & frozen execution configuration & EXECUTION\_BOUND & outputs/k2\_e2\_lomb\_scargle/lomb\_scargle\_execution\_configuration.json & Fixed configured bounds. \\
+grid & autopower; samples\_per\_peak=5 & frozen configuration and grid registries & EXECUTION\_BOUND & outputs/k2\_e2\_lomb\_scargle/lomb\_scargle\_execution\_configuration.json; outputs/k2\_e2\_lomb\_scargle/lomb\_scargle\_frequency\_grid\_summary\_registry.json & Object-specific generated grid persisted. \\
+dominant tie & first frequency-grid occurrence attaining maximum power & frozen execution implementation/result metadata & EXECUTION\_BOUND & src/spectral/lomb\_scargle/lomb\_scargle\_execution.py & numpy.argmax\_first\_occurrence. \\
+model form & y(t)=a cos(2 pi f t)+b sin(2 pi f t)+c & current constructor settings & STRONGLY\_CORROBORATED\_NOT\_EXECUTION\_BOUND & outputs/results/stage\_22\_11\_final\_public\_release\_audit/ls\_provenance\_final\_check.csv & Depends on fit\_mean=True and nterms=1; do not promote to execution-bound provenance. \\
+normalization & standard & Stage 22.11 final provenance classification & STRONGLY\_CORROBORATED\_NOT\_EXECUTION\_BOUND & outputs/results/stage\_22\_11\_final\_public\_release\_audit/ls\_provenance\_final\_check.csv & Supported by current public/full implementation and records, not serialized in execution-bound frozen config. \\
+fit\_mean & True & Stage 22.11 final provenance classification & STRONGLY\_CORROBORATED\_NOT\_EXECUTION\_BOUND & outputs/results/stage\_22\_11\_final\_public\_release\_audit/ls\_provenance\_final\_check.csv & Same qualification. \\
+center\_data & True & Stage 22.11 final provenance classification & STRONGLY\_CORROBORATED\_NOT\_EXECUTION\_BOUND & outputs/results/stage\_22\_11\_final\_public\_release\_audit/ls\_provenance\_final\_check.csv & Same qualification. \\
+nterms & 1 & Stage 22.11 final provenance classification & STRONGLY\_CORROBORATED\_NOT\_EXECUTION\_BOUND & outputs/results/stage\_22\_11\_final\_public\_release\_audit/ls\_provenance\_final\_check.csv & Same qualification. \\
+\bottomrule
+\end{longtable}

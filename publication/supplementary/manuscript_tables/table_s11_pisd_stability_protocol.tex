@@ -1,0 +1,21 @@
+\begin{longtable}{lllll}
+\caption{PISD stability protocol}\\
+\toprule
+protocol\_item & frozen\_contract & evidence & provenance\_status & notes \\
+\midrule
+\endfirsthead
+\toprule
+protocol\_item & frozen\_contract & evidence & provenance\_status & notes \\
+\midrule
+\endhead
+N\_perturb & 100 & outputs/pisd\_execution\_policy/pisd\_monte\_carlo\_reproducibility\_policy.json & EXECUTION\_BOUND & 33 x 100=3300 successful \\
+root seed & 42 & outputs/pisd\_execution\_policy/pisd\_monte\_carlo\_reproducibility\_policy.json & EXECUTION\_BOUND &  \\
+object seed policy & pisd\_stability\_object\_seed\_sha256\_v1 & outputs/pisd\_execution\_policy/pisd\_monte\_carlo\_reproducibility\_policy.json & EXECUTION\_BOUND & 33 unique persisted seeds \\
+perturbed quantity & relative flux: flux + Normal(0,sigma) & src/pisd/execution/pisd\_v2\_orchestrator.py & EXECUTION\_BOUND & Time fixed; uncertainty vector absent in pilot \\
+frozen noise path & corrected first-difference MAD for all 33 objects & outputs/k2\_e2\_pisd\_v2/pisd\_v2\_stability\_execution\_registry.json & FROZEN\_ARTIFACT\_VERIFIED & fallback\_used=false for all \\
+fixed quantities & time, frequency grid, frozen reference power profile, baseline, frozen dominant reference & src/pisd/execution/pisd\_v2\_orchestrator.py & EXECUTION\_BOUND & Only perturbed power is evaluated \\
+repeated stage & Lomb-Scargle power evaluation on fixed grid & src/pisd/execution/pisd\_v2\_orchestrator.py & EXECUTION\_BOUND & No autopower; no peak/relation/canonical rerun \\
+aggregation & median, population SD, mean indicator, linear p90, exponential median transform & src/pisd/execution/pisd\_v2\_orchestrator.py & EXECUTION\_BOUND & Feature-specific formulas in Table S1 \\
+failure handling & fail-fast; all 100 required & src/pisd/execution/pisd\_v2\_orchestrator.py; outputs/k2\_e2\_pisd\_v2/pisd\_v2\_stability\_execution\_registry.json & EXECUTION\_BOUND & Frozen failed\_perturbations=0 \\
+\bottomrule
+\end{longtable}

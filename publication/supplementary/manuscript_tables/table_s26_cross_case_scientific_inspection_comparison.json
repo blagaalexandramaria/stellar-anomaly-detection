@@ -1,0 +1,79 @@
+{
+  "table_id": "Table S26",
+  "title": "Cross-case scientific-inspection comparison",
+  "supplementary_section": "S7",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/experiments/scientific_inspection/stage_20_4",
+    "outputs/results/stage_21_5_final_results_freeze/registries/representative_case_evidence_registry.json"
+  ],
+  "provenance_caveat": "External context is post-freeze annotation and cannot alter ranks or create a combined anomaly score.",
+  "columns": [
+    "EPIC",
+    "frozen_role",
+    "consensus_rank",
+    "rank_range",
+    "retained_peak_count",
+    "graph_node_count",
+    "graph_relationship_count",
+    "dominant_relation_patterns",
+    "notable_stability_behavior",
+    "post_freeze_context_summary",
+    "interpretation_boundary"
+  ],
+  "records": [
+    {
+      "EPIC": "EPIC 60018238",
+      "frozen_role": "ROBUST_HIGH_CONSENSUS",
+      "consensus_rank": "1",
+      "rank_range": "2",
+      "retained_peak_count": "31",
+      "graph_node_count": "109",
+      "graph_relationship_count": "28828",
+      "dominant_relation_patterns": "difference_combination_edge_fraction=0.457749410295546;sideband_edge_fraction=0.24594144581656724;sum_combination_edge_fraction=0.22658526432634937",
+      "notable_stability_behavior": "profile_similarity=0.9695175461138934; dominant_peak_retention=1",
+      "post_freeze_context_summary": "ASAS J233930-0337.9; RRc",
+      "interpretation_boundary": "High consensus does not establish physical novelty."
+    },
+    {
+      "EPIC": "EPIC 60042292",
+      "frozen_role": "ROBUST_HIGH_CONSENSUS",
+      "consensus_rank": "2",
+      "rank_range": "4",
+      "retained_peak_count": "47",
+      "graph_node_count": "124",
+      "graph_relationship_count": "43937",
+      "dominant_relation_patterns": "difference_combination_edge_fraction=0.46912624894735644;sideband_edge_fraction=0.23538247945922572;sum_combination_edge_fraction=0.2326968158954867",
+      "notable_stability_behavior": "profile_similarity=0.9704652819434997; dominant_peak_retention=1",
+      "post_freeze_context_summary": "HE 2355-0207; RRc; modulated; background in EPIC mask",
+      "interpretation_boundary": "High consensus does not establish physical novelty."
+    },
+    {
+      "EPIC": "EPIC 60018678",
+      "frozen_role": "ROBUST_HIGH_CONSENSUS",
+      "consensus_rank": "3",
+      "rank_range": "2",
+      "retained_peak_count": "27",
+      "graph_node_count": "107",
+      "graph_relationship_count": "28824",
+      "dominant_relation_patterns": "difference_combination_edge_fraction=0.4643352761587566;sideband_edge_fraction=0.23570635581459895;sum_combination_edge_fraction=0.23029419927837913",
+      "notable_stability_behavior": "profile_similarity=0.9836715059323307; dominant_peak_retention=1",
+      "post_freeze_context_summary": "CRTS J232839.2+010142; RRc",
+      "interpretation_boundary": "High consensus does not establish physical novelty."
+    },
+    {
+      "EPIC": "EPIC 60018742",
+      "frozen_role": "DISAGREEMENT_CONTROL",
+      "consensus_rank": "13",
+      "rank_range": "12",
+      "retained_peak_count": "31",
+      "graph_node_count": "101",
+      "graph_relationship_count": "24031",
+      "dominant_relation_patterns": "difference_combination_edge_fraction=0.45641046980982897;sideband_edge_fraction=0.24285298156547794;sum_combination_edge_fraction=0.22620781490574673",
+      "notable_stability_behavior": "profile_similarity=0.9975681702582353; dominant_peak_retention=1",
+      "post_freeze_context_summary": "ATO J001.9023-08.2457; RRab; modulated",
+      "interpretation_boundary": "Detector-rank spread illustrates disagreement; it is not model failure."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+\begin{longtable}{lllllllll}
+\caption{Reference-fitted preprocessing contract}\\
+\toprule
+preprocessing\_name & fit\_scope & transform\_scope & centering\_rule & scaling\_rule & zero\_scale\_behavior & implementation & provenance\_status & notes \\
+\midrule
+\endfirsthead
+\toprule
+preprocessing\_name & fit\_scope & transform\_scope & centering\_rule & scaling\_rule & zero\_scale\_behavior & implementation & provenance\_status & notes \\
+\midrule
+\endhead
+RAW\_V1 & NONE & reference and evaluation & none & identity & n/a & frozen identity policy & EXECUTION\_BOUND & No PCA or feature removal \\
+STANDARD\_SCALE\_V1 & REFERENCE\_PARTITION\_ONLY & both with reference-fit parameters & reference mean & population standard deviation; ddof=0 & retain feature; map to zero in both partitions & frozen project implementation & EXECUTION\_BOUND & evaluation rows excluded \\
+ROBUST\_SCALE\_V1 & REFERENCE\_PARTITION\_ONLY & both with reference-fit parameters & reference median & reference IQR; NumPy linear quantiles & retain feature; map to zero in both partitions & frozen project implementation & EXECUTION\_BOUND & evaluation rows excluded \\
+\bottomrule
+\end{longtable}

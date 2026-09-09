@@ -1,0 +1,74 @@
+{
+  "table_id": "Table S25",
+  "title": "Frozen scientific-inspection cohort",
+  "supplementary_section": "S7",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/representative_case_registry.json",
+    "outputs/results/stage_21_5_final_results_freeze/registries/representative_case_evidence_registry.json"
+  ],
+  "provenance_caveat": "Cases were selected from frozen evidence and are not confirmed anomalies.",
+  "columns": [
+    "EPIC",
+    "IF_rank",
+    "LOF_rank",
+    "AE_rank",
+    "consensus_rank",
+    "rank_range",
+    "frozen_role",
+    "inspection_reason",
+    "selection_status",
+    "notes"
+  ],
+  "records": [
+    {
+      "EPIC": "EPIC 60018238",
+      "IF_rank": "3",
+      "LOF_rank": "1",
+      "AE_rank": "1",
+      "consensus_rank": "1",
+      "rank_range": "2",
+      "frozen_role": "ROBUST_HIGH_CONSENSUS",
+      "inspection_reason": "PRIMARY_HIGH_CONSENSUS_TOP10_TIE_AWARE;ROBUST_HIGH_CONSENSUS_SUPPORT",
+      "selection_status": "FROZEN_SELECTED_FOR_SCIENTIFIC_INSPECTION",
+      "notes": "Strong multi-model prioritization."
+    },
+    {
+      "EPIC": "EPIC 60042292",
+      "IF_rank": "1",
+      "LOF_rank": "2",
+      "AE_rank": "5",
+      "consensus_rank": "2",
+      "rank_range": "4",
+      "frozen_role": "ROBUST_HIGH_CONSENSUS",
+      "inspection_reason": "PRIMARY_HIGH_CONSENSUS_TOP10_TIE_AWARE;ROBUST_HIGH_CONSENSUS_SUPPORT",
+      "selection_status": "FROZEN_SELECTED_FOR_SCIENTIFIC_INSPECTION",
+      "notes": "Strong multi-model prioritization."
+    },
+    {
+      "EPIC": "EPIC 60018678",
+      "IF_rank": "2",
+      "LOF_rank": "3",
+      "AE_rank": "4",
+      "consensus_rank": "3",
+      "rank_range": "2",
+      "frozen_role": "ROBUST_HIGH_CONSENSUS",
+      "inspection_reason": "PRIMARY_HIGH_CONSENSUS_TOP10_TIE_AWARE;ROBUST_HIGH_CONSENSUS_SUPPORT",
+      "selection_status": "FROZEN_SELECTED_FOR_SCIENTIFIC_INSPECTION",
+      "notes": "Strong multi-model prioritization."
+    },
+    {
+      "EPIC": "EPIC 60018742",
+      "IF_rank": "20",
+      "LOF_rank": "13",
+      "AE_rank": "8",
+      "consensus_rank": "13",
+      "rank_range": "12",
+      "frozen_role": "DISAGREEMENT_CONTROL",
+      "inspection_reason": "MAX_PRIMARY_FULL_RANK_DISPLACEMENT;MAX_LOF_PERTURBATION_DISPLACEMENT",
+      "selection_status": "FROZEN_SELECTED_FOR_SCIENTIFIC_INSPECTION",
+      "notes": "Controlled detector disagreement; not a failed candidate."
+    }
+  ]
+}

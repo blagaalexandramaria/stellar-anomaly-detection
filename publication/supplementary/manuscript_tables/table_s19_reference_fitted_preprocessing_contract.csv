@@ -1,0 +1,4 @@
+preprocessing_name,fit_scope,transform_scope,centering_rule,scaling_rule,zero_scale_behavior,implementation,provenance_status,notes
+RAW_V1,NONE,reference and evaluation,none,identity,n/a,frozen identity policy,EXECUTION_BOUND,No PCA or feature removal
+STANDARD_SCALE_V1,REFERENCE_PARTITION_ONLY,both with reference-fit parameters,reference mean,population standard deviation; ddof=0,retain feature; map to zero in both partitions,frozen project implementation,EXECUTION_BOUND,evaluation rows excluded
+ROBUST_SCALE_V1,REFERENCE_PARTITION_ONLY,both with reference-fit parameters,reference median,reference IQR; NumPy linear quantiles,retain feature; map to zero in both partitions,frozen project implementation,EXECUTION_BOUND,evaluation rows excluded

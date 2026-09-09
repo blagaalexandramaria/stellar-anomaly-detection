@@ -1,0 +1,123 @@
+{
+  "table_id": "Table S7",
+  "title": "Deterministic peak-extraction contract",
+  "supplementary_section": "S2",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_periodogram_peaks/peak_extraction_configuration.json",
+    "outputs/k2_e2_periodogram_peaks/peak_suppression_registry.json",
+    "outputs/k2_e2_periodogram_peaks/dominant_peak_continuity_registry.json"
+  ],
+  "provenance_caveat": "Sampling-window matches are advisory and do not remove peaks.",
+  "columns": [
+    "stage",
+    "rule",
+    "exact_condition",
+    "deterministic_tie_break",
+    "supporting_artifact",
+    "provenance_status",
+    "notes"
+  ],
+  "records": [
+    {
+      "stage": "candidate detection",
+      "rule": "interior local maximum",
+      "exact_condition": "For index i in 1..N-2: power[i] > power[i-1] and power[i] >= power[i+1].",
+      "deterministic_tie_break": "Strict-left/non-strict-right resolves a flat two-point top to its left member.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Boundary samples are not ordinary interior maxima."
+    },
+    {
+      "stage": "candidate augmentation",
+      "rule": "global maximum inclusion",
+      "exact_condition": "Append frozen Stage 13.3 dominant_index when absent from ordinary local maxima.",
+      "deterministic_tie_break": "Stage 13.3 dominant uses numpy.argmax, first grid occurrence on a tie.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py; src/spectral/lomb_scargle/lomb_scargle_execution.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Guarantees the global Lomb–Scargle maximum enters the candidate set, including a boundary maximum."
+    },
+    {
+      "stage": "candidate identity",
+      "rule": "stable candidate identifier",
+      "exact_condition": "peak_candidate:{observation_id}:{grid_index zero-padded to 6 digits}.",
+      "deterministic_tie_break": "Grid index fixes identity.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Duplicate candidate indices are removed by sorted(set(indices))."
+    },
+    {
+      "stage": "candidate ranking",
+      "rule": "descending power",
+      "exact_condition": "Sort by (-power, frequency, local_maximum_index).",
+      "deterministic_tie_break": "Lower frequency, then lower grid index.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "No peak-count cap and no power threshold are applied."
+    },
+    {
+      "stage": "Rayleigh scale",
+      "rule": "object-specific resolution",
+      "exact_condition": "T=max(t)-min(t); delta_f_R=1/T.",
+      "deterministic_tie_break": "Not applicable.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py; outputs/k2_e2_periodogram_peaks/peak_extraction_configuration.json",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Cadence diagnostic baseline supplies T."
+    },
+    {
+      "stage": "NMS ordering",
+      "rule": "dominant-first greedy traversal",
+      "exact_condition": "Process the frozen dominant candidate first, then all other candidates in candidate-rank order.",
+      "deterministic_tie_break": "Candidate rank uses the deterministic ranking above.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Dominant-first ordering ensures global-maximum preservation."
+    },
+    {
+      "stage": "NMS suppression",
+      "rule": "one-Rayleigh minimum separation",
+      "exact_condition": "Suppress candidate c when the first already retained r satisfies |f_c-f_r| < delta_f_R.",
+      "deterministic_tie_break": "First close retained peak in traversal order is the suppressor.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Equality |delta f|=delta_f_R is retained; multiplier=1.0."
+    },
+    {
+      "stage": "retained identity",
+      "rule": "stable retained identifier",
+      "exact_condition": "retained_peak:{observation_id}:{retained sequence zero-padded to 4 digits}.",
+      "deterministic_tie_break": "Greedy traversal order fixes sequence.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Retained rank is one-based traversal order."
+    },
+    {
+      "stage": "few/no ordinary maxima",
+      "rule": "fallback behavior",
+      "exact_condition": "The frozen global maximum is still appended and retained; execution fails only if dominant continuity or positive dominant power is invalid.",
+      "deterministic_tie_break": "numpy.argmax first occurrence for dominant ties.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "At least one retained peak is therefore required for a successful observation."
+    },
+    {
+      "stage": "FAP role",
+      "rule": "dominant-only metadata",
+      "exact_condition": "Attach frozen FAP/level/significance to the dominant retained peak; secondary retained peaks receive NOT_EVALUATED and null FAP fields.",
+      "deterministic_tie_break": "Dominant identity is frozen from Stage 13.3.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "FAP does not filter candidates or retained peaks."
+    },
+    {
+      "stage": "sampling-window role",
+      "rule": "advisory proximity annotation",
+      "exact_condition": "Compare each retained peak with principal window peak and maximum sidelobe using distance <= delta_f_R.",
+      "deterministic_tie_break": "Both reason codes may be retained in fixed order.",
+      "supporting_artifact": "src/spectral/peaks/periodogram_peak_extraction.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Alias advisories never remove, rerank, or invalidate retained peaks."
+    }
+  ]
+}

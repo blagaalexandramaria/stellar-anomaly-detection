@@ -1,0 +1,12 @@
+contract_item,frozen_value,supporting_artifact,provenance_status,notes
+protocol,OBJECT_LEVEL_REPEATED_HOLDOUT_V1,outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"
+independent_unit,astronomical object,outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"
+object_count,33,outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"
+repeat_count,30,outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"
+evaluation_fraction,0.2,outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"
+reference_count,26,outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"
+evaluation_count,7,outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"
+persistence,"object IDs, row IDs, indices, and split seeds",outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"
+sharing,common split registry across views and detector families,outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"
+stratification,not recorded,outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"
+evaluation_coverage,all 33 objects; 2–10 appearances,outputs/k2_e2_experiment_inputs/object_level_split_registry.json,FROZEN_ARTIFACT_VERIFIED,"Photometric measurements are nested, not independently split"

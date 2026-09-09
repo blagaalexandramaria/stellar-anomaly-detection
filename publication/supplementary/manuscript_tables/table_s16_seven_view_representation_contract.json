@@ -1,0 +1,94 @@
+{
+  "table_id": "Table S16",
+  "title": "Seven-view representation contract",
+  "supplementary_section": "S5",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_representation_registry.json",
+    "outputs/k2_e2_multiview_dataset/raw_multiview_dataset_manifest.json"
+  ],
+  "provenance_caveat": "PISD_PLUS_GRAPH_ALL is the predefined 108-dimensional PRIMARY view.",
+  "columns": [
+    "representation_name",
+    "components",
+    "dimension",
+    "role",
+    "primary",
+    "supporting_artifact",
+    "provenance_status",
+    "notes"
+  ],
+  "records": [
+    {
+      "representation_name": "PISD_ONLY",
+      "components": "PISD v2",
+      "dimension": "42",
+      "role": "secondary",
+      "primary": "NO",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_representation_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Exact frozen name and dimension"
+    },
+    {
+      "representation_name": "GRAPH_CORE_ONLY",
+      "components": "Graph-Core",
+      "dimension": "30",
+      "role": "secondary",
+      "primary": "NO",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_representation_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Exact frozen name and dimension"
+    },
+    {
+      "representation_name": "GRAPH_EXTENDED_ONLY",
+      "components": "Graph-Extended",
+      "dimension": "36",
+      "role": "secondary",
+      "primary": "NO",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_representation_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Exact frozen name and dimension"
+    },
+    {
+      "representation_name": "GRAPH_ALL",
+      "components": "Graph-Core + Graph-Extended",
+      "dimension": "66",
+      "role": "secondary",
+      "primary": "NO",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_representation_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Exact frozen name and dimension"
+    },
+    {
+      "representation_name": "PISD_PLUS_GRAPH_CORE",
+      "components": "PISD v2 + Graph-Core",
+      "dimension": "72",
+      "role": "secondary",
+      "primary": "NO",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_representation_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Exact frozen name and dimension"
+    },
+    {
+      "representation_name": "PISD_PLUS_GRAPH_EXTENDED",
+      "components": "PISD v2 + Graph-Extended",
+      "dimension": "78",
+      "role": "secondary",
+      "primary": "NO",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_representation_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Exact frozen name and dimension"
+    },
+    {
+      "representation_name": "PISD_PLUS_GRAPH_ALL",
+      "components": "PISD v2 + Graph-All",
+      "dimension": "108",
+      "role": "predefined primary evidence view",
+      "primary": "YES",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_representation_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "Exact frozen name and dimension"
+    }
+  ]
+}

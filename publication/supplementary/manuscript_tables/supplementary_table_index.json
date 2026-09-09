@@ -1,0 +1,499 @@
+{
+  "artifact_type": "current_manuscript_supplementary_table_inventory",
+  "table_count": 27,
+  "numbering": "global S1-S27",
+  "records": [
+    {
+      "table_number": "Table S1",
+      "title": "Complete source-product inventory",
+      "supplementary_section": "S1",
+      "source_artifacts": [
+        "outputs/stellar_corpus/stellar_corpus_manifest.json",
+        "outputs/results/stage_22_13_manuscript_evidence_extraction/manuscript_methods_constants.csv"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s01_complete_source_product_inventory",
+      "provenance_caveat": "Only one source product entered the frozen experiment; incomplete metadata for context products is not inferred."
+    },
+    {
+      "table_number": "Table S2",
+      "title": "Frozen K2-E2 experimental-source summary",
+      "supplementary_section": "S1",
+      "source_artifacts": [
+        "outputs/k2_e2_photometric_adapter/k2_e2_lightcurve_manifest.json",
+        "outputs/k2_e2_photometric_adapter/photometric_transformation_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s02_frozen_k2_e2_experimental_source_summary",
+      "provenance_caveat": "Source labels are preserved literally; no more specific BJD or Kp calibration claim is made."
+    },
+    {
+      "table_number": "Table S3",
+      "title": "Frozen 33-object pilot manifest",
+      "supplementary_section": "S1",
+      "source_artifacts": [
+        "outputs/k2_e2_photometric_adapter/k2_e2_photometric_transformation_manifest.json",
+        "outputs/k2_e2_photometric_adapter/k2_e2_lightcurve_manifest.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s03_frozen_33_object_pilot_manifest",
+      "provenance_caveat": "Photometric samples are repeated measurements nested within astronomical objects."
+    },
+    {
+      "table_number": "Table S4",
+      "title": "Data and corpus provenance qualifications",
+      "supplementary_section": "S1",
+      "source_artifacts": [
+        "outputs/results/stage_22_13_manuscript_evidence_extraction/manuscript_open_items.csv",
+        "outputs/k2_e2_photometric_adapter/photometric_transformation_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s04_data_and_corpus_provenance_qualifications",
+      "provenance_caveat": "Separates execution-bound facts from qualified or unresolved source conventions."
+    },
+    {
+      "table_number": "Table S5",
+      "title": "Spectral input-validation contract",
+      "supplementary_section": "S2",
+      "source_artifacts": [
+        "outputs/k2_e2_lomb_scargle/lomb_scargle_execution_configuration.json",
+        "outputs/k2_e2_lomb_scargle/lomb_scargle_execution_audit.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s05_spectral_input_validation_contract",
+      "provenance_caveat": "Validation behavior is execution-corroborated; implementation-level clauses remain identified as such."
+    },
+    {
+      "table_number": "Table S6",
+      "title": "Lomb–Scargle configuration and provenance",
+      "supplementary_section": "S2",
+      "source_artifacts": [
+        "outputs/k2_e2_lomb_scargle/lomb_scargle_execution_configuration.json",
+        "outputs/k2_e2_lomb_scargle/lomb_scargle_frequency_grid_summary_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s06_lomb_scargle_configuration_and_provenance",
+      "provenance_caveat": "normalization, fit_mean, center_data, and nterms remain strongly corroborated but not execution-bound."
+    },
+    {
+      "table_number": "Table S7",
+      "title": "Deterministic peak-extraction contract",
+      "supplementary_section": "S2",
+      "source_artifacts": [
+        "outputs/k2_e2_periodogram_peaks/peak_extraction_configuration.json",
+        "outputs/k2_e2_periodogram_peaks/peak_suppression_registry.json",
+        "outputs/k2_e2_periodogram_peaks/dominant_peak_continuity_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s07_deterministic_peak_extraction_contract",
+      "provenance_caveat": "Sampling-window matches are advisory and do not remove peaks."
+    },
+    {
+      "table_number": "Table S8",
+      "title": "Frequency-relation ontology",
+      "supplementary_section": "S2",
+      "source_artifacts": [
+        "outputs/k2_e2_frequency_relationships/frequency_relationship_configuration.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s08_frequency_relation_ontology",
+      "provenance_caveat": "Relation predicates are analytical definitions, not confirmed physical coupling."
+    },
+    {
+      "table_number": "Table S9",
+      "title": "Canonical operational-reference contract",
+      "supplementary_section": "S2",
+      "source_artifacts": [
+        "outputs/k2_e2_spectral_interpretation/canonical_harmonic_family_registry.json",
+        "outputs/k2_e2_spectral_interpretation/canonical_harmonic_member_registry.json",
+        "outputs/k2_e2_spectral_interpretation/canonical_spectral_representation_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s09_canonical_operational_reference_contract",
+      "provenance_caveat": "The operational reference is not asserted to be the physical stellar fundamental."
+    },
+    {
+      "table_number": "Table S10",
+      "title": "Complete ordered PISD v2 feature registry",
+      "supplementary_section": "S3",
+      "source_artifacts": [
+        "outputs/k2_e2_pisd_v2/pisd_v2_feature_registry.json",
+        "outputs/k2_e2_pisd_v2/pisd_v2_feature_matrix_manifest.json",
+        "outputs/pisd_descriptor_contract/pisd_feature_contract_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s10_complete_ordered_pisd_v2_feature_registry",
+      "provenance_caveat": "Formula-level wording follows executed adapters where later prose summaries conflict."
+    },
+    {
+      "table_number": "Table S11",
+      "title": "PISD stability protocol",
+      "supplementary_section": "S3",
+      "source_artifacts": [
+        "outputs/k2_e2_pisd_v2_inputs/pisd_stability_input_registry.json",
+        "outputs/k2_e2_pisd_v2_audit/pisd_stability_feature_audit.json",
+        "outputs/k2_e2_pisd_v2/pisd_v2_execution_manifest.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s11_pisd_stability_protocol",
+      "provenance_caveat": "Uses 100 perturbations and persisted object-specific streams; no perturbation is recomputed here."
+    },
+    {
+      "table_number": "Table S12",
+      "title": "Spectral graph relationship projection contract",
+      "supplementary_section": "S4",
+      "source_artifacts": [
+        "outputs/k2_e2_spectral_graphs/spectral_graph_construction_configuration.json",
+        "outputs/k2_e2_frequency_relationships/frequency_relationship_configuration.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s12_spectral_graph_relationship_projection_contract",
+      "provenance_caveat": "Projected directed edges retain upstream relationship identity."
+    },
+    {
+      "table_number": "Table S13",
+      "title": "Ordered Graph-Core feature registry",
+      "supplementary_section": "S4",
+      "source_artifacts": [
+        "outputs/k2_e2_graph_core/graph_core_feature_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s13_ordered_graph_core_feature_registry",
+      "provenance_caveat": "Graph-Core is topology-only and contains exactly 30 ordered features."
+    },
+    {
+      "table_number": "Table S14",
+      "title": "Ordered Graph-Extended feature registry",
+      "supplementary_section": "S4",
+      "source_artifacts": [
+        "outputs/k2_e2_graph_extended/graph_extended_feature_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s14_ordered_graph_extended_feature_registry",
+      "provenance_caveat": "Graph-Extended contains 36 operational physics-annotated summaries without physical-confirmation claims."
+    },
+    {
+      "table_number": "Table S15",
+      "title": "Ordered Graph-All feature registry",
+      "supplementary_section": "S4",
+      "source_artifacts": [
+        "outputs/k2_e2_graph_core/graph_core_feature_registry.json",
+        "outputs/k2_e2_graph_extended/graph_extended_feature_registry.json",
+        "outputs/k2_e2_multiview_dataset/raw_multiview_dataset_manifest.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s15_ordered_graph_all_feature_registry",
+      "provenance_caveat": "Graph-All is the exact Core-then-Extended concatenation; no matrix is recomputed."
+    },
+    {
+      "table_number": "Table S16",
+      "title": "Seven-view representation contract",
+      "supplementary_section": "S5",
+      "source_artifacts": [
+        "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/final_representation_registry.json",
+        "outputs/k2_e2_multiview_dataset/raw_multiview_dataset_manifest.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s16_seven_view_representation_contract",
+      "provenance_caveat": "PISD_PLUS_GRAPH_ALL is the predefined 108-dimensional PRIMARY view."
+    },
+    {
+      "table_number": "Table S17",
+      "title": "Repeated object-level holdout contract",
+      "supplementary_section": "S5",
+      "source_artifacts": [
+        "outputs/k2_e2_experimental_boundary/object_level_resampling_protocol.json",
+        "outputs/k2_e2_experiment_inputs/object_level_split_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s17_repeated_object_level_holdout_contract",
+      "provenance_caveat": "Thirty deterministic splits use astronomical objects as the independent units."
+    },
+    {
+      "table_number": "Table S18",
+      "title": "Experiment seed contract",
+      "supplementary_section": "S5",
+      "source_artifacts": [
+        "outputs/k2_e2_experimental_boundary/experiment_seed_policy.json",
+        "outputs/k2_e2_experiment_inputs/object_level_split_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s18_experiment_seed_contract",
+      "provenance_caveat": "Child seeds depend on the complete frozen experiment identity."
+    },
+    {
+      "table_number": "Table S19",
+      "title": "Reference-fitted preprocessing contract",
+      "supplementary_section": "S5",
+      "source_artifacts": [
+        "outputs/k2_e2_experimental_boundary/preprocessing_policy_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s19_reference_fitted_preprocessing_contract",
+      "provenance_caveat": "Evaluation objects never affect fitting; zero-scale columns remain in schema and map to zero."
+    },
+    {
+      "table_number": "Table S20",
+      "title": "Frozen detector configuration grid",
+      "supplementary_section": "S5",
+      "source_artifacts": [
+        "outputs/experiments/isolation_forest/stage_16_1/isolation_forest_hyperparameter_registry.json",
+        "outputs/experiments/lof/stage_17_1/local_outlier_factor_configuration_registry.json",
+        "outputs/experiments/autoencoder/stage_18_1/autoencoder_configuration_registry.json",
+        "outputs/results/stage_22_13_manuscript_evidence_extraction/detector_configuration_table.csv"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s20_frozen_detector_configuration_grid",
+      "provenance_caveat": "Configuration rows are frozen transcriptions; no model is rerun."
+    },
+    {
+      "table_number": "Table S21",
+      "title": "Complete representation-dependent rank agreement",
+      "supplementary_section": "S6",
+      "source_artifacts": [
+        "outputs/experiments/isolation_forest/stage_16_3/representation_agreement_registry.json",
+        "outputs/experiments/lof/stage_17_3/lof_representation_agreement_registry.json",
+        "outputs/experiments/autoencoder/stage_18_3/autoencoder_representation_agreement_summary.json",
+        "outputs/results/stage_21_5_final_results_freeze/registries/representation_findings.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s21_complete_representation_dependent_rank_agreement",
+      "provenance_caveat": "Agreement is descriptive rank concordance, not classification accuracy."
+    },
+    {
+      "table_number": "Table S22",
+      "title": "Cross-model agreement and predefined top-k overlap",
+      "supplementary_section": "S6",
+      "source_artifacts": [
+        "outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s4_cross_model_agreement.csv",
+        "outputs/results/stage_21_5_final_results_freeze/registries/cross_model_agreement_findings.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s22_cross_model_agreement_and_predefined_top_k_overlap",
+      "provenance_caveat": "Top-k overlap is descriptive and not a classification threshold."
+    },
+    {
+      "table_number": "Table S23",
+      "title": "Complete PRIMARY consensus ranking",
+      "supplementary_section": "S6",
+      "source_artifacts": [
+        "outputs/experiments/cross_model/stage_19_3/cross_model_primary_consensus_ranked.csv",
+        "outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s2_complete_object_rankings.csv"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s23_complete_primary_consensus_ranking",
+      "provenance_caveat": "Rank 1 denotes the most unusual placement; no object is labeled a confirmed anomaly."
+    },
+    {
+      "table_number": "Table S24",
+      "title": "Complete frozen robustness summary",
+      "supplementary_section": "S6",
+      "source_artifacts": [
+        "outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s3_robustness.csv",
+        "outputs/results/stage_21_5_final_results_freeze/registries/robustness_findings.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s24_complete_frozen_robustness_summary",
+      "provenance_caveat": "Robustness quantifies rank sensitivity, not detector superiority."
+    },
+    {
+      "table_number": "Table S25",
+      "title": "Frozen scientific-inspection cohort",
+      "supplementary_section": "S7",
+      "source_artifacts": [
+        "outputs/results/stage_21_8_publication_supplementary_package/supplementary_registries/representative_case_registry.json",
+        "outputs/results/stage_21_5_final_results_freeze/registries/representative_case_evidence_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s25_frozen_scientific_inspection_cohort",
+      "provenance_caveat": "Cases were selected from frozen evidence and are not confirmed anomalies."
+    },
+    {
+      "table_number": "Table S26",
+      "title": "Cross-case scientific-inspection comparison",
+      "supplementary_section": "S7",
+      "source_artifacts": [
+        "outputs/experiments/scientific_inspection/stage_20_4",
+        "outputs/results/stage_21_5_final_results_freeze/registries/representative_case_evidence_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s26_cross_case_scientific_inspection_comparison",
+      "provenance_caveat": "External context is post-freeze annotation and cannot alter ranks or create a combined anomaly score."
+    },
+    {
+      "table_number": "Table S27",
+      "title": "Known reproducibility and provenance limitations",
+      "supplementary_section": "S8",
+      "source_artifacts": [
+        "outputs/results/stage_22_13_manuscript_evidence_extraction/manuscript_open_items.csv",
+        "outputs/results/stage_22_13_manuscript_evidence_extraction/manuscript_evidence_report.md",
+        "outputs/results/stage_21_9_final_scientific_publication_freeze/registries/final_supplementary_registry.json"
+      ],
+      "values_already_frozen": true,
+      "producible_without_recomputation": true,
+      "formats": [
+        "csv",
+        "json",
+        "tex"
+      ],
+      "basename": "table_s27_known_reproducibility_and_provenance_limitations",
+      "provenance_caveat": "Includes execution-bound, corroborated, and unresolved items with explicit status; it is not a new scientific result."
+    }
+  ]
+}

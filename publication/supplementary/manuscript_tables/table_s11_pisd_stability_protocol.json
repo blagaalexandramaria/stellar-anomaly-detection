@@ -1,0 +1,85 @@
+{
+  "table_id": "Table S11",
+  "title": "PISD stability protocol",
+  "supplementary_section": "S3",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_pisd_v2_inputs/pisd_stability_input_registry.json",
+    "outputs/k2_e2_pisd_v2_audit/pisd_stability_feature_audit.json",
+    "outputs/k2_e2_pisd_v2/pisd_v2_execution_manifest.json"
+  ],
+  "provenance_caveat": "Uses 100 perturbations and persisted object-specific streams; no perturbation is recomputed here.",
+  "columns": [
+    "protocol_item",
+    "frozen_contract",
+    "evidence",
+    "provenance_status",
+    "notes"
+  ],
+  "records": [
+    {
+      "protocol_item": "N_perturb",
+      "frozen_contract": "100",
+      "evidence": "outputs/pisd_execution_policy/pisd_monte_carlo_reproducibility_policy.json",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "33 x 100=3300 successful"
+    },
+    {
+      "protocol_item": "root seed",
+      "frozen_contract": "42",
+      "evidence": "outputs/pisd_execution_policy/pisd_monte_carlo_reproducibility_policy.json",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": ""
+    },
+    {
+      "protocol_item": "object seed policy",
+      "frozen_contract": "pisd_stability_object_seed_sha256_v1",
+      "evidence": "outputs/pisd_execution_policy/pisd_monte_carlo_reproducibility_policy.json",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "33 unique persisted seeds"
+    },
+    {
+      "protocol_item": "perturbed quantity",
+      "frozen_contract": "relative flux: flux + Normal(0,sigma)",
+      "evidence": "src/pisd/execution/pisd_v2_orchestrator.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Time fixed; uncertainty vector absent in pilot"
+    },
+    {
+      "protocol_item": "frozen noise path",
+      "frozen_contract": "corrected first-difference MAD for all 33 objects",
+      "evidence": "outputs/k2_e2_pisd_v2/pisd_v2_stability_execution_registry.json",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "fallback_used=false for all"
+    },
+    {
+      "protocol_item": "fixed quantities",
+      "frozen_contract": "time, frequency grid, frozen reference power profile, baseline, frozen dominant reference",
+      "evidence": "src/pisd/execution/pisd_v2_orchestrator.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Only perturbed power is evaluated"
+    },
+    {
+      "protocol_item": "repeated stage",
+      "frozen_contract": "Lomb-Scargle power evaluation on fixed grid",
+      "evidence": "src/pisd/execution/pisd_v2_orchestrator.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "No autopower; no peak/relation/canonical rerun"
+    },
+    {
+      "protocol_item": "aggregation",
+      "frozen_contract": "median, population SD, mean indicator, linear p90, exponential median transform",
+      "evidence": "src/pisd/execution/pisd_v2_orchestrator.py",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Feature-specific formulas in Table S1"
+    },
+    {
+      "protocol_item": "failure handling",
+      "frozen_contract": "fail-fast; all 100 required",
+      "evidence": "src/pisd/execution/pisd_v2_orchestrator.py; outputs/k2_e2_pisd_v2/pisd_v2_stability_execution_registry.json",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Frozen failed_perturbations=0"
+    }
+  ]
+}

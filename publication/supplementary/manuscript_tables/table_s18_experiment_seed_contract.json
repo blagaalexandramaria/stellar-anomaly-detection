@@ -1,0 +1,64 @@
+{
+  "table_id": "Table S18",
+  "title": "Experiment seed contract",
+  "supplementary_section": "S5",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_experimental_boundary/experiment_seed_policy.json",
+    "outputs/k2_e2_experiment_inputs/object_level_split_registry.json"
+  ],
+  "provenance_caveat": "Child seeds depend on the complete frozen experiment identity.",
+  "columns": [
+    "seed_scope",
+    "root_seed",
+    "policy_name",
+    "derivation_inputs",
+    "exact_derivation_if_verified",
+    "persisted",
+    "provenance_status",
+    "notes"
+  ],
+  "records": [
+    {
+      "seed_scope": "split",
+      "root_seed": "42",
+      "policy_name": "SHA256_EXPERIMENT_CHILD_SEED_V1",
+      "derivation_inputs": "root seed; split identity",
+      "exact_derivation_if_verified": "Exact serialized preimage not independently established",
+      "persisted": "YES",
+      "provenance_status": "PARTIALLY_VERIFIED",
+      "notes": "Do not regenerate"
+    },
+    {
+      "seed_scope": "IF run",
+      "root_seed": "42",
+      "policy_name": "SHA256_EXPERIMENT_CHILD_SEED_V1",
+      "derivation_inputs": "split, view, preprocessing, config, family",
+      "exact_derivation_if_verified": "Persisted deterministic run seed",
+      "persisted": "YES",
+      "provenance_status": "FROZEN_ARTIFACT_VERIFIED",
+      "notes": "random_state derived per experiment"
+    },
+    {
+      "seed_scope": "LOF run",
+      "root_seed": "42",
+      "policy_name": "SHA256_EXPERIMENT_CHILD_SEED_V1",
+      "derivation_inputs": "run identity fields",
+      "exact_derivation_if_verified": "LOF estimator has no stochastic random_state",
+      "persisted": "PARTIAL",
+      "provenance_status": "PARTIALLY_VERIFIED",
+      "notes": "Identity provenance preserved"
+    },
+    {
+      "seed_scope": "AE run",
+      "root_seed": "42",
+      "policy_name": "SHA256_EXPERIMENT_CHILD_SEED_V1",
+      "derivation_inputs": "model_family; view_id; preprocessing_policy_id; split_id; architecture_configuration_id; replication_id",
+      "exact_derivation_if_verified": "UINT32(FIRST_8_BYTES(SHA256(CANONICAL_JSON(seed_material))))",
+      "persisted": "YES",
+      "provenance_status": "EXECUTION_BOUND",
+      "notes": "Seeds Python random, NumPy, Torch"
+    }
+  ]
+}

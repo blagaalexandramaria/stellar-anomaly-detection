@@ -1,0 +1,77 @@
+{
+  "table_id": "Table S4",
+  "title": "Data and corpus provenance qualifications",
+  "supplementary_section": "S1",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/results/stage_22_13_manuscript_evidence_extraction/manuscript_open_items.csv",
+    "outputs/k2_e2_photometric_adapter/photometric_transformation_registry.json"
+  ],
+  "provenance_caveat": "Separates execution-bound facts from qualified or unresolved source conventions.",
+  "columns": [
+    "provenance_item",
+    "status",
+    "evidence_source",
+    "manuscript_safe_wording",
+    "consequence"
+  ],
+  "records": [
+    {
+      "provenance_item": "exact time standard of BJD-2450000",
+      "status": "UNRESOLVED",
+      "evidence_source": "docs/architecture/STAGE_12_4D_A1_K2_E2_TIME_MAGNITUDE_ERROR_CONVENTION_RESOLUTION.md",
+      "manuscript_safe_wording": "The supplied BJD-2450000 coordinate was retained without conversion; a more specific time standard was not independently established.",
+      "consequence": "Do not label the coordinate as a specific BJD time scale."
+    },
+    {
+      "provenance_item": "exact physical/calibration interpretation of Kp",
+      "status": "UNRESOLVED",
+      "evidence_source": "docs/architecture/STAGE_12_4D_A1_K2_E2_TIME_MAGNITUDE_ERROR_CONVENTION_RESOLUTION.md",
+      "manuscript_safe_wording": "Kp is treated as the reported magnitude-like photometric quantity.",
+      "consequence": "Do not claim absolute or calibrated apparent-magnitude semantics."
+    },
+    {
+      "provenance_item": "interpretation of Kp_err",
+      "status": "PARTIALLY VERIFIED",
+      "evidence_source": "docs/architecture/STAGE_12_4D_A1_K2_E2_TIME_MAGNITUDE_ERROR_CONVENTION_RESOLUTION.md; outputs/k2_e2_photometric_adapter/photometric_transformation_registry.json",
+      "manuscript_safe_wording": "Kp_err is retained as supplied source metadata; its detailed statistical/calibration semantics were not independently established.",
+      "consequence": "Kp_err was not propagated; canonical flux_error is None and Lomb–Scargle analysis is unweighted."
+    },
+    {
+      "provenance_item": "broader 14-product source provenance completeness",
+      "status": "PARTIALLY VERIFIED",
+      "evidence_source": "config/data/stellar_corpus_sources.json; [private path omitted]",
+      "manuscript_safe_wording": "The broader corpus registry contains 14 workbook-derived source products; unconfirmed metadata remain unresolved.",
+      "consequence": "Only registry-supported fields are reported; bibliography reconciliation remains necessary."
+    },
+    {
+      "provenance_item": "K2-E2 publication provenance",
+      "status": "LITERATURE-VERIFIED",
+      "evidence_source": "[private path omitted]; [private path omitted]",
+      "manuscript_safe_wording": "The experimental source is Molnár et al. (2015), “An RR Lyrae family portrait: 33 stars observed in Pisces with K2-E2.”",
+      "consequence": "Supports publication-level observing and sample context, not project-processing details."
+    },
+    {
+      "provenance_item": "exact object and light-curve counts",
+      "status": "PROJECT-VERIFIED",
+      "evidence_source": "outputs/k2_e2_raw_loader/k2_e2_raw_loader_manifest.json; outputs/k2_e2_photometric_adapter/k2_e2_lightcurve_manifest.json; outputs/results/stage_22_13_manuscript_evidence_extraction/pilot_cohort_manifest.csv",
+      "manuscript_safe_wording": "The frozen pilot contains 33 astronomical objects and 33 light-curve products.",
+      "consequence": "Defines the machine-learning sample size as 33 objects."
+    },
+    {
+      "provenance_item": "retained-row accounting",
+      "status": "PROJECT-VERIFIED",
+      "evidence_source": "outputs/k2_e2_raw_loader/k2_e2_raw_loader_statistics.json; outputs/k2_e2_photometric_adapter/k2_e2_photometric_transformation_statistics.json; outputs/results/stage_22_13_manuscript_evidence_extraction/pilot_cohort_manifest.csv",
+      "manuscript_safe_wording": "All 14,338 input rows survived finite filtering and were retained.",
+      "consequence": "The measurements are nested within objects and are not independent ML observations."
+    },
+    {
+      "provenance_item": "cross-mission or cross-class generalization",
+      "status": "NOT REQUIRED FOR PRESENT ANALYSIS",
+      "evidence_source": "docs/architecture/stage_13/STAGE_13_2_A1_AUTHORITATIVE_PILOT_SCOPE_AND_GOVERNANCE.md",
+      "manuscript_safe_wording": "The frozen experiment uses one K2-E2 RR Lyrae source and does not establish cross-mission or cross-class generalization.",
+      "consequence": "Limit claims to the frozen pilot scope."
+    }
+  ]
+}

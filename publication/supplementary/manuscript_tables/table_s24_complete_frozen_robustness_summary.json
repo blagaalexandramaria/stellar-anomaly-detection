@@ -1,0 +1,74 @@
+{
+  "table_id": "Table S24",
+  "title": "Complete frozen robustness summary",
+  "supplementary_section": "S6",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s3_robustness.csv",
+    "outputs/results/stage_21_5_final_results_freeze/registries/robustness_findings.json"
+  ],
+  "provenance_caveat": "Robustness quantifies rank sensitivity, not detector superiority.",
+  "columns": [
+    "comparison",
+    "spearman_rho",
+    "kendall_tau",
+    "mean_absolute_rank_displacement",
+    "maximum_absolute_rank_displacement",
+    "n_objects",
+    "supporting_artifact",
+    "notes"
+  ],
+  "records": [
+    {
+      "comparison": "Median vs mean",
+      "spearman_rho": "0.992971901452473",
+      "kendall_tau": "0.9520153550863725",
+      "mean_absolute_rank_displacement": "0.9090909090909091",
+      "maximum_absolute_rank_displacement": "3",
+      "n_objects": "33",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s3_robustness.csv",
+      "notes": "Frozen named comparison; descriptive rank concordance and displacement only."
+    },
+    {
+      "comparison": "PRIMARY vs FULL",
+      "spearman_rho": "0.9084672148610509",
+      "kendall_tau": "0.7512011150888909",
+      "mean_absolute_rank_displacement": "3.4242424242424243",
+      "maximum_absolute_rank_displacement": "8",
+      "n_objects": "33",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s3_robustness.csv",
+      "notes": "Frozen named comparison; descriptive rank concordance and displacement only."
+    },
+    {
+      "comparison": "IF",
+      "spearman_rho": "0.9995818663704296",
+      "kendall_tau": "0.9952194120982412",
+      "mean_absolute_rank_displacement": "0.15151515151515152",
+      "maximum_absolute_rank_displacement": "1",
+      "n_objects": "33",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s3_robustness.csv",
+      "notes": "Frozen one-model perturbation; descriptive sensitivity of the consensus ranking."
+    },
+    {
+      "comparison": "LOF",
+      "spearman_rho": "0.9518909102481282",
+      "kendall_tau": "0.8395777168640545",
+      "mean_absolute_rank_displacement": "2.3333333333333335",
+      "maximum_absolute_rank_displacement": "7",
+      "n_objects": "33",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s3_robustness.csv",
+      "notes": "Frozen one-model perturbation; descriptive sensitivity of the consensus ranking."
+    },
+    {
+      "comparison": "AE",
+      "spearman_rho": "0.9614904361634342",
+      "kendall_tau": "0.8676526945638056",
+      "mean_absolute_rank_displacement": "1.7272727272727273",
+      "maximum_absolute_rank_displacement": "9",
+      "n_objects": "33",
+      "supporting_artifact": "outputs/results/stage_21_8_publication_supplementary_package/supplementary_tables/table_s3_robustness.csv",
+      "notes": "Frozen one-model perturbation; descriptive sensitivity of the consensus ranking."
+    }
+  ]
+}

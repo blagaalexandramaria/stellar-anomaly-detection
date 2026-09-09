@@ -1,0 +1,91 @@
+{
+  "table_id": "Table S12",
+  "title": "Spectral graph relationship projection contract",
+  "supplementary_section": "S4",
+  "values_frozen": true,
+  "produced_without_recomputation": true,
+  "source_artifacts": [
+    "outputs/k2_e2_spectral_graphs/spectral_graph_construction_configuration.json",
+    "outputs/k2_e2_frequency_relationships/frequency_relationship_configuration.json"
+  ],
+  "provenance_caveat": "Projected directed edges retain upstream relationship identity.",
+  "columns": [
+    "relation_type",
+    "source_arity",
+    "graph_direction_semantics",
+    "allowed_parallelism",
+    "edge_weight_definition",
+    "relationship_id_behavior",
+    "notes",
+    "provenance_status",
+    "supporting_artifact"
+  ],
+  "records": [
+    {
+      "relation_type": "HARMONIC",
+      "source_arity": "2",
+      "graph_direction_semantics": "BASE_TO_TARGET",
+      "allowed_parallelism": "RETAINED",
+      "edge_weight_definition": "relationship_similarity_weight=1/(1+normalized_resolution_residual)",
+      "relationship_id_behavior": "One edge preserves original relationship identity",
+      "notes": "ONE_EDGE; BASE -> HARMONIC_TARGET",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "outputs/spectral_graph_contract/graph_relationship_projection_registry.json"
+    },
+    {
+      "relation_type": "SUBHARMONIC",
+      "source_arity": "2",
+      "graph_direction_semantics": "HIGH_TO_LOWER",
+      "allowed_parallelism": "RETAINED",
+      "edge_weight_definition": "relationship_similarity_weight=1/(1+normalized_resolution_residual)",
+      "relationship_id_behavior": "One edge preserves original relationship identity",
+      "notes": "ONE_EDGE; REFERENCE_OR_HIGH -> LOWER_SUBHARMONIC",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "outputs/spectral_graph_contract/graph_relationship_projection_registry.json"
+    },
+    {
+      "relation_type": "RATIONAL",
+      "source_arity": "2",
+      "graph_direction_semantics": "LOW_TO_HIGH",
+      "allowed_parallelism": "RETAINED",
+      "edge_weight_definition": "relationship_similarity_weight=1/(1+normalized_resolution_residual)",
+      "relationship_id_behavior": "One edge preserves original relationship identity",
+      "notes": "ONE_EDGE; LOWER_FREQUENCY -> HIGHER_FREQUENCY",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "outputs/spectral_graph_contract/graph_relationship_projection_registry.json"
+    },
+    {
+      "relation_type": "SUM_COMBINATION",
+      "source_arity": "3",
+      "graph_direction_semantics": "EACH_SOURCE_TO_TARGET",
+      "allowed_parallelism": "RETAINED",
+      "edge_weight_definition": "relationship_similarity_weight=1/(1+normalized_resolution_residual)",
+      "relationship_id_behavior": "Projected edges share original relationship identity",
+      "notes": "PAIRWISE_SHARED_RELATIONSHIP_ID; SOURCE_A_AND_SOURCE_B -> TARGET",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "outputs/spectral_graph_contract/graph_relationship_projection_registry.json"
+    },
+    {
+      "relation_type": "DIFFERENCE_COMBINATION",
+      "source_arity": "3",
+      "graph_direction_semantics": "EACH_SOURCE_TO_TARGET",
+      "allowed_parallelism": "RETAINED",
+      "edge_weight_definition": "relationship_similarity_weight=1/(1+normalized_resolution_residual)",
+      "relationship_id_behavior": "Projected edges share original relationship identity",
+      "notes": "PAIRWISE_SHARED_RELATIONSHIP_ID; HIGH_SOURCE_AND_LOW_SOURCE -> TARGET",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "outputs/spectral_graph_contract/graph_relationship_projection_registry.json"
+    },
+    {
+      "relation_type": "SIDEBAND_PAIR",
+      "source_arity": "3",
+      "graph_direction_semantics": "CENTER_TO_EACH_SIDEBAND",
+      "allowed_parallelism": "RETAINED",
+      "edge_weight_definition": "relationship_similarity_weight=1/(1+normalized_resolution_residual)",
+      "relationship_id_behavior": "Projected edges share original relationship identity",
+      "notes": "PAIRWISE_SHARED_RELATIONSHIP_ID; CENTER -> LEFT_AND_RIGHT",
+      "provenance_status": "EXECUTION_BOUND",
+      "supporting_artifact": "outputs/spectral_graph_contract/graph_relationship_projection_registry.json"
+    }
+  ]
+}
