@@ -54,9 +54,9 @@ def _letter(ax, text):
 def figure_02(p):
     """Render the representation-comparison figure from its frozen payload."""
     plt = _setup()
-    fig = plt.figure(figsize=(13.8, 7.55), constrained_layout=True)
+    fig = plt.figure(figsize=(13.8, 8.15), constrained_layout=True)
     grid = fig.add_gridspec(
-        2, 4, height_ratios=(1.18, 0.95), width_ratios=(1, 1, 1, 0.052), hspace=0.12, wspace=0.18
+        2, 4, height_ratios=(1.28, 0.92), width_ratios=(1, 1, 1, 0.06), hspace=0.16, wspace=0.25
     )
     images = []
     for i, entry in enumerate(p["matrices"]):
@@ -76,8 +76,8 @@ def figure_02(p):
         )
         ax.title.set_fontsize(10)
         ax.title.set_fontweight("semibold")
-        ax.tick_params(axis="x", rotation=38, labelsize=8.2, pad=3)
-        ax.tick_params(axis="y", labelsize=8.2)
+        ax.tick_params(axis="x", rotation=42, labelsize=7.5, pad=2)
+        ax.tick_params(axis="y", labelsize=7.7)
         for r in range(7):
             for c in range(7):
                 ax.text(
@@ -86,12 +86,12 @@ def figure_02(p):
                     f"{vals[r,c]:.2f}",
                     ha="center",
                     va="center",
-                    fontsize=7.0,
+                    fontsize=6.25,
                     color="white" if vals[r, c] < 0.52 else "#17212B",
                 )
     cb = fig.colorbar(images[0], cax=fig.add_subplot(grid[0, 3]))
-    cb.ax.tick_params(labelsize=8.2)
-    cb.set_label("Spearman rank agreement", fontsize=9.2, labelpad=8)
+    cb.ax.tick_params(labelsize=7.5)
+    cb.set_label("Spearman rank agreement", fontsize=8.5, labelpad=7)
     ax = fig.add_subplot(grid[1, :3])
     _letter(ax, "B")
     for ci, contrast in enumerate(CONTRAST_LABELS):
@@ -132,8 +132,9 @@ def figure_02(p):
     ax.legend(
         frameon=False,
         ncol=3,
-        loc="lower left",
-        fontsize=8.7,
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.18),
+        fontsize=8,
         handletextpad=0.4,
         columnspacing=1.2,
     )
@@ -192,9 +193,9 @@ def figure_04(p):
 def figure_03(p):
     """Render the cross-model rank-flow figure from its frozen payload."""
     plt = _setup()
-    fig = plt.figure(figsize=(14.3, 9.6), constrained_layout=True)
+    fig = plt.figure(figsize=(14.3, 10.4), constrained_layout=True)
     grid = fig.add_gridspec(
-        2, 2, height_ratios=(1.08, 1.52), width_ratios=(1, 1.08), hspace=0.13, wspace=0.18
+        2, 2, height_ratios=(0.95, 1.55), width_ratios=(1, 1.12), hspace=0.18, wspace=0.22
     )
     models = list(MODEL_ORDER)
     pairs = {
@@ -230,7 +231,7 @@ def figure_03(p):
                     color="white" if vals[i, k] < 0.62 else "#17212B",
                 )
     fig.text(
-        0.075, 0.588, f"Global Kendall W = {p['kendall_w']:.3f}", fontsize=9.3, color=NEUTRAL
+        0.075, 0.614, f"Global Kendall W = {p['kendall_w']:.3f}", fontsize=8.8, color=NEUTRAL
     )
     ax = fig.add_subplot(grid[0, 1])
     _letter(ax, "B")
@@ -262,7 +263,7 @@ def figure_03(p):
         frameon=False,
         ncol=2,
         loc="upper left",
-        fontsize=8.7,
+        fontsize=8,
         columnspacing=1.1,
         handletextpad=0.4,
     )
@@ -288,7 +289,7 @@ def figure_03(p):
     # Sort label slots by their already-frozen AE endpoint rank only; no plotted
     # coordinates, ranks, or membership are altered.
     label_order = sorted(p["highlighted_object_ids"], key=lambda oid: (rows[oid]["AE"], oid))
-    slot_y = np.linspace(1.0, 15.2, len(label_order))
+    slot_y = np.linspace(1.0, 15.5, len(label_order))
     for oid, target_y in zip(label_order, slot_y):
         rank = rows[oid]["AE"]
         label = oid.replace("object:epic:", "EPIC ")
@@ -297,7 +298,7 @@ def figure_03(p):
             xy=(2, rank),
             xytext=(2.16, target_y),
             textcoords="data",
-            fontsize=7.25,
+            fontsize=6.6,
             va="center",
             color="#1B3448",
             arrowprops={
@@ -310,7 +311,7 @@ def figure_03(p):
             annotation_clip=False,
         )
     ax.set(
-        xlim=(-0.08, 2.68),
+        xlim=(-0.08, 2.60),
         xticks=xvals,
         xticklabels=models,
         ylim=(33.7, 0.3),
@@ -333,15 +334,15 @@ def figure_05(p):
     fig, axes = plt.subplots(
         3,
         4,
-        figsize=(14.8, 9.35),
+        figsize=(14.8, 8.9),
         constrained_layout=True,
-        gridspec_kw={"height_ratios": (1, 1, 0.62), "hspace": 0.18, "wspace": 0.18},
+        gridspec_kw={"height_ratios": (1, 1, 0.58), "hspace": 0.15, "wspace": 0.15},
     )
     for i, case in enumerate(p["cases"]):
         oid = case["object_id"].replace("object:epic:", "EPIC ")
         axes[0, i].set_title(
             f"{case['case_type'].replace('_',' ')} — {oid}\n{FIGURE_05_ROLE_LABELS[case['case_type']]}",
-            fontsize=9.2,
+            fontsize=8.8,
             fontweight="semibold",
             pad=7,
         )
@@ -357,7 +358,7 @@ def figure_05(p):
         ax.invert_yaxis()
         ax.set(xlabel="BJD − 2450000 [d]", ylabel="Kp [mag]" if i == 0 else "")
         ax.grid(color=GRID, lw=0.42)
-        ax.tick_params(labelsize=8.5)
+        ax.tick_params(labelsize=8)
         ax = axes[1, i]
         ax.plot(
             case["frequency_day_inverse"],
@@ -367,13 +368,13 @@ def figure_05(p):
         )
         ax.set(xlabel="Frequency [d⁻¹]", ylabel="LS power" if i == 0 else "")
         ax.grid(color=GRID, lw=0.42)
-        ax.tick_params(labelsize=8.5)
+        ax.tick_params(labelsize=8)
         ax = axes[2, i]
         for j, model in enumerate(MODEL_ORDER):
             rank = case["ranks"][model]
             ax.scatter(rank, j, s=64, color=MODEL_COLORS[model], zorder=3)
             ax.text(
-                rank, j - 0.19, str(rank), ha="center", va="bottom", fontsize=8.3, color=NEUTRAL
+                rank, j - 0.19, str(rank), ha="center", va="bottom", fontsize=7.8, color=NEUTRAL
             )
         ax.set(
             xlim=(33.5, 0.5),
@@ -382,7 +383,7 @@ def figure_05(p):
             xlabel="Rank (1 = most unusual)",
         )
         ax.grid(axis="x", color=GRID, lw=0.48)
-        ax.tick_params(labelsize=8.5)
+        ax.tick_params(labelsize=8)
     for idx, (letter, row, label) in enumerate(
         (
             ("A", 0, "Frozen light curve"),

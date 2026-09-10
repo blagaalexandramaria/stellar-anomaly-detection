@@ -1,5 +1,5 @@
 {
-  "artifact_type": "publication_methodology_figure_render_manifest",
+  "artifact_type": "publication_methodology_figure_spacious_render_manifest",
   "manuscript_figure": "Figure 1",
   "selected_object": "EPIC 60018752",
   "canonical_object_id": "object:epic:60018752",
@@ -14,10 +14,10 @@
     "methodology_figure_graph_edges.csv": "a044a17a8718bf1af0a484426c74963f20cfb3d35a39efd5848667fd13d6f4a8"
   },
   "figure_dimensions": {
-    "width_mm": 180,
-    "height_mm": 125,
-    "width_in": 7.086614173228347,
-    "height_in": 4.921259842519685
+    "width_mm": 260,
+    "height_mm": 170,
+    "width_in": 10.236220472440946,
+    "height_in": 6.692913385826772
   },
   "font": {
     "family": "DejaVu Sans",
@@ -63,16 +63,16 @@
   },
   "outputs": {
     "figure_1_methodology.pdf": {
-      "sha256": "8623766364e2b0c35e102273354c130299accb3afe5e908850a22bdc19278fb7",
-      "size_bytes": 51741
+      "sha256": "29edc334254459438c4f2f2414ce2bca7710672df2ca48af02b5c188e40e6402",
+      "size_bytes": 52765
     },
     "figure_1_methodology.svg": {
-      "sha256": "cae5d87ff1ad5fbfea2f3296f198fd0c980fda2f9f8985463861ec11a7ac02a3",
-      "size_bytes": 163335
+      "sha256": "1225b702032a2d97fa2d86dc3319f3ace494c1e4a181df98be7df5bd53a77012",
+      "size_bytes": 167122
     },
     "figure_1_methodology.png": {
-      "sha256": "b5befd0a41358d5866ad6b51520021443d02234a6f0527795703b301707bd65a",
-      "size_bytes": 1074369
+      "sha256": "6623699445fe04776f8f09082ba2fe7544604c134b6abd0c4acdd7a6b94f698b",
+      "size_bytes": 1224613
     }
   },
   "frozen_result_figures_modified": false,
